@@ -5,6 +5,7 @@ import Footer from 'components/Footer';
 import Theme from 'utils/theme';
 import Logo from 'images/Logo.png';
 import Home from 'components/Home'
+
 import {
   Section,
   SectionSidebar,
@@ -35,7 +36,7 @@ const MainContainer = props => {
         <Section active={active === 1} color="black">
           <SectionSidebar onClick={() => setActive(1)}>
             <SidebarName />
-            <SidebarName>hello world</SidebarName>
+            <SidebarName primaryColor >hello world</SidebarName>
           </SectionSidebar>
           {active === 1 && (
             <ContentContainer>
@@ -57,11 +58,11 @@ const MainContainer = props => {
         <Section active={active === 3} color="black">
           <SectionSidebar onClick={() => setActive(3)}>
             <SidebarName />
-            <SidebarName>hello world</SidebarName>
+            <SidebarName primaryColor >hello world</SidebarName>
           </SectionSidebar>
           {active === 3 && (
             <ContentContainer>
-              <h1>Hi Bakier</h1>
+              <h1>Hi bitch</h1>
             </ContentContainer>
           )}
         </Section>

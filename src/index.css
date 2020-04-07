@@ -21,3 +21,21 @@ code {
   font-family: 'icofont';
   src: local('icofont'), url(./fonts/icofont.woff2) format('woff2');
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 4.5px;
+
+}
+
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #e2dede;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #646464;
+}

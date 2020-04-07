@@ -2,5 +2,8 @@ export {
   Section,
   SectionSidebar,
   SidebarName,
-  ContentContainer
+  ContentContainer,
+  Text,
+  Logo,
+  LogoContainer
 } from './CommonStyles.style';

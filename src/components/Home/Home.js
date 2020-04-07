@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'
 import {
   Section,
   SectionSidebar,
   SidebarName,
-  ContentContainer
-} from 'components/CommonStyles';
+  ContentContainer,
+} from 'components/CommonStyles'
 import {
   Flex,
   Banner,
@@ -16,7 +16,7 @@ import {
   MenuItem,
   WeCanContainer,
   WeCanItem,
-} from './Home.style';
+} from './Home.style'
 
 const Home = ({ isActive, setActive }) => (
   <Section active={isActive} color="#fcd72f">
@@ -34,9 +34,7 @@ const Home = ({ isActive, setActive }) => (
                 {`The world is getting fast-paced. 
 Powerful. Diverse`}
               </Sentence>
-              <Sentence>
-                {`But, it’s a small world.`}
-              </Sentence>
+              <Sentence>{`But, it’s a small world.`}</Sentence>
               <Sentence>
                 {`Every detail matters because there’s no room for
 mistakes.`}
@@ -45,9 +43,7 @@ mistakes.`}
                 {`All elements of your marketing needs tailored for precise 
 effectiveness.`}
               </Sentence>
-              <Sentence>
-                {`That’s where we come in.`}
-              </Sentence>
+              <Sentence>{`That’s where we come in.`}</Sentence>
               <Sentence>
                 {`We will make your dreams bigger than this small world.`}
               </Sentence>
@@ -73,6 +69,6 @@ effectiveness.`}
       </ContentContainer>
     )}
   </Section>
-);
+)
 
-export default Home;
+export default Home

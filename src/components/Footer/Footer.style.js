@@ -6,6 +6,7 @@ export const Footer = styled.footer`
   display: flex;
   /* grid-template-columns: 20% 20% 20% 20% 20%; */
   background: ${({ theme }) => theme.primary};
+  position:fixed;
 
   ${({ theme }) => theme.media.phone`
     display: none;
@@ -23,4 +24,5 @@ export const Division = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 `;

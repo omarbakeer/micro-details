@@ -29,6 +29,6 @@ export default {
   media,
   primary: '#fcd72f', //  yellow
   black: '#000', // black
-  white: '#fff', // Gray
+  white: '#fff', // white
   direction: 'ltr'
 };

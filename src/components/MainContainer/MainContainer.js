@@ -1,20 +1,21 @@
-import React, { useState } from 'react';
-import { ThemeProvider } from 'styled-components';
-import { GlobalStyle, Main } from './MainContainer.style';
-import Footer from 'components/Footer';
-import Theme from 'utils/theme';
-import Logo from 'images/Logo.png';
+import React, { useState } from 'react'
+import { ThemeProvider } from 'styled-components'
+import { GlobalStyle, Main } from './MainContainer.style'
+import Footer from 'components/Footer'
+import Theme from 'utils/theme'
+import Logo from 'images/Logo.png'
 import Home from 'components/Home'
+import About from 'components/About'
 
 import {
   Section,
   SectionSidebar,
   SidebarName,
-  ContentContainer
-} from '../CommonStyles';
+  ContentContainer,
+} from '../CommonStyles'
 
-const MainContainer = props => {
-  const [active, setActive] = useState(4);
+const MainContainer = (props) => {
+  const [active, setActive] = useState(4)
 
   return (
     <ThemeProvider theme={Theme}>
@@ -29,14 +30,14 @@ const MainContainer = props => {
           {active === 0 && (
             <ContentContainer>
               <h1>Hi Bakier</h1>
-              <img src={Logo} alt =''/>
+              <img src={Logo} alt="" />
             </ContentContainer>
           )}
         </Section>
         <Section active={active === 1} color="black">
           <SectionSidebar onClick={() => setActive(1)}>
             <SidebarName />
-            <SidebarName primaryColor >we work with</SidebarName>
+            <SidebarName primaryColor>we work with</SidebarName>
           </SectionSidebar>
           {active === 1 && (
             <ContentContainer>
@@ -58,11 +59,11 @@ const MainContainer = props => {
         <Section active={active === 3} color="black">
           <SectionSidebar onClick={() => setActive(3)}>
             <SidebarName />
-            <SidebarName primaryColor >about us</SidebarName>
+            <SidebarName primaryColor>about us</SidebarName>
           </SectionSidebar>
           {active === 3 && (
             <ContentContainer>
-              <h1>Hi bitch</h1>
+              <About />
             </ContentContainer>
           )}
         </Section>
@@ -70,7 +71,7 @@ const MainContainer = props => {
       </Main>
       <Footer />
     </ThemeProvider>
-  );
-};
+  )
+}
 
-export default MainContainer;
+export default MainContainer

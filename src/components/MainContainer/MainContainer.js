@@ -24,19 +24,19 @@ const MainContainer = props => {
         <Section active={active === 0} color="#fcd72f">
           <SectionSidebar onClick={() => setActive(0)}>
             <SidebarName />
-            <SidebarName>hello world</SidebarName>
+            <SidebarName>contact us</SidebarName>
           </SectionSidebar>
           {active === 0 && (
             <ContentContainer>
               <h1>Hi Bakier</h1>
-              <img src={Logo}/>
+              <img src={Logo} alt =''/>
             </ContentContainer>
           )}
         </Section>
         <Section active={active === 1} color="black">
           <SectionSidebar onClick={() => setActive(1)}>
             <SidebarName />
-            <SidebarName primaryColor >hello world</SidebarName>
+            <SidebarName primaryColor >we work with</SidebarName>
           </SectionSidebar>
           {active === 1 && (
             <ContentContainer>
@@ -47,7 +47,7 @@ const MainContainer = props => {
         <Section active={active === 2} color="#fcd72f">
           <SectionSidebar onClick={() => setActive(2)}>
             <SidebarName />
-            <SidebarName>hello world</SidebarName>
+            <SidebarName>services</SidebarName>
           </SectionSidebar>
           {active === 2 && (
             <ContentContainer>
@@ -58,7 +58,7 @@ const MainContainer = props => {
         <Section active={active === 3} color="black">
           <SectionSidebar onClick={() => setActive(3)}>
             <SidebarName />
-            <SidebarName primaryColor >hello world</SidebarName>
+            <SidebarName primaryColor >about us</SidebarName>
           </SectionSidebar>
           {active === 3 && (
             <ContentContainer>

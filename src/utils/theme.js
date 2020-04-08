@@ -27,8 +27,11 @@ media.desktop = (...args) => css`
 export default {
   sizes,
   media,
-  primary: '#fcd72f', //  yellow
-  black: '#000', // black
-  white: '#fff', // white
+  colors: {
+    primary: '#fcd72f', //  yellow
+    black: '#000',
+    white: '#fff',
+    blue: '#0056b3',
+  },
   direction: 'ltr'
 };

@@ -46,7 +46,7 @@ export const HomeMenu = styled.div`
 export const MenuItem = styled.div`
   max-width: 60%;
   padding: 20px 10px;
-  border-bottom: 2px solid ${({ theme }) => theme.primary}
+  border-bottom: 2px solid ${({ theme }) => theme.colors.primary}
 `;
 
 /***************************************************

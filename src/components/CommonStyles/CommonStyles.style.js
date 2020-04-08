@@ -35,7 +35,7 @@ export const SidebarName = styled.div`
   transform: rotate(-90deg);
   transform-origin: left top;
   color: ${({ theme, primaryColor }) =>
-    primaryColor ? theme.primary : 'black'};
+    primaryColor ? theme.colors.primary : theme.colors.black};
   font-size: 36px;
   text-transform: uppercase;
   ${({ theme }) => theme.media.phone`
@@ -142,3 +142,17 @@ export const Text = styled.span`
   `}
 `}
 `
+
+export const Icon = styled.span`
+  font-family: icofont;
+  margin: 0 5px;
+  &:before {
+    content: "\\${({ icon }) => icon || ''}";
+    font-size: ${({ size }) => size || 16}px;
+    color: ${({ theme, color }) => theme.colors[color || 'black'] };
+    /* transform: ${({ rotate, theme }) => rotate && theme.direction === 'ltr' ? 'rotate(90deg)' : 'unset'}; */
+    display: inline-block;
+  }
+  transform: ${({ flip }) => (flip && 'scaleX(-1)') || 'unset'};
+  ${({ extendStyle }) => extendStyle || ''}
+`;

@@ -36,7 +36,7 @@ export const TitleContainer = styled.div`
 
 `
 export const ParagraphContainer = styled.div`
-  background: ${({ theme }) => theme.primary};
+  background: ${({ theme }) => theme.colors.primary};
   margin-left: 20px;
   padding: 10px;
   width: 40%;

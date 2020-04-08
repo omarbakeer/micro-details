@@ -5,5 +5,6 @@ export {
   ContentContainer,
   Text,
   Logo,
-  LogoContainer
+  LogoContainer,
+  Icon,
 } from './CommonStyles.style';

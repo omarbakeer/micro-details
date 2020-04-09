@@ -6,6 +6,7 @@ import Theme from 'utils/theme'
 import Logo from 'images/Logo.png'
 import Home from 'components/Home'
 import About from 'components/About'
+import Services from 'components/Services'
 
 import {
   Section,
@@ -15,7 +16,7 @@ import {
 } from '../CommonStyles'
 
 const MainContainer = (props) => {
-  const [active, setActive] = useState(4)
+  const [active, setActive] = useState(2)
 
   return (
     <ThemeProvider theme={Theme}>
@@ -52,7 +53,7 @@ const MainContainer = (props) => {
           </SectionSidebar>
           {active === 2 && (
             <ContentContainer>
-              <h1>Hi Bakier</h1>
+              <Services/>
             </ContentContainer>
           )}
         </Section>

@@ -46,21 +46,33 @@ export const SidebarName = styled.div`
 `
 
 export const ContentContainer = styled.div`
-  overflow:auto;
+  overflow: auto;
   width: calc(100% - calc(100vw / 25));
   background: white;
+  padding: 50px 80px;
+  position: relative;
   ${({ theme }) => theme.media.phone`
       width: 100%;
       height: calc(100% - calc(100vh / 20));
+      position: unset;
+      padding: 5px;
     `}
-  padding: 50px;
-`
-export const Logo = styled.img``
 
-export const LogoContainer = styled.div``
+`
+export const Logo = styled.img`
+  height: 120px;
+`
+
+export const LogoContainer = styled.div`
+  top: 0;
+  left: 2%;
+  position: absolute;
+`
 
 export const Text = styled.span`
   display:block;
+  color: ${({ theme, color }) => theme.colors[color || 'black']};
+
   ${({ title }) =>
     title &&
     `  
@@ -75,7 +87,6 @@ export const Text = styled.span`
   ${({ secondryTitle }) =>
     secondryTitle &&
     `
-    color: #fff;  
     font-size: 20px;
     -webkit-letter-spacing: 5px;
     -moz-letter-spacing: 5px;
@@ -149,10 +160,11 @@ export const Icon = styled.span`
   &:before {
     content: "\\${({ icon }) => icon || ''}";
     font-size: ${({ size }) => size || 16}px;
-    color: ${({ theme, color }) => theme.colors[color || 'black'] };
-    /* transform: ${({ rotate, theme }) => rotate && theme.direction === 'ltr' ? 'rotate(90deg)' : 'unset'}; */
+    color: ${({ theme, color }) => theme.colors[color || 'black']};
+    /* transform: ${({ rotate, theme }) =>
+      rotate && theme.direction === 'ltr' ? 'rotate(90deg)' : 'unset'}; */
     display: inline-block;
   }
   transform: ${({ flip }) => (flip && 'scaleX(-1)') || 'unset'};
   ${({ extendStyle }) => extendStyle || ''}
-`;
+`

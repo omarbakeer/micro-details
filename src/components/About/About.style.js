@@ -30,7 +30,7 @@ export const MissionAndVisionContainer = styled.div`
 `
 
 export const TitleContainer = styled.div`
-  background: ${({ theme }) => theme.black};
+  background: ${({ theme }) => theme.colors.black};
   padding: 10px 10px 0 10px;
   width: 30%;
 

@@ -42,7 +42,7 @@ export const ParagraphContainer = styled.div`
   width: 40%;
   height: 70px;
   ${({ theme }) => theme.media.tablet`
-  height: 150px;
+  height: 200px;
 `}
   ${({ theme }) => theme.media.phone`
   width: 80%;

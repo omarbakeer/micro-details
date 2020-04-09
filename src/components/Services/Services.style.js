@@ -16,10 +16,9 @@ export const Row = styled.div`
 `
 
 export const ServiceBlock = styled.div`
-  height: 100px;
   width: 33%;
   margin: 0;
-  padding: 0;
+  padding: 50px 0px;
   display: inline-block;
   background: ${({ theme, selected }) => selected && theme.colors.primary};
   border-bottom: ${({ theme, lastRow }) =>
@@ -33,10 +32,8 @@ export const ServiceBlock = styled.div`
     background: ${({ theme }) => theme.colors.primary};
   }
   ${({ theme }) => theme.media.phone`
-  width: 35%;
-  height: 170px;
-
-
+  width: 50%;
+  padding: 75px 0px;
   `}
 `
 

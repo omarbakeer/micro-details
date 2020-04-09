@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Logo, LogoContainer, Text } from 'components/CommonStyles'
+import { Logo, LogoContainer, Text, Icon } from 'components/CommonStyles'
 import BrandLogo from 'images/Logo.png'
 import {
   Container,
@@ -162,12 +162,22 @@ const Services = () => {
             onClick={() => setSelectedTab(1)}
             selected={selectedTab === 1}
           >
+            <Icon
+              icon="e97d"
+              size={26}
+              color={selectedTab !== 1 && 'primary'}
+            />
             <Service>Marketing Plan</Service>
           </ServiceBlock>
           <ServiceBlock
             onClick={() => setSelectedTab(2)}
             selected={selectedTab === 2}
           >
+            <Icon
+              icon="eae8"
+              size={26}
+              color={selectedTab !== 2 && 'primary'}
+            />
             <Service>Design and development</Service>
           </ServiceBlock>
           <ServiceBlock
@@ -175,6 +185,11 @@ const Services = () => {
             lastEelement
             selected={selectedTab === 3}
           >
+            <Icon
+              icon="e962"
+              size={26}
+              color={selectedTab !== 3 && 'primary'}
+            />
             <Service>Business consultation</Service>
           </ServiceBlock>
         </Row>
@@ -184,6 +199,11 @@ const Services = () => {
             lastRow
             selected={selectedTab === 4}
           >
+            <Icon
+              icon="ecf4"
+              size={26}
+              color={selectedTab !== 4 && 'primary'}
+            />
             <Service>Training and Workshop</Service>
           </ServiceBlock>
           <ServiceBlock
@@ -191,6 +211,11 @@ const Services = () => {
             lastRow
             selected={selectedTab === 5}
           >
+            <Icon
+              icon="e97d"
+              size={26}
+              color={selectedTab !== 5 && 'primary'}
+            />
             <Service>Original digital growth</Service>
           </ServiceBlock>
           <ServiceBlock
@@ -199,6 +224,11 @@ const Services = () => {
             lastEelement
             selected={selectedTab === 6}
           >
+            <Icon
+              icon="eece"
+              size={26}
+              color={selectedTab !== 6 && 'primary'}
+            />
             <Service>Photography and videography</Service>
           </ServiceBlock>
         </Row>
@@ -215,12 +245,22 @@ const Services = () => {
             selected={selectedTab === 1}
           >
             <Service>Marketing Plan</Service>
+            <Icon
+              icon="e97d"
+              size={26}
+              color={selectedTab !== 1 && 'primary'}
+            />
           </ServiceBlock>
           <ServiceBlock
             onClick={() => setSelectedTab(2)}
             selected={selectedTab === 2}
             lastEelement
           >
+            <Icon
+              icon="eae8"
+              size={26}
+              color={selectedTab !== 2 && 'primary'}
+            />
             <Service>Design and development</Service>
           </ServiceBlock>
         </Row>
@@ -229,6 +269,11 @@ const Services = () => {
             onClick={() => setSelectedTab(3)}
             selected={selectedTab === 3}
           >
+            <Icon
+              icon="e962"
+              size={26}
+              color={selectedTab !== 3 && 'primary'}
+            />
             <Service>Business consultation</Service>
           </ServiceBlock>
           <ServiceBlock
@@ -236,6 +281,11 @@ const Services = () => {
             lastEelement
             selected={selectedTab === 4}
           >
+            <Icon
+              icon="ecf4"
+              size={26}
+              color={selectedTab !== 4 && 'primary'}
+            />
             <Service>Training and Workshop</Service>
           </ServiceBlock>
         </Row>
@@ -245,15 +295,24 @@ const Services = () => {
             selected={selectedTab === 5}
             lastRow
           >
+            <Icon
+              icon="e97d"
+              size={26}
+              color={selectedTab !== 5 && 'primary'}
+            />
             <Service>Original digital growth</Service>
           </ServiceBlock>
           <ServiceBlock
             onClick={() => setSelectedTab(6)}
             lastEelement
             lastRow
-            
             selected={selectedTab === 6}
           >
+            <Icon
+              icon="eece"
+              size={26}
+              color={selectedTab !== 6 && 'primary'}
+            />
             <Service>Photography and videography</Service>
           </ServiceBlock>
         </Row>

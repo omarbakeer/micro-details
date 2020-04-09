@@ -49,7 +49,7 @@ export const ContentContainer = styled.div`
   overflow: auto;
   width: calc(100% - calc(100vw / 25));
   background: white;
-  padding: 50px 80px;
+  padding: 80px 80px;
   position: relative;
   ${({ theme }) => theme.media.phone`
       width: 100%;

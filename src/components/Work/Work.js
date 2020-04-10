@@ -7,8 +7,9 @@ import {
   ClientLogo,
   ImageWrapper,
 } from './Work.style'
-import SwipeableViews from 'react-swipeable-views';
+import { T } from 'locale'
 
+import SwipeableViews from 'react-swipeable-views'
 import Logo_1 from 'images/(1).jpg'
 import Logo_2 from 'images/(2).jpg'
 import Logo_3 from 'images/(3).jpg'
@@ -36,16 +37,14 @@ import Logo_24 from 'images/(24).jpg'
 import Logo_25 from 'images/(25).jpg'
 import Logo_26 from 'images/(26).jpg'
 
-const About = () => {
-
-
+const Work = () => {
   return (
     <>
       <LogoContainer>
         <Logo src={BrandLogo} alt="" />
       </LogoContainer>
       <Container>
-        <Text title>We Work With</Text>
+        <Text title>{T('weWorkWith')}</Text>
         <SwipeableViews animateTransitions enableMouseEvents>
           <ClientsContainer>
             <ImageWrapper>
@@ -136,4 +135,4 @@ const About = () => {
     </>
   )
 }
-export default About
+export default Work

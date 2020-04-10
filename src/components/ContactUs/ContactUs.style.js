@@ -8,8 +8,8 @@ export const extendIcon = css`
 export const BasicRow = styled.div`
   display: flex;
   width: 100%;
-  ${({ theme }) => theme.media.phone`
-    flex-direction: column;
+  ${({ theme, reversedOnMobile }) => theme.media.phone`
+    flex-direction: ${reversedOnMobile ? 'column-reverse' : 'column'};
     align-items: center;
   `}
 `;
@@ -18,10 +18,14 @@ export const Col = styled.div`
   flex: ${({ flex }) => flex || 1};
   display: flex;
   flex-direction: column;
-  ${({ theme }) => theme.media.phone`
+  ${({ theme, styleMapOnMobile }) => theme.media.phone`
     align-items: center;
     flex: unset;
     width: 100%;
+    ${styleMapOnMobile && `
+      height: 300px;
+      margin: 20px 0;
+    `}
   `}
 `;
 
@@ -88,6 +92,9 @@ const inputStyle = css`
   border-bottom: 1px solid ${({ theme }) => theme.colors.primary};
   width: 80%;
   outline: none;
+  ${({ theme }) => theme.media.phone`
+    width: 95%;
+  `}
   &::placeholder{
     font-family: Arial;
     color: ${({ theme }) => theme.colors.black};
@@ -125,4 +132,27 @@ export const Button = styled.button`
   font-family: Qanelas;
   padding: 10px 0;
   cursor: pointer;
+`;
+
+export const Marker = styled.div`
+  position: absolute;
+  top: -30px;
+  left: -14px;
+  border-radius: 50% 50% 50% 0;
+  border: 4px solid #ef0f0f;
+  width: 30px;
+  height: 30px;
+  transform: rotate(-45deg);
+  &:after {
+    position: absolute;
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    margin-left: -7px;
+    margin-top: -8px;
+    background-color: #ef0f0f;
+  }
 `;

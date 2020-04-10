@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import GoogleMapReact from 'google-map-react'
 import {
   Section,
   SectionSidebar,
@@ -22,12 +23,24 @@ import {
   InputField,
   TextArea,
   Button,
+  Marker,
   extendIcon,
 } from './ContactUs.style'
 import BrandLogo from 'images/Logo.png'
 
+const officesCoordinates = {
+  eg: {
+    lat: 30.0684895,
+    long: 31.3453752,
+  },
+  sa: {
+    lat: 21.5677489,
+    long: 39.1436756,
+  }
+}
+
 const ContactUs = ({ isActive, setActive }) => {
-  const [activeAddress, setActiveAddress] = useState(0);
+  const [activeAddress, setActiveAddress] = useState('sa');
   const [fullName, setFullName] = useState('');
   const [emailAddress, setEmailAddress] = useState('');
   const [mobile, setMobile] = useState('');
@@ -36,11 +49,12 @@ const ContactUs = ({ isActive, setActive }) => {
   const handleSubmit = () => {
     console.warn("Submitted")
   }
+
   return (
     <Section active={isActive} color="#fcd72f">
       <SectionSidebar onClick={() => setActive(0)}>
         <SidebarName />
-        <SidebarName>hello world</SidebarName>
+        <SidebarName>Contact Us</SidebarName>
       </SectionSidebar>
       {isActive && (
         <ContentContainer>
@@ -65,13 +79,13 @@ const ContactUs = ({ isActive, setActive }) => {
             <Col flex={4}>
               <Title>Our offices</Title>
               <Row>
-                <Address active={activeAddress === 0} onClick={() => setActiveAddress(0)}>
+                <Address active={activeAddress === 'sa'} onClick={() => setActiveAddress('sa')}>
                   <AddressTitle>Jeddah</AddressTitle>
                   <AddressDetails>
                   Prince Sultan Street, Al Murjana Tower, 7th floor, Jeddah- KSA
                   </AddressDetails>
                 </Address>
-                <Address active={activeAddress === 1} onClick={() => setActiveAddress(1)}>
+                <Address active={activeAddress === 'eg'} onClick={() => setActiveAddress('eg')}>
                   <AddressTitle>Cairo</AddressTitle>
                   <AddressDetails>
                     55 Makram Ebaid, City Center Tower 4th floor, Cairo - Egypt
@@ -80,36 +94,49 @@ const ContactUs = ({ isActive, setActive }) => {
               </Row>
             </Col>
           </BasicRow>
-          <BasicRow>
-          <Col flex={3}>
-            <Title>Say Hello!</Title>
-            <Form onSubmit={handleSubmit} method="POST" autoComplete="nope">
-              <InputField
-                placeholder="Full Name"
-                value={fullName}
-                onChange={({ target : { value }}) => setFullName(value)}
-              />
-              <InputField
-                type="email"
-                placeholder="Email Address"
-                value={emailAddress}
-                onChange={({ target : { value }}) => setEmailAddress(value)}
-              />
-              <InputField
-                type="tel"
-                placeholder="Mobile"
-                value={mobile}
-                onChange={({ target : { value }}) => setMobile(value)}
-              />
-              <TextArea 
-                value={message}
-                onChange={({ target : { value }}) => setMessage(value)}
-                placeholder="Message"
-              />
-              <Button>Send</Button>
-            </Form>
-          </Col>
-          <Col flex={4}></Col>
+          <BasicRow reversedOnMobile>
+            <Col flex={3}>
+              <Title>Say Hello!</Title>
+              <Form onSubmit={handleSubmit} method="POST" autoComplete="nope">
+                <InputField
+                  placeholder="Full Name"
+                  value={fullName}
+                  onChange={({ target : { value }}) => setFullName(value)}
+                />
+                <InputField
+                  type="email"
+                  placeholder="Email Address"
+                  value={emailAddress}
+                  onChange={({ target : { value }}) => setEmailAddress(value)}
+                />
+                <InputField
+                  type="tel"
+                  placeholder="Mobile"
+                  value={mobile}
+                  onChange={({ target : { value }}) => setMobile(value)}
+                />
+                <TextArea 
+                  value={message}
+                  onChange={({ target : { value }}) => setMessage(value)}
+                  placeholder="Message"
+                />
+                <Button>Send</Button>
+              </Form>
+            </Col>
+            <Col flex={4} styleMapOnMobile>
+              <GoogleMapReact
+                bootstrapURLKeys={{ key: 'AIzaSyAytC_TusuhG7kpNQ19hMrCzXDIUjd307o' }}
+                yesIWantToUseGoogleMapApiInternals
+                defaultZoom={16}
+                center={[officesCoordinates[activeAddress].lat, officesCoordinates[activeAddress].long]}
+              >
+                <Marker
+                  lat={officesCoordinates[activeAddress].lat}
+                  lng={officesCoordinates[activeAddress].long}
+                  text="My Marker"
+                />
+              </GoogleMapReact>
+            </Col>
           </BasicRow>
         </ContentContainer>
       )}

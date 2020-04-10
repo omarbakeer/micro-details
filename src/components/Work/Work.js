@@ -7,6 +7,8 @@ import {
   ClientLogo,
   ImageWrapper,
 } from './Work.style'
+import SwipeableViews from 'react-swipeable-views';
+
 import Logo_1 from 'images/(1).jpg'
 import Logo_2 from 'images/(2).jpg'
 import Logo_3 from 'images/(3).jpg'
@@ -35,6 +37,8 @@ import Logo_25 from 'images/(25).jpg'
 import Logo_26 from 'images/(26).jpg'
 
 const About = () => {
+
+
   return (
     <>
       <LogoContainer>
@@ -42,86 +46,92 @@ const About = () => {
       </LogoContainer>
       <Container>
         <Text title>We Work With</Text>
-        <ClientsContainer>
-          <ImageWrapper>
-            <ClientLogo src={Logo_1} alt="client" />
-          </ImageWrapper>
-          <ImageWrapper>
-            <ClientLogo src={Logo_2} alt="client" />
-          </ImageWrapper>
-          <ImageWrapper>
-            <ClientLogo src={Logo_3} alt="client" />
-          </ImageWrapper>
-          <ImageWrapper>
-            <ClientLogo src={Logo_4} alt="client" />
-          </ImageWrapper>
-          <ImageWrapper>
-            <ClientLogo src={Logo_5} alt="client" />
-          </ImageWrapper>
-          <ImageWrapper>
-            <ClientLogo src={Logo_6} alt="client" />
-          </ImageWrapper>
-          <ImageWrapper>
-            <ClientLogo src={Logo_7} alt="client" />
-          </ImageWrapper>
-          <ImageWrapper>
-            <ClientLogo src={Logo_8} alt="client" />
-          </ImageWrapper>
-          <ImageWrapper>
-            <ClientLogo src={Logo_9} alt="client" />
-          </ImageWrapper>
-          <ImageWrapper>
-            <ClientLogo src={Logo_10} alt="client" />
-          </ImageWrapper>
-          <ImageWrapper>
-            <ClientLogo src={Logo_11} alt="client" />
-          </ImageWrapper>
-          <ImageWrapper>
-            <ClientLogo src={Logo_12} alt="client" />
-          </ImageWrapper>
-          <ImageWrapper>
-            <ClientLogo src={Logo_13} alt="client" />
-          </ImageWrapper>
-          <ImageWrapper>
-            <ClientLogo src={Logo_14} alt="client" />
-          </ImageWrapper>
-          <ImageWrapper>
-            <ClientLogo src={Logo_15} alt="client" />
-          </ImageWrapper>
-          <ImageWrapper>
-            <ClientLogo src={Logo_16} alt="client" />
-          </ImageWrapper>
-          <ImageWrapper>
-            <ClientLogo src={Logo_17} alt="client" />
-          </ImageWrapper>
-          <ImageWrapper>
-            <ClientLogo src={Logo_18} alt="client" />
-          </ImageWrapper>
-          <ImageWrapper>
-            <ClientLogo src={Logo_19} alt="client" />
-          </ImageWrapper>
-          <ImageWrapper>
-            <ClientLogo src={Logo_20} alt="client" />
-          </ImageWrapper>
-          <ImageWrapper>
-            <ClientLogo src={Logo_21} alt="client" />
-          </ImageWrapper>
-          <ImageWrapper>
-            <ClientLogo src={Logo_22} alt="client" />
-          </ImageWrapper>
-          <ImageWrapper>
-            <ClientLogo src={Logo_23} alt="client" />
-          </ImageWrapper>
-          <ImageWrapper>
-            <ClientLogo src={Logo_24} alt="client" />
-          </ImageWrapper>
-          <ImageWrapper>
-            <ClientLogo src={Logo_25} alt="client" />
-          </ImageWrapper>
-          <ImageWrapper>
-            <ClientLogo src={Logo_26} alt="client" />
-          </ImageWrapper>
-        </ClientsContainer>
+        <SwipeableViews animateTransitions enableMouseEvents>
+          <ClientsContainer>
+            <ImageWrapper>
+              <ClientLogo src={Logo_1} alt="client" />
+            </ImageWrapper>
+            <ImageWrapper>
+              <ClientLogo src={Logo_2} alt="client" />
+            </ImageWrapper>
+            <ImageWrapper>
+              <ClientLogo src={Logo_3} alt="client" />
+            </ImageWrapper>
+            <ImageWrapper>
+              <ClientLogo src={Logo_4} alt="client" />
+            </ImageWrapper>
+            <ImageWrapper>
+              <ClientLogo src={Logo_5} alt="client" />
+            </ImageWrapper>
+            <ImageWrapper>
+              <ClientLogo src={Logo_6} alt="client" />
+            </ImageWrapper>
+            <ImageWrapper>
+              <ClientLogo src={Logo_7} alt="client" />
+            </ImageWrapper>
+            <ImageWrapper>
+              <ClientLogo src={Logo_8} alt="client" />
+            </ImageWrapper>
+            <ImageWrapper>
+              <ClientLogo src={Logo_9} alt="client" />
+            </ImageWrapper>
+          </ClientsContainer>
+          <ClientsContainer>
+            <ImageWrapper>
+              <ClientLogo src={Logo_19} alt="client" />
+            </ImageWrapper>
+            <ImageWrapper>
+              <ClientLogo src={Logo_20} alt="client" />
+            </ImageWrapper>
+            <ImageWrapper>
+              <ClientLogo src={Logo_21} alt="client" />
+            </ImageWrapper>
+            <ImageWrapper>
+              <ClientLogo src={Logo_22} alt="client" />
+            </ImageWrapper>
+            <ImageWrapper>
+              <ClientLogo src={Logo_23} alt="client" />
+            </ImageWrapper>
+            <ImageWrapper>
+              <ClientLogo src={Logo_24} alt="client" />
+            </ImageWrapper>
+            <ImageWrapper>
+              <ClientLogo src={Logo_25} alt="client" />
+            </ImageWrapper>
+            <ImageWrapper>
+              <ClientLogo src={Logo_26} alt="client" />
+            </ImageWrapper>
+          </ClientsContainer>
+          <ClientsContainer>
+            <ImageWrapper>
+              <ClientLogo src={Logo_10} alt="client" />
+            </ImageWrapper>
+            <ImageWrapper>
+              <ClientLogo src={Logo_11} alt="client" />
+            </ImageWrapper>
+            <ImageWrapper>
+              <ClientLogo src={Logo_12} alt="client" />
+            </ImageWrapper>
+            <ImageWrapper>
+              <ClientLogo src={Logo_13} alt="client" />
+            </ImageWrapper>
+            <ImageWrapper>
+              <ClientLogo src={Logo_14} alt="client" />
+            </ImageWrapper>
+            <ImageWrapper>
+              <ClientLogo src={Logo_15} alt="client" />
+            </ImageWrapper>
+            <ImageWrapper>
+              <ClientLogo src={Logo_16} alt="client" />
+            </ImageWrapper>
+            <ImageWrapper>
+              <ClientLogo src={Logo_17} alt="client" />
+            </ImageWrapper>
+            <ImageWrapper>
+              <ClientLogo src={Logo_18} alt="client" />
+            </ImageWrapper>
+          </ClientsContainer>
+        </SwipeableViews>
       </Container>
     </>
   )

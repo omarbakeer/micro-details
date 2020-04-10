@@ -8,7 +8,7 @@ import Home from 'components/Home'
 import About from 'components/About'
 import Services from 'components/Services'
 import Work from 'components/Work'
-
+import ContactUs from 'components/ContactUs'
 import {
   Section,
   SectionSidebar,
@@ -17,25 +17,14 @@ import {
 } from '../CommonStyles'
 
 const MainContainer = (props) => {
-  const [active, setActive] = useState(1)
+  const [active, setActive] = useState(0)
 
   return (
     <ThemeProvider theme={Theme}>
       <GlobalStyle />
       <Main>
         {/* <Collapsible data={data}/> */}
-        <Section active={active === 0} color="#fcd72f">
-          <SectionSidebar onClick={() => setActive(0)}>
-            <SidebarName />
-            <SidebarName>contact us</SidebarName>
-          </SectionSidebar>
-          {active === 0 && (
-            <ContentContainer>
-              <h1>Hi Bakier</h1>
-              <img src={Logo} alt="" />
-            </ContentContainer>
-          )}
-        </Section>
+        <ContactUs isActive={active === 0} setActive={setActive}/>
         <Section active={active === 1} color="black">
           <SectionSidebar onClick={() => setActive(1)}>
             <SidebarName />

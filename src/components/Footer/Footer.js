@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Text, Icon } from 'components/CommonStyles';
+import React from 'react';
+import { Icon } from 'components/CommonStyles';
 import {
   Footer,
   Filler,
@@ -28,7 +28,7 @@ const FooterContainer = (props) => {
           <Title>Jeddah</Title>
         </TitleWithIcon>
         <Address>
-          Hisham bin Hakim Street, Al Andalus District, Jeddah 23322, KSA
+          Prince Sultan Street, Al Murjana Tower, 7th floor, Jeddah- KSA
         </Address>
       </Division>
       <Division>
@@ -40,7 +40,7 @@ const FooterContainer = (props) => {
           55 Makram Ebaid, City Center Tower 4th floor, Cairo - Egypt
         </Address>
       </Division>
-      <Division>
+      <Division flex={4}>
         <TitleWithIcon mb={16}>
           <Icon icon="ec8a" size={24}/>
           <Link href="tel:+966562330130">+966 56 233 0130</Link>
@@ -50,12 +50,20 @@ const FooterContainer = (props) => {
           <Link href="mailto:info@micro-details.com">info@micro-details.com</Link>
         </TitleWithIcon>
       </Division>
-      <Division SocialDivision>
+      <Division SocialDivision flex={6}>
         <SocialMediaContainer>
-          <SocialMediaLink href="#"><Icon icon="ed37" size={30} /></SocialMediaLink>
-          <SocialMediaLink href="#"><Icon icon="ed7a" size={30} /></SocialMediaLink>
-          <SocialMediaLink href="#"><Icon icon="ed46" size={30} /></SocialMediaLink>
-          <SocialMediaLink href="#"><Icon icon="ed4d" size={30} /></SocialMediaLink>
+          <SocialMediaLink href="https://www.facebook.com/Micro-Details-412285212646523/?modal=admin_todo_tour">
+            <Icon icon="ed37" size={30} />
+          </SocialMediaLink>
+          <SocialMediaLink href="https://twitter.com/MicroDetails">
+            <Icon icon="ed7a" size={30} />
+          </SocialMediaLink>
+          <SocialMediaLink href="https://www.instagram.com/micro.details">
+            <Icon icon="ed46" size={30} />
+          </SocialMediaLink>
+          <SocialMediaLink href="https://www.linkedin.com/company/18959521">
+            <Icon icon="ed4d" size={30} />
+          </SocialMediaLink>
         </SocialMediaContainer>
         <CopyRights>
           © <span style={{fontWeight: 500}}>Micro Details</span> - All rights reserved 2020

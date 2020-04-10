@@ -51,6 +51,7 @@ export const ContentContainer = styled.div`
   background: white;
   padding: 80px 80px;
   position: relative;
+  box-sizing: border-box;
   ${({ theme }) => theme.media.phone`
       width: 100%;
       height: calc(100% - calc(100vh / 20));

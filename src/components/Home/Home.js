@@ -9,6 +9,8 @@ import {
   Flex,
   Banner,
   Slogan,
+  SloganText,
+  NoWrapp,
   DescriptionsContainer,
   Sentence,
   HomeDetails,
@@ -28,7 +30,11 @@ const Home = ({ isActive, setActive }) => (
       <ContentContainer>
         <Flex>
           <Banner>
-            <Slogan>BIG THINGS BY LITTLE THINGS</Slogan>
+            <Slogan>
+              <SloganText>
+                BIG THINGS <NoWrapp>BY LITTLE</NoWrapp> THINGS
+              </SloganText>
+            </Slogan>
             <DescriptionsContainer>
               <Sentence>
                 {`The world is getting fast-paced. 

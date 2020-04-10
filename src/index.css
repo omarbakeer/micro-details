@@ -18,6 +18,18 @@ code {
 }
 
 @font-face {
+  font-family: 'Qanelas';
+  font-weight: 500;
+  src: local('Qanelas Semibold'), url(./fonts/Qanelas-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Qanelas';
+  font-weight: bold;
+  src: local('Qanelas Bold'), url(./fonts/Qanelas-Bold.ttf) format('truetype');
+}
+
+@font-face {
   font-family: 'icofont';
   src: local('icofont'), url(./fonts/icofont.woff2) format('woff2');
 }

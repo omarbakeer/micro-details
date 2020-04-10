@@ -23,7 +23,7 @@ export const Filler = styled.div`
 `;
 
 export const Division = styled.div`
-  flex: 5;
+  flex: ${({ flex }) => flex || 5};
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

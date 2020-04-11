@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import RandomText from 'images/random-text.png'
 import WeCan from 'components/WeCan'
 import WeAre from 'components/WeAre'
+import { T } from 'locale'
+
 import {
   Section,
   SectionSidebar,
@@ -12,6 +14,7 @@ import {
   HideOnDeskTop,
   ShowOnDesktop,
   DesktopRandomTextImg,
+  Text,
 } from 'components/CommonStyles'
 import BrandLogo from 'images/Logo.png'
 import {
@@ -137,7 +140,7 @@ const Home = ({ isActive, setActive }) => {
       <DesktopRandomTextImg src={RandomText} alt="micro details logo" />
       <SectionSidebar onClick={() => setActive(4)}>
         <SidebarName />
-        <SidebarName>Home</SidebarName>
+        <SidebarName>{T('home')}</SidebarName>
       </SectionSidebar>
       {isActive && (
         <ContentContainer>
@@ -145,45 +148,36 @@ const Home = ({ isActive, setActive }) => {
             <Logo src={BrandLogo} alt="" />
           </LogoContainer>
           <ShowOnDesktop>
-
-          <Banner>
-            <Slogan>
-              <SloganText>
-                BIG THINGS <NoWrapp>BY LITTLE</NoWrapp> THINGS
-              </SloganText>
-            </Slogan>
-            <DescriptionsContainer>
-              <Sentence style={{ maxWidth: '70%' }}>
-                The world is getting fast-paced. Powe rful.
-                <SpecialStyle bold italic>
-                  Diverse
-                </SpecialStyle>
-              </Sentence>
-              <Sentence>
-                <SpecialStyle bold>But</SpecialStyle>, it’s a small world.
-              </Sentence>
-              <Sentence>
-                <SpecialStyle bold italic>
-                  Every detail matters
-                </SpecialStyle>
-                because there’s no room for mistakes.
-              </Sentence>
-              <Sentence>
-                All elements of your marketing needs tailored for precise
-                <SpecialStyle bold italic>
-                  effectiveness.
-                </SpecialStyle>
-              </Sentence>
-              <Sentence>That’s where we come in.</Sentence>
-              <Sentence underLine>
-                We will make your
-                <SpecialStyle bold italic>
-                  dreams bigger
-                </SpecialStyle>
-                than this small world.
-              </Sentence>
-            </DescriptionsContainer>
-          </Banner>
+            <Banner>
+              <Slogan>
+                <SloganText>
+                  {T('bigThings')} <NoWrapp>{T('byLittle')} </NoWrapp>{' '}
+                  {T('things')}
+                </SloganText>
+              </Slogan>
+              <DescriptionsContainer>
+                <Text paragraph maxWidth="70%">
+                  {T('homepageParagraphOne')}
+                  <SpecialStyle bold italic>
+                    {T('diverse')}
+                  </SpecialStyle>
+                </Text>
+                <Text>
+                  <SpecialStyle bold>{T('but')}</SpecialStyle>,{' '}
+                  {T('homepageParagraphTwo')}
+                </Text>
+                <Text paragraph>
+                  {T('homepageParagraphThree')}
+                  <SpecialStyle bold italic>
+                    {T('effectiveness')}
+                  </SpecialStyle>
+                </Text>
+                <Text paragraph>
+                  {T('homepageParagraphFour')}
+                </Text>
+                <Text underLine paragraph>{T('homepageParagraphFive')}</Text>
+              </DescriptionsContainer>
+            </Banner>
           </ShowOnDesktop>
 
           {renderMobileMenu()}

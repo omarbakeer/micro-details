@@ -11,6 +11,7 @@ import Services from 'components/Services'
 import Work from 'components/Work'
 import ContactUs from 'components/ContactUs'
 import RandomText from 'images/random-text.png'
+import { T } from 'locale'
 import {
   Section,
   SectionSidebar,
@@ -31,7 +32,7 @@ const MainContainer = () => {
           <Section active={active === 1} color="black">
             <SectionSidebar onClick={() => setActive(1)}>
               <SidebarName />
-              <SidebarName primaryColor>we work with</SidebarName>
+              <SidebarName primaryColor>{T('weWorkWith')}</SidebarName>
             </SectionSidebar>
             {active === 1 && (
               <ContentContainer>
@@ -43,7 +44,7 @@ const MainContainer = () => {
             <DesktopRandomTextImg src={RandomText} alt="micro details logo" />
             <SectionSidebar onClick={() => setActive(2)}>
               <SidebarName />
-              <SidebarName>services</SidebarName>
+              <SidebarName>{T('services')}</SidebarName>
             </SectionSidebar>
             {active === 2 && (
               <ContentContainer>

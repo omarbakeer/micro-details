@@ -7,153 +7,64 @@ import {
   HideOnDeskTop,
   ShowOnDesktop,
 } from 'components/CommonStyles'
+import { T } from 'locale'
 import BrandLogo from 'images/Logo.png'
-import {
-  Container,
-  Row,
-  ServiceBlock,
-  Service,
-} from './Services.style'
+import { Container, Row, ServiceBlock, Service } from './Services.style'
 
 const Services = () => {
   const [selectedTab, setSelectedTab] = useState(4)
-
   const renderTextBasedOnSelectedTab = () => {
     if (selectedTab === 1) {
       return (
         <>
-          <Text title>Marketing Plan</Text>
-          <Text paragraph>
-            We started our journey when we experienced the reach and impact of
-            digital marketing on brands. The marketeers focus on ‘details’, but
-            our team is passionate about ‘micro details’. We started this
-            company so we can continue to analyze and use these details to
-            create unique and successful marketing campaigns for our clients.
-          </Text>
-          <Text paragraph>
-            Courses and training sessions designed to give you an introduction
-            into the world of high-level creative thinking and how it can be
-            applied to marketing and technology. Social Media Marketing, Program
-            and Design Training, Marketing Plan Training are just some of the
-            topics covered. Whether you are looking to network, renew ideas or
-            learn from scratch, Micro Details wants you to discover the
-            opportunities.
-          </Text>
+          <Text title>{T('marketingPlan')}</Text>
+          <Text paragraph>{T('marketingPlanParahraphOne')}</Text>
+          <Text paragraph>{T('marketingPlanParahraphTwo')}</Text>
         </>
       )
     }
     if (selectedTab === 2) {
       return (
         <>
-          <Text title>Design And Development</Text>
-          <Text paragraph>
-            We started our journey when we experienced the reach and impact of
-            digital marketing on brands. The marketeers focus on ‘details’, but
-            our team is passionate about ‘micro details’. We started this
-            company so we can continue to analyze and use these details to
-            create unique and successful marketing campaigns for our clients.
-          </Text>
-          <Text paragraph>
-            Courses and training sessions designed to give you an introduction
-            into the world of high-level creative thinking and how it can be
-            applied to marketing and technology. Social Media Marketing, Program
-            and Design Training, Marketing Plan Training are just some of the
-            topics covered. Whether you are looking to network, renew ideas or
-            learn from scratch, Micro Details wants you to discover the
-            opportunities.
-          </Text>
+          <Text title>{T('designAndDevelopment')}</Text>
+          <Text paragraph>{T('designAndDevelopmentParahraphOne')}</Text>
+          <Text paragraph>{T('designAndDevelopmentParahraphTwo')}</Text>
         </>
       )
     }
     if (selectedTab === 3) {
       return (
         <>
-          <Text title>Business Consultation</Text>
-          <Text paragraph>
-            We started our journey when we experienced the reach and impact of
-            digital marketing on brands. The marketeers focus on ‘details’, but
-            our team is passionate about ‘micro details’. We started this
-            company so we can continue to analyze and use these details to
-            create unique and successful marketing campaigns for our clients.
-          </Text>
-          <Text paragraph>
-            Courses and training sessions designed to give you an introduction
-            into the world of high-level creative thinking and how it can be
-            applied to marketing and technology. Social Media Marketing, Program
-            and Design Training, Marketing Plan Training are just some of the
-            topics covered. Whether you are looking to network, renew ideas or
-            learn from scratch, Micro Details wants you to discover the
-            opportunities.
-          </Text>
+          <Text title>{T('buissnessConsultation')}</Text>
+          <Text paragraph>{T('buissnessConsultationParahraphOne')}</Text>
+          <Text paragraph>{T('buissnessConsultationParahraphTwo')}</Text>
         </>
       )
     }
     if (selectedTab === 4) {
       return (
         <>
-          <Text title>Training and Workshop</Text>
-          <Text paragraph>
-            We started our journey when we experienced the reach and impact of
-            digital marketing on brands. The marketeers focus on ‘details’, but
-            our team is passionate about ‘micro details’. We started this
-            company so we can continue to analyze and use these details to
-            create unique and successful marketing campaigns for our clients.
-          </Text>
-          <Text paragraph>
-            Courses and training sessions designed to give you an introduction
-            into the world of high-level creative thinking and how it can be
-            applied to marketing and technology. Social Media Marketing, Program
-            and Design Training, Marketing Plan Training are just some of the
-            topics covered. Whether you are looking to network, renew ideas or
-            learn from scratch, Micro Details wants you to discover the
-            opportunities.
-          </Text>
+          <Text title>{T('trainingAndWorkshop')}</Text>
+          <Text paragraph>{T('trainingAndWorkshopParahraphOne')}</Text>
+          <Text paragraph>{T('trainingAndWorkshopParahraphTwo')}</Text>
         </>
       )
     }
     if (selectedTab === 5) {
       return (
         <>
-          <Text title>Original Digital Grwoth</Text>
-          <Text paragraph>
-            We started our journey when we experienced the reach and impact of
-            digital marketing on brands. The marketeers focus on ‘details’, but
-            our team is passionate about ‘micro details’. We started this
-            company so we can continue to analyze and use these details to
-            create unique and successful marketing campaigns for our clients.
-          </Text>
-          <Text paragraph>
-            Courses and training sessions designed to give you an introduction
-            into the world of high-level creative thinking and how it can be
-            applied to marketing and technology. Social Media Marketing, Program
-            and Design Training, Marketing Plan Training are just some of the
-            topics covered. Whether you are looking to network, renew ideas or
-            learn from scratch, Micro Details wants you to discover the
-            opportunities.
-          </Text>
+          <Text title>{T('growthHacking')}</Text>
+          <Text paragraph>{T('growthHackingParahraphOne')}</Text>
+          <Text paragraph>{T('growthHackingParahraphTwo')}</Text>
         </>
       )
     }
     if (selectedTab === 6) {
       return (
         <>
-          <Text title>Training and Workshop</Text>
-          <Text paragraph>
-            We started our journey when we experienced the reach and impact of
-            digital marketing on brands. The marketeers focus on ‘details’, but
-            our team is passionate about ‘micro details’. We started this
-            company so we can continue to analyze and use these details to
-            create unique and successful marketing campaigns for our clients.
-          </Text>
-          <Text paragraph>
-            Courses and training sessions designed to give you an introduction
-            into the world of high-level creative thinking and how it can be
-            applied to marketing and technology. Social Media Marketing, Program
-            and Design Training, Marketing Plan Training are just some of the
-            topics covered. Whether you are looking to network, renew ideas or
-            learn from scratch, Micro Details wants you to discover the
-            opportunities.
-          </Text>
+          <Text title>{T('photographyAndVideoghraphy')}</Text>
+          <Text paragraph>{T('photographyAndVideoghraphyOne')}</Text>
+          <Text paragraph>{T('photographyAndVideoghraphyTwo')}</Text>
         </>
       )
     }
@@ -172,7 +83,7 @@ const Services = () => {
               size={26}
               color={selectedTab !== 1 && 'primary'}
             />
-            <Service>Marketing Plan</Service>
+            <Service>{T('marketingPlan')}</Service>
           </ServiceBlock>
           <ServiceBlock
             onClick={() => setSelectedTab(2)}
@@ -183,7 +94,7 @@ const Services = () => {
               size={26}
               color={selectedTab !== 2 && 'primary'}
             />
-            <Service>Design and development</Service>
+            <Service>{T('designAndDevelopment')}</Service>
           </ServiceBlock>
           <ServiceBlock
             onClick={() => setSelectedTab(3)}
@@ -195,7 +106,7 @@ const Services = () => {
               size={26}
               color={selectedTab !== 3 && 'primary'}
             />
-            <Service>Business consultation</Service>
+            <Service>{T('buissnessConsultation')}</Service>
           </ServiceBlock>
         </Row>
         <Row>
@@ -209,7 +120,7 @@ const Services = () => {
               size={26}
               color={selectedTab !== 4 && 'primary'}
             />
-            <Service>Training and Workshop</Service>
+            <Service>{T('trainingAndWorkshop')}</Service>
           </ServiceBlock>
           <ServiceBlock
             onClick={() => setSelectedTab(5)}
@@ -221,7 +132,7 @@ const Services = () => {
               size={26}
               color={selectedTab !== 5 && 'primary'}
             />
-            <Service>Original digital growth</Service>
+            <Service>{T('growthHacking')}</Service>
           </ServiceBlock>
           <ServiceBlock
             onClick={() => setSelectedTab(6)}
@@ -234,7 +145,7 @@ const Services = () => {
               size={26}
               color={selectedTab !== 6 && 'primary'}
             />
-            <Service>Photography and videography</Service>
+            <Service>{T('photographyAndVideoghraphy')}</Service>
           </ServiceBlock>
         </Row>
       </ShowOnDesktop>
@@ -250,6 +161,8 @@ const Services = () => {
             selected={selectedTab === 1}
           >
             <Service>Marketing Plan</Service>
+            <Service>{T('marketingPlan')}</Service>
+
             <Icon
               icon="e97d"
               size={26}
@@ -266,7 +179,7 @@ const Services = () => {
               size={26}
               color={selectedTab !== 2 && 'primary'}
             />
-            <Service>Design and development</Service>
+            <Service>{T('designAndDevelopment')}</Service>
           </ServiceBlock>
         </Row>
         <Row>
@@ -279,7 +192,7 @@ const Services = () => {
               size={26}
               color={selectedTab !== 3 && 'primary'}
             />
-            <Service>Business consultation</Service>
+            <Service>{T('buissnessConsultation')}</Service>
           </ServiceBlock>
           <ServiceBlock
             onClick={() => setSelectedTab(4)}
@@ -291,7 +204,7 @@ const Services = () => {
               size={26}
               color={selectedTab !== 4 && 'primary'}
             />
-            <Service>Training and Workshop</Service>
+            <Service>{T('trainingAndWorkshop')}</Service>
           </ServiceBlock>
         </Row>
         <Row>
@@ -305,7 +218,7 @@ const Services = () => {
               size={26}
               color={selectedTab !== 5 && 'primary'}
             />
-            <Service>Original digital growth</Service>
+            <Service>{T('growthHacking')}</Service>
           </ServiceBlock>
           <ServiceBlock
             onClick={() => setSelectedTab(6)}
@@ -319,6 +232,7 @@ const Services = () => {
               color={selectedTab !== 6 && 'primary'}
             />
             <Service>Photography and videography</Service>
+            <Service>{T('marketingPlan')}</Service>
           </ServiceBlock>
         </Row>
       </HideOnDeskTop>
@@ -331,7 +245,7 @@ const Services = () => {
         <Logo src={BrandLogo} alt="" />
       </LogoContainer>
       <Container>
-        <Text title>Services</Text>
+        <Text title>{T('services')}</Text>
         {renderdDeskTopServicesTabs()}
         {renderdMobileServicesTabs()}
         {renderTextBasedOnSelectedTab()}

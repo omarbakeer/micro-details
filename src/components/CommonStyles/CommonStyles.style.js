@@ -24,7 +24,7 @@ export const DesktopRandomTextImg = styled.img`
     `
     height: 80%;
     bottom: 0; `}
-    ${({ theme }) => theme.media.phone`
+  ${({ theme }) => theme.media.phone`
       display:none;
   `}
 `
@@ -91,6 +91,9 @@ export const LogoContainer = styled.div`
 export const Text = styled.span`
   display:block;
   color: ${({ theme, color }) => theme.colors[color || 'black']};
+  ${({ underLine }) => underLine && 'text-decoration: underline;'}
+  max-width: ${({ maxWidth }) => maxWidth};
+
 
   ${({ title }) =>
     title &&
@@ -102,6 +105,7 @@ export const Text = styled.span`
     -ms-letter-spacing: 12px;
     letter-spacing: 12px;
     font-weight:500;
+    text-transform:capitalize;
   `}
   ${({ secondryTitle }) =>
     secondryTitle &&
@@ -129,7 +133,7 @@ export const Text = styled.span`
  ${({ paragraph }) =>
    paragraph &&
    `  
-    font-size: 14px;
+    font-size: 16px;
     margin: 10px 0px;
   `}
 
@@ -153,7 +157,7 @@ export const Text = styled.span`
   `}
   ${(paragraph) =>
     paragraph &&
-    `  
+    ` 
       font-size: 14px;
       letter-spacing: 2px;
       -webkit-letter-spacing: 2px;

@@ -39,8 +39,8 @@ export const ParagraphContainer = styled.div`
   background: ${({ theme }) => theme.colors.primary};
   margin-left: 20px;
   padding: 10px;
-  width: 40%;
-  height: 70px;
+  width: 250px;
+  height: 100px;
   ${({ theme }) => theme.media.tablet`
   height: 200px;
 `}

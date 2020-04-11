@@ -46,6 +46,7 @@ export const DescriptionsContainer = styled.div`
 
 export const Sentence = styled.div`
   font-size: 16px;
+  margin: 10px 0px;
   font-weight: 300;
   letter-spacing: 2.5px;
   ${({ underLine }) => underLine && 'text-decoration: underline;'}

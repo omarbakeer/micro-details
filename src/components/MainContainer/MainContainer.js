@@ -21,7 +21,7 @@ import {
 } from '../CommonStyles'
 
 const MainContainer = () => {
-  const [active, setActive] = useState(4)
+  const [active, setActive] = useState(0)
   return (
     <LanguageProvider>
       <ThemeProvider theme={Theme}>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import GoogleMapReact from 'google-map-react'
+import { T } from 'locale'
 import RandomText from 'images/random-text.png'
 import {
   Section,
@@ -58,17 +59,17 @@ const ContactUs = ({ isActive, setActive }) => {
 
       <SectionSidebar onClick={() => setActive(0)}>
         <SidebarName />
-        <SidebarName>Contact Us</SidebarName>
+        <SidebarName>{T('contactUs')}</SidebarName>
       </SectionSidebar>
       {isActive && (
         <ContentContainer>
           <LogoContainer>
             <Logo src={BrandLogo} alt="" />
           </LogoContainer>
-          <Text title>Contact us</Text>
+          <Text title>{T('contactUs')}</Text>
           <BasicRow>
             <Col flex={3}>
-              <Title>Contact info.</Title>
+              <Title>{T('contactInfo')}</Title>
               <Row>
                 <Icon icon="ec8a" size={24} extendStyle={extendIcon} />
                 <Link href="tel:+966 12 6017687">+966 12 6017687</Link>
@@ -81,7 +82,7 @@ const ContactUs = ({ isActive, setActive }) => {
               </Row>
             </Col>
             <Col flex={4}>
-              <Title>Our offices</Title>
+              <Title>{T('ourOffices')}</Title>
               <Row>
                 <Address active={activeAddress === 'sa'} onClick={() => setActiveAddress('sa')}>
                   <AddressTitle>Jeddah</AddressTitle>
@@ -103,28 +104,28 @@ const ContactUs = ({ isActive, setActive }) => {
               <Title>Say Hello!</Title>
               <Form onSubmit={handleSubmit} method="POST" autoComplete="nope">
                 <InputField
-                  placeholder="Full Name"
+                  placeholder={T('fullNamePlaceholder')}
                   value={fullName}
                   onChange={({ target : { value }}) => setFullName(value)}
                 />
                 <InputField
                   type="email"
-                  placeholder="Email Address"
+                  placeholder={T('emailPlaceholder')}
                   value={emailAddress}
                   onChange={({ target : { value }}) => setEmailAddress(value)}
                 />
                 <InputField
                   type="tel"
-                  placeholder="Mobile"
+                  placeholder={T('mobilePlaceholder')}
                   value={mobile}
                   onChange={({ target : { value }}) => setMobile(value)}
                 />
                 <TextArea 
                   value={message}
                   onChange={({ target : { value }}) => setMessage(value)}
-                  placeholder="Message"
+                  placeholder={T('messagePlaceholder')}
                 />
-                <Button>Send</Button>
+                <Button>{T('send')}</Button>
               </Form>
             </Col>
             <Col flex={4} styleMapOnMobile>

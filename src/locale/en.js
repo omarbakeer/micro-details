@@ -67,7 +67,15 @@ const en = {
   methodical: 'methodical',
   methodicalDescription: 'Our goal is to understand the connection between customer and content. Imagine your brand is a puzzle and every piece, a tailored strategy. Little by little, we’re here to make it to the big picture.',
   detailed: 'detailed',
-  detailedDescription: 'Getting into the details is testing work. But we’re patient and we’re ready to put in the effort. To provide you with a unique and successful experience, we go in headstrong for sure-fire results.'
+  detailedDescription: 'Getting into the details is testing work. But we’re patient and we’re ready to put in the effort. To provide you with a unique and successful experience, we go in headstrong for sure-fire results.',
+  contactUs: 'contact us',
+  contactInfo: 'Contact Info.',
+  ourOffices: 'Our offices',
+  fullNamePlaceholder: 'Full Name',
+  emailPlaceholder: 'Email Address',
+  mobilePlaceholder: 'Mobile',
+  messagePlaceholder: 'Message',
+  send: 'Send',
 }
 
 export default en

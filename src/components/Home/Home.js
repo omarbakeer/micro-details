@@ -1,4 +1,7 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
+import { useLocation } from 'react-router-dom'
+import { LanguageContext } from 'locale'
+import { languageOptions } from 'locale'
 import RandomText from 'images/random-text.png'
 import WeCan from 'components/WeCan'
 import WeAre from 'components/WeAre'
@@ -32,6 +35,17 @@ import {
 
 const Home = ({ isActive, setActive }) => {
   const [selectedMenu, setSelectedMenu] = useState(1)
+  const location = useLocation()
+  const languageContext = useContext(LanguageContext)
+
+  useEffect(() => {
+    let currentPath = location.pathname
+    if (currentPath === '/ar') {
+      languageContext.setLanguage(languageOptions[1])
+    }else{
+      languageContext.setLanguage(languageOptions[0])
+    }
+  }, [])
 
   const renderMenu = () => {
     return (

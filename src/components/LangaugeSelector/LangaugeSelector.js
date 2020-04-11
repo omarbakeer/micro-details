@@ -5,8 +5,10 @@ import Ar from 'images/saudi-flag.jpg'
 import { T } from 'locale'
 import { languageOptions } from 'locale'
 import { LanguageContext } from 'locale'
+import { useHistory } from 'react-router-dom'
 
 const LanguageSelector = () => {
+  const history = useHistory()
   const languageContext = useContext(LanguageContext)
   const [language, seLangauge] = useState(languageContext.language)
 
@@ -14,6 +16,11 @@ const LanguageSelector = () => {
     const selectedLanguage = languageOptions.find(
       (item) => item.id !== language.id
     )
+    if (selectedLanguage.id === 'ar') {
+      history.push('/ar')
+    } else {
+      history.push('/')
+    }
     seLangauge(selectedLanguage)
     languageContext.setLanguage(selectedLanguage)
   }

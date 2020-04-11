@@ -1,13 +1,17 @@
 import styled from 'styled-components'
 
-export const WeCanContainer = styled.div`
+export const WeAreContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 77%;
   /* margin-left: 10px; */
+  ${({ theme }) => theme.media.phone`
+    flex-direction: column;
+    align-items: center;
+  `}
 `
 
-export const WeCanItem = styled.div`
+export const WeAreItem = styled.div`
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -18,21 +22,14 @@ export const WeCanItem = styled.div`
   width: 35%;
   `}
   ${({ theme }) => theme.media.phone`
-  width: 50%;
-  `}
-`
-export const WeCanTitleWithIcon = styled.div`
-  display: flex;
-  align-items: flex-end;
-  margin-bottom: 15px;
-  height: 35px;
-  ${({ theme }) => theme.media.phone`
-  margin:auto;
-  text-align:center;
+  align-items: center;
+  width: 100%;
+  margin-right: 0;
   `}
 `
 
 export const Title = styled.h5`
+  width: min-content;
   margin: 0;
   background-color: ${({ theme }) => theme.colors.primary};
   font-size: 20px;
@@ -40,11 +37,12 @@ export const Title = styled.h5`
   line-height: 1;
   letter-spacing: 3px;
   text-transform: uppercase;
+  margin-bottom: 15px;
 `
 
 export const ImgIcon = styled.img`
-  width: 25px;
-  margin-right: 10px;
+  width: ${({ size }) => size || 55}px;
+  margin-bottom: 15px;
 `
 
 export const ContentText = styled.p`
@@ -55,5 +53,6 @@ export const ContentText = styled.p`
   `}
   ${({ theme }) => theme.media.phone`
   font-size: 13px;
+  text-align: center;
   `}
 `

@@ -28,72 +28,16 @@ import {
   HomeDetails,
   HomeMenu,
   MenuItem,
-  MobileMenuItem,
-  Row,
-  MobileMenu,
 } from './Home.style'
 
 const Home = ({ isActive, setActive }) => {
-  const [selectedMenu, setSelectedMenu] = useState(0)
+  const [selectedMenu, setSelectedMenu] = useState(1)
 
-  const renderMobileMenu = () => {
-    return (
-      <HideOnDeskTop>
-        <MobileMenu>
-          <Row>
-            <MobileMenuItem
-              onClick={() => setSelectedMenu(0)}
-              selected={selectedMenu === 0}
-            >
-              we{' '}
-              <SpecialStyle italic={selectedMenu === 0} vBold>
-                CAN
-              </SpecialStyle>
-            </MobileMenuItem>
-            <MobileMenuItem
-              onClick={() => setSelectedMenu(1)}
-              selected={selectedMenu === 1}
-              lastEelement
-            >
-              we{' '}
-              <SpecialStyle italic={selectedMenu === 1} vBold>
-                ARE
-              </SpecialStyle>
-            </MobileMenuItem>
-          </Row>
-          <Row>
-            <MobileMenuItem
-              onClick={() => setSelectedMenu(2)}
-              selected={selectedMenu === 2}
-            >
-              {' '}
-              we{' '}
-              <SpecialStyle italic={selectedMenu === 3} vBold>
-                DO
-              </SpecialStyle>
-            </MobileMenuItem>
-            <MobileMenuItem
-              onClick={() => setSelectedMenu(3)}
-              lastEelement
-              selected={selectedMenu === 3}
-            >
-              we{' '}
-              <SpecialStyle italic={selectedMenu === 3} vBold>
-                WORK
-              </SpecialStyle>{' '}
-              with
-            </MobileMenuItem>
-          </Row>
-        </MobileMenu>
-      </HideOnDeskTop>
-    )
-  }
-
-  const renderDesktopMenu = () => {
+  const renderMenu = () => {
     return (
       <HomeMenu>
-        <ShowOnDesktop>
           <MenuItem
+            rightBorder
             selected={selectedMenu === 0}
             onClick={() => setSelectedMenu(0)}
           >
@@ -112,6 +56,7 @@ const Home = ({ isActive, setActive }) => {
             </SpecialStyle>
           </MenuItem>
           <MenuItem
+            rightBorder
             selected={selectedMenu === 2}
             onClick={() => setSelectedMenu(2)}
           >
@@ -130,7 +75,6 @@ const Home = ({ isActive, setActive }) => {
             </SpecialStyle>{' '}
             with
           </MenuItem>
-        </ShowOnDesktop>
       </HomeMenu>
     )
   }
@@ -180,10 +124,8 @@ const Home = ({ isActive, setActive }) => {
             </Banner>
           </ShowOnDesktop>
 
-          {renderMobileMenu()}
-
           <HomeDetails>
-            {renderDesktopMenu()}
+            {renderMenu()}
             {selectedMenu === 0 && <WeCan />}
             {selectedMenu === 1 && <WeAre />}
             {selectedMenu === 2 && <WeAre />}

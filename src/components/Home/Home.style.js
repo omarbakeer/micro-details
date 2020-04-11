@@ -60,12 +60,22 @@ export const SpecialStyle = styled.span`
 
 export const HomeDetails = styled.div`
   display: flex;
+  ${({ theme }) => theme.media.phone`
+    flex-direction: column;
+    align-items: center;
+  `}
 `;
 
 export const HomeMenu = styled.div`
   display: flex;
   flex-direction: column;
   width: 18%;
+  ${({ theme }) => theme.media.phone`
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 40px;
+  `}
 `;
 
 export const MenuItem = styled.div`
@@ -75,41 +85,22 @@ export const MenuItem = styled.div`
   border-bottom: 2px solid ${({ theme }) => theme.colors.primary};
   cursor: pointer;
   transition: all 0.5s linear;
-  ${({ selected, theme }) => selected && `
-    background-color: ${theme.colors.primary};
+  background-color: ${({ selected, theme }) => selected ? theme.colors.primary : theme.colors.lightGray};
+  
+  ${({ theme }) => theme.media.phone`
+    max-width: unset;
+    width: 50%;
+    box-sizing: border-box;
+    text-align: right;
+  `}
+  ${({ theme, rightBorder }) => rightBorder && theme.media.phone`
+    border-right: solid 2px ${theme.colors.primary};
   `}
 `;
-
-export const MobileMenu =styled.div`
-  width:90%;
-  margin:10px auto;
-`
-export const MobileMenuItem = styled.div`
-  width: 33%;
-  margin: 0;
-  background-color: #f8f8f8;
-  display: inline-block;
-  background: ${({ theme, selected }) => selected && theme.colors.primary};
-  border-bottom: ${({ theme, lastRow }) =>
-    !lastRow && `solid 2px${theme.colors.primary}`};
-  border-right: ${({ theme, lastEelement }) =>
-    !lastEelement && `solid 2px${theme.colors.primary}`};
-  color: ${({ theme }) => theme.colors.black};
-  text-align: center;
-  &&:hover {
-    cursor: pointer;
-    background: ${({ theme }) => theme.colors.primary};
-  }
-  ${({ theme }) => theme.media.phone`
-  width: 50%;
-  padding: 20px 0px;
-  `}
-`
 
 export const Row = styled.div`
   display: flex;
   justify-content: center;
   position: relative;
   width: 100%;
-
 `

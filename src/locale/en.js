@@ -62,6 +62,12 @@ const en = {
     'To help ambitious organizations reach the right audience to maximize growth and profitability.',
   visionParagraph:
     'Grow into the most reliable and go-to digital and marketing agency in the industry.',
+  creative: 'creative',
+  creativeDescription: 'Experienced and skilled in every aspect of Advertising. We understand that Digital and Marketing is the current medium for growth. We’re focused. We listen. We have that little spark.',
+  methodical: 'methodical',
+  methodicalDescription: 'Our goal is to understand the connection between customer and content. Imagine your brand is a puzzle and every piece, a tailored strategy. Little by little, we’re here to make it to the big picture.',
+  detailed: 'detailed',
+  detailedDescription: 'Getting into the details is testing work. But we’re patient and we’re ready to put in the effort. To provide you with a unique and successful experience, we go in headstrong for sure-fire results.'
 }
 
 export default en

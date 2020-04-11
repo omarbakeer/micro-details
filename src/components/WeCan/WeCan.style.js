@@ -4,7 +4,9 @@ export const WeCanContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   width: 77%;
-  /* margin-left: 10px; */
+  ${({ theme }) => theme.media.phone`
+    width: 95%;
+  `}
 `
 
 export const WeCanItem = styled.div`
@@ -28,8 +30,7 @@ export const WeCanTitleWithIcon = styled.div`
   margin-bottom: 15px;
   height: 35px;
   ${({ theme }) => theme.media.phone`
-  margin:auto;
-  text-align:center;
+    text-align:center;
   `}
 `
 

@@ -82,6 +82,7 @@ export const LogoContainer = styled.div`
   top: 0;
   left: 2%;
   position: absolute;
+  z-index: 1;
   ${({ theme }) => theme.media.phone`
   position: fixed;
 

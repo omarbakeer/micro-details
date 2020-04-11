@@ -2,9 +2,6 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   display: block;
-  ${({ theme }) => theme.media.phone`
-    height: 300px;
-  `}
 `
 
 export const Row = styled.div`
@@ -12,7 +9,10 @@ export const Row = styled.div`
   justify-content: center;
   position: relative;
   width: 100%;
-
+  ${({ theme }) => theme.media.phone`
+    text-align:center;
+    display:block;
+    `}
 `
 
 export const ServiceBlock = styled.div`
@@ -32,27 +32,24 @@ export const ServiceBlock = styled.div`
     background: ${({ theme }) => theme.colors.primary};
   }
   ${({ theme }) => theme.media.phone`
-  width: 50%;
-  padding: 75px 0px;
-  `}
+    border:none;
+    width:100%;
+    text-align:center;
+    display:block;
+    `}
 `
 
 export const Service = styled.span`
   font-weight: 700;
   text-transform: uppercase;
   color: ${({ theme }) => theme.colors.black};
+
   &&:hover {
   }
   ${({ theme }) => theme.media.tablet`
-  font-size: 14px;
-  `}
+font-size: 15px;
+`}
   ${({ theme }) => theme.media.phone`
-  font-size: 12px;
-  `}
+font-size: 15px;
+`}
 `
-
-export const Wrapper = styled.div`
-  display: block;
-`
-
-

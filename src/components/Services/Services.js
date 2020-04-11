@@ -13,6 +13,7 @@ import { Container, Row, ServiceBlock, Service } from './Services.style'
 
 const Services = () => {
   const [selectedTab, setSelectedTab] = useState(4)
+  
   const renderTextBasedOnSelectedTab = () => {
     if (selectedTab === 1) {
       return (

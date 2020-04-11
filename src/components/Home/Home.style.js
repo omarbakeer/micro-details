@@ -10,6 +10,12 @@ export const Banner = styled.div`
   height: 65%;
 `;
 
+export const ClientsContainer =styled.div`
+  ${({ theme }) => theme.media.desktop`
+    width:70%;
+  `}
+`
+
 export const Slogan = styled.div`
   width: 40%;
   padding: auto;

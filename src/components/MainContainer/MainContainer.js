@@ -40,7 +40,7 @@ const MainContainer = () => {
               )}
             </Section>
             <Section active={active === 2}>
-              <SectionSidebar onClick={() => setActive(2)}>
+              <SectionSidebar primaryColor onClick={() => setActive(2)}>
                 <SidebarName>{T('services')}</SidebarName>
               </SectionSidebar>
               {active === 2 && (

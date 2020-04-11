@@ -1,31 +1,34 @@
 import styled from 'styled-components'
 
 export const Section = styled.section`
-  flex: 0;
+  width: 4vw;
   position: relative;
   height: 100%;
-  transition: flex 0.8s ease;
-  ${({ active }) => active && 'flex: 25;'}
+  transition: all 0.8s ease;
+  ${({ active }) => active && 'width: 84vw;'}
   display: flex;
   ${({ theme, active }) => theme.media.phone`
+      width: 100%;
+      height: 5vh;
       flex-direction: column;
       transition: all 0.8s ease;
-      ${active && 'flex: 16;'}
+      ${active && 'height: 80vh;'}
     `}
 `
 
 export const SectionSidebar = styled.div`
-  width: calc(100vw / 25);
+  width: 4vw;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   cursor: pointer;
   position: relative;
+  overflow: hidden;
   background: ${({ theme, primaryColor }) => !primaryColor && theme.colors.black};
   ${({ theme }) => theme.media.phone`
     width: 100%;
-    height: calc(100vh / 20);
+    height: 5vh;
     flex-direction: row;
     justify-content: center;
   `}
@@ -38,8 +41,8 @@ export const SidebarName = styled.div`
     top: calc(100vh - 500px);
     width: 350px;
     text-align: center;
-    font-size: 24px;
-    padding: 5px 0;
+    height: 4vw;
+    line-height: 4vw;
     color: ${({ theme, primaryColor }) =>
       primaryColor ? theme.colors.primary : theme.colors.black};
     background: ${({ theme, primaryColor }) =>
@@ -63,8 +66,9 @@ export const SidebarName = styled.div`
 `
 
 export const ContentContainer = styled.div`
-  overflow: auto;
-  width: calc(100% - calc(100vw / 25));
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 80vw;
   background: white;
   padding: 80px 80px;
   position: relative;

@@ -28,14 +28,14 @@ const MainContainer = () => {
           <GlobalStyle />
           <LanguageSelector />
           <Main>
-            <ContactUs isActive={active === 0} setActive={setActive} />
-            <Section active={active === 1}>
-              <SectionSidebar onClick={() => setActive(1)}>
-                <SidebarName primaryColor>{T('weWorkWith')}</SidebarName>
+            <Home isActive={active === 4} setActive={setActive} />
+            <Section active={active === 3}>
+              <SectionSidebar onClick={() => setActive(3)}>
+                <SidebarName primaryColor>about us</SidebarName>
               </SectionSidebar>
-              {active === 1 && (
+              {active === 3 && (
                 <ContentContainer>
-                  <Work />
+                  <About />
                 </ContentContainer>
               )}
             </Section>
@@ -49,17 +49,17 @@ const MainContainer = () => {
                 </ContentContainer>
               )}
             </Section>
-            <Section active={active === 3}>
-              <SectionSidebar onClick={() => setActive(3)}>
-                <SidebarName primaryColor>about us</SidebarName>
+            <Section active={active === 1}>
+              <SectionSidebar onClick={() => setActive(1)}>
+                <SidebarName primaryColor>{T('weWorkWith')}</SidebarName>
               </SectionSidebar>
-              {active === 3 && (
+              {active === 1 && (
                 <ContentContainer>
-                  <About />
+                  <Work />
                 </ContentContainer>
               )}
             </Section>
-            <Home isActive={active === 4} setActive={setActive} />
+            <ContactUs isActive={active === 0} setActive={setActive} />
           </Main>
           <Footer />
         </ThemeProvider>

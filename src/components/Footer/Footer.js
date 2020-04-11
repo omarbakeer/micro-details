@@ -1,5 +1,6 @@
-import React from 'react';
-import { Icon } from 'components/CommonStyles';
+import React from 'react'
+import { Icon } from 'components/CommonStyles'
+import RandomText from 'images/random-text.png'
 import {
   Footer,
   Filler,
@@ -12,19 +13,26 @@ import {
   SocialMediaLink,
   CopyRights,
   extendIcon,
-} from './Footer.style';
+} from './Footer.style'
+import { DesktopRandomTextImg } from '../CommonStyles'
 
 const FooterContainer = (props) => {
   return (
     <Footer>
-      <Filler />
+      <Filler>
+        <DesktopRandomTextImg footer src={RandomText} alt="micro details logo" />
+      </Filler>
       <Filler color="black" />
-      <Filler />
+      <Filler>
+        <DesktopRandomTextImg footer src={RandomText} alt="micro details logo" />
+      </Filler>
       <Filler color="black" />
-      <Filler />
+      <Filler>
+        <DesktopRandomTextImg footer src={RandomText} alt="micro details logo" />
+      </Filler>
       <Division>
         <TitleWithIcon>
-          <Icon icon="ef79" size={24} extendStyle={extendIcon}/>
+          <Icon icon="ef79" size={24} extendStyle={extendIcon} />
           <Title>Jeddah</Title>
         </TitleWithIcon>
         <Address>
@@ -33,7 +41,7 @@ const FooterContainer = (props) => {
       </Division>
       <Division>
         <TitleWithIcon>
-          <Icon icon="ef79" size={24} extendStyle={extendIcon}/>
+          <Icon icon="ef79" size={24} extendStyle={extendIcon} />
           <Title>Cairo</Title>
         </TitleWithIcon>
         <Address>
@@ -42,12 +50,14 @@ const FooterContainer = (props) => {
       </Division>
       <Division flex={4}>
         <TitleWithIcon mb={16}>
-          <Icon icon="ec8a" size={24}/>
+          <Icon icon="ec8a" size={24} />
           <Link href="tel:+966562330130">+966 56 233 0130</Link>
         </TitleWithIcon>
         <TitleWithIcon>
-          <Icon icon="ef14" size={24}/>
-          <Link href="mailto:info@micro-details.com">info@micro-details.com</Link>
+          <Icon icon="ef14" size={24} />
+          <Link href="mailto:info@micro-details.com">
+            info@micro-details.com
+          </Link>
         </TitleWithIcon>
       </Division>
       <Division SocialDivision flex={6}>
@@ -66,11 +76,12 @@ const FooterContainer = (props) => {
           </SocialMediaLink>
         </SocialMediaContainer>
         <CopyRights>
-          © <span style={{fontWeight: 500}}>Micro Details</span> - All rights reserved 2020
+          © <span style={{ fontWeight: 500 }}>Micro Details</span> - All rights
+          reserved 2020
         </CopyRights>
       </Division>
     </Footer>
-  );
-};
+  )
+}
 
-export default FooterContainer;
+export default FooterContainer

@@ -7,4 +7,7 @@ export {
   Logo,
   LogoContainer,
   Icon,
-} from './CommonStyles.style';
+  ShowOnDesktop,
+  HideOnDeskTop,
+  DesktopRandomTextImg
+} from './CommonStyles.style'

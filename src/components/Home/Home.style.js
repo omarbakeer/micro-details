@@ -69,6 +69,7 @@ export const HomeMenu = styled.div`
 
 export const MenuItem = styled.div`
   max-width: 70%;
+  background-color: #f8f8f8;
   padding: 20px 10px;
   border-bottom: 2px solid ${({ theme }) => theme.colors.primary};
   cursor: pointer;
@@ -77,3 +78,37 @@ export const MenuItem = styled.div`
     background-color: ${theme.colors.primary};
   `}
 `;
+
+export const MobileMenu =styled.div`
+  width:90%;
+  margin:10px auto;
+`
+export const MobileMenuItem = styled.div`
+  width: 33%;
+  margin: 0;
+  background-color: #f8f8f8;
+  display: inline-block;
+  background: ${({ theme, selected }) => selected && theme.colors.primary};
+  border-bottom: ${({ theme, lastRow }) =>
+    !lastRow && `solid 2px${theme.colors.primary}`};
+  border-right: ${({ theme, lastEelement }) =>
+    !lastEelement && `solid 2px${theme.colors.primary}`};
+  color: ${({ theme }) => theme.colors.black};
+  text-align: center;
+  &&:hover {
+    cursor: pointer;
+    background: ${({ theme }) => theme.colors.primary};
+  }
+  ${({ theme }) => theme.media.phone`
+  width: 50%;
+  padding: 20px 0px;
+  `}
+`
+
+export const Row = styled.div`
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+
+`

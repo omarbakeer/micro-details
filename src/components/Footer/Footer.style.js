@@ -20,6 +20,7 @@ export const Footer = styled.footer`
 export const Filler = styled.div`
   flex: 1;
   background: ${({ color, theme }) =>  theme.colors[color ||'primary']};
+  position:relative;
 `;
 
 export const Division = styled.div`

@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import GoogleMapReact from 'google-map-react'
+import RandomText from 'images/random-text.png'
 import {
   Section,
   SectionSidebar,
@@ -9,6 +10,7 @@ import {
   Logo,
   Text,
   Icon,
+  DesktopRandomTextImg
 } from 'components/CommonStyles'
 import {
   BasicRow,
@@ -52,6 +54,8 @@ const ContactUs = ({ isActive, setActive }) => {
 
   return (
     <Section active={isActive} color="#fcd72f">
+            <DesktopRandomTextImg src={RandomText} alt="micro details logo" />
+
       <SectionSidebar onClick={() => setActive(0)}>
         <SidebarName />
         <SidebarName>Contact Us</SidebarName>

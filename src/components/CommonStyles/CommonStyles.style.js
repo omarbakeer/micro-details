@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const Section = styled.section`
     flex: 1;
+    position:relative;
     height: 100%;
     transition: flex 0.8s ease;
     ${({ active }) => active && 'flex: 25;'}
@@ -12,6 +13,20 @@ export const Section = styled.section`
       transition: all 0.8s ease;
       ${active && 'flex: 16;'}
     `}
+
+`
+
+export const DesktopRandomTextImg = styled.img`
+  position: absolute;
+  height: 40%;
+  ${({ footer }) =>
+    footer &&
+    `
+    height: 80%;
+    bottom: 0; `}
+    ${({ theme }) => theme.media.phone`
+      display:none;
+  `}
 `
 
 export const SectionSidebar = styled.div`
@@ -30,7 +45,7 @@ export const SectionSidebar = styled.div`
 `
 
 export const SidebarName = styled.div`
-  margin-bottom: 100px;
+  // margin-bottom: 100px;
   white-space: nowrap;
   transform: rotate(-90deg);
   transform-origin: left top;
@@ -58,7 +73,6 @@ export const ContentContainer = styled.div`
       position: unset;
       padding: 5px;
     `}
-
 `
 export const Logo = styled.img`
   height: 120px;
@@ -68,6 +82,10 @@ export const LogoContainer = styled.div`
   top: 0;
   left: 2%;
   position: absolute;
+  ${({ theme }) => theme.media.phone`
+  position: fixed;
+
+`}
 `
 
 export const Text = styled.span`
@@ -83,7 +101,7 @@ export const Text = styled.span`
     -moz-letter-spacing: 12px;
     -ms-letter-spacing: 12px;
     letter-spacing: 12px;
-    font-weight:700;
+    font-weight:500;
   `}
   ${({ secondryTitle }) =>
     secondryTitle &&
@@ -168,4 +186,18 @@ export const Icon = styled.span`
   }
   transform: ${({ flip }) => (flip && 'scaleX(-1)') || 'unset'};
   ${({ extendStyle }) => extendStyle || ''}
+`
+
+export const ShowOnDesktop = styled.div`
+  ${({ theme }) => theme.media.phone`
+    display: none;
+`}
+`
+export const HideOnDeskTop = styled.div`
+  ${({ theme }) => theme.media.desktop`
+  display:none;
+    `}
+  ${({ theme }) => theme.media.tablet`
+    display:none;
+      `}
 `

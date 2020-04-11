@@ -1,13 +1,18 @@
 import React, { useState } from 'react'
-import { Logo, LogoContainer, Text, Icon } from 'components/CommonStyles'
+import {
+  Logo,
+  LogoContainer,
+  Text,
+  Icon,
+  HideOnDeskTop,
+  ShowOnDesktop,
+} from 'components/CommonStyles'
 import BrandLogo from 'images/Logo.png'
 import {
   Container,
   Row,
   ServiceBlock,
   Service,
-  ShowOnDesktop,
-  HideOnDeskTop,
 } from './Services.style'
 
 const Services = () => {

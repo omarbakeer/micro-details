@@ -4,21 +4,22 @@ import { LanguageProvider } from 'locale'
 import { GlobalStyle, Main } from './MainContainer.style'
 import Footer from 'components/Footer'
 import Theme from 'utils/theme'
-import Logo from 'images/Logo.png'
 import Home from 'components/Home'
 import About from 'components/About'
 import Services from 'components/Services'
 import Work from 'components/Work'
 import ContactUs from 'components/ContactUs'
+import RandomText from 'images/random-text.png'
 import {
   Section,
   SectionSidebar,
   SidebarName,
   ContentContainer,
+  DesktopRandomTextImg,
 } from '../CommonStyles'
 
 const MainContainer = () => {
-  const [active, setActive] = useState(1)
+  const [active, setActive] = useState(4)
   return (
     <LanguageProvider>
       <ThemeProvider theme={Theme}>
@@ -37,6 +38,7 @@ const MainContainer = () => {
             )}
           </Section>
           <Section active={active === 2} color="#fcd72f">
+            <DesktopRandomTextImg src={RandomText} alt="micro details logo" />
             <SectionSidebar onClick={() => setActive(2)}>
               <SidebarName />
               <SidebarName>services</SidebarName>

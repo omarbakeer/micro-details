@@ -42,7 +42,7 @@ const Home = ({ isActive, setActive }) => {
     let currentPath = location.pathname
     if (currentPath === '/ar') {
       languageContext.setLanguage(languageOptions[1])
-    }else{
+    } else {
       languageContext.setLanguage(languageOptions[0])
     }
   }, [])

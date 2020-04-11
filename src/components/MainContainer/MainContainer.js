@@ -25,9 +25,9 @@ const MainContainer = () => {
   const [active, setActive] = useState(4)
   return (
     <LanguageProvider>
-      <ThemeProvider theme={Theme}>
-        <GlobalStyle />
-        <Router>
+      <Router>
+        <ThemeProvider theme={Theme}>
+          <GlobalStyle />
           <LanguageSelector />
           <Main>
             <ContactUs isActive={active === 0} setActive={setActive} />
@@ -67,9 +67,9 @@ const MainContainer = () => {
             </Section>
             <Home isActive={active === 4} setActive={setActive} />
           </Main>
-        </Router>
-        <Footer />
-      </ThemeProvider>
+          <Footer />
+        </ThemeProvider>
+      </Router>
     </LanguageProvider>
   )
 }

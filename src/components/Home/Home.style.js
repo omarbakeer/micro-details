@@ -4,20 +4,14 @@ import bannerBackground from 'images/banner-rectangle.png';
 ****************** Home Commons ********************
 ****************************************************/
 
-export const Flex = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-`;
-
 export const Banner = styled.div`
-  flex: 1;
   display: flex;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  height: 65%;
 `;
 
 export const Slogan = styled.div`
-  flex: 2;
+  width: 40%;
   padding: auto;
   display: flex;
   justify-content: center;
@@ -44,45 +38,42 @@ export const NoWrapp = styled.span`
 
 export const DescriptionsContainer = styled.div`
   padding: 0 3%;
-  flex: 3;
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 `;
 
 export const Sentence = styled.div`
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: 300;
   letter-spacing: 2.5px;
+  ${({ underLine }) => underLine && 'text-decoration: underline;'}
+`;
+
+export const SpecialStyle = styled.span`
+  ${({ bold }) => bold && 'font-weight: 500;'}
+  ${({ vBold }) => vBold && 'font-weight: 600;'}
+  ${({ italic }) => italic && 'font-style: italic;'}
 `;
 
 export const HomeDetails = styled.div`
-  flex: 1;
   display: flex;
 `;
 
 export const HomeMenu = styled.div`
-  flex: 1;
   display: flex;
   flex-direction: column;
+  width: 18%;
 `;
 
 export const MenuItem = styled.div`
-  max-width: 60%;
+  max-width: 70%;
   padding: 20px 10px;
-  border-bottom: 2px solid ${({ theme }) => theme.colors.primary}
+  border-bottom: 2px solid ${({ theme }) => theme.colors.primary};
+  cursor: pointer;
+  transition: all 0.5s linear;
+  ${({ selected, theme }) => selected && `
+    background-color: ${theme.colors.primary};
+  `}
 `;
-
-/***************************************************
-****************** We Can Content ******************
-***************************************************/
-
-export const WeCanContainer = styled.div`
-  flex: 3;
-  display: flex;
-  flex-wrap: wrap;
-`
-
-export const WeCanItem = styled.div`
-  flex-grow: 1;
-  width: 33%;
-`

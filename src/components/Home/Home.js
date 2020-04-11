@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import RandomText from 'images/random-text.png'
 import WeCan from 'components/WeCan'
 import WeAre from 'components/WeAre'
 import { T } from 'locale'
@@ -13,7 +12,6 @@ import {
   Logo,
   HideOnDeskTop,
   ShowOnDesktop,
-  DesktopRandomTextImg,
   Text,
 } from 'components/CommonStyles'
 import BrandLogo from 'images/Logo.png'
@@ -31,7 +29,7 @@ import {
 } from './Home.style'
 
 const Home = ({ isActive, setActive }) => {
-  const [selectedMenu, setSelectedMenu] = useState(1)
+  const [selectedMenu, setSelectedMenu] = useState(0)
 
   const renderMenu = () => {
     return (
@@ -80,10 +78,8 @@ const Home = ({ isActive, setActive }) => {
   }
 
   return (
-    <Section active={isActive} color="#fcd72f">
-      <DesktopRandomTextImg src={RandomText} alt="micro details logo" />
-      <SectionSidebar onClick={() => setActive(4)}>
-        <SidebarName />
+    <Section active={isActive}>
+      <SectionSidebar primaryColor onClick={() => setActive(4)}>
         <SidebarName>{T('home')}</SidebarName>
       </SectionSidebar>
       {isActive && (

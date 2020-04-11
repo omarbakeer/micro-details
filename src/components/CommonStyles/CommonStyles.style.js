@@ -1,32 +1,17 @@
 import styled from 'styled-components'
 
 export const Section = styled.section`
-    flex: 1;
-    position:relative;
-    height: 100%;
-    transition: flex 0.8s ease;
-    ${({ active }) => active && 'flex: 25;'}
-    background: ${({ color }) => color || 'black'};
-    display: flex;
-    ${({ theme, active }) => theme.media.phone`
+  flex: 0;
+  position: relative;
+  height: 100%;
+  transition: flex 0.8s ease;
+  ${({ active }) => active && 'flex: 25;'}
+  display: flex;
+  ${({ theme, active }) => theme.media.phone`
       flex-direction: column;
       transition: all 0.8s ease;
       ${active && 'flex: 16;'}
     `}
-
-`
-
-export const DesktopRandomTextImg = styled.img`
-  position: absolute;
-  height: 40%;
-  ${({ footer }) =>
-    footer &&
-    `
-    height: 80%;
-    bottom: 0; `}
-  ${({ theme }) => theme.media.phone`
-      display:none;
-  `}
 `
 
 export const SectionSidebar = styled.div`
@@ -36,6 +21,8 @@ export const SectionSidebar = styled.div`
   flex-direction: column;
   justify-content: flex-end;
   cursor: pointer;
+  position: relative;
+  background: ${({ theme, primaryColor }) => !primaryColor && theme.colors.black};
   ${({ theme }) => theme.media.phone`
     width: 100%;
     height: calc(100vh / 20);
@@ -45,19 +32,34 @@ export const SectionSidebar = styled.div`
 `
 
 export const SidebarName = styled.div`
-  // margin-bottom: 100px;
-  white-space: nowrap;
-  transform: rotate(-90deg);
-  transform-origin: left top;
-  color: ${({ theme, primaryColor }) =>
-    primaryColor ? theme.colors.primary : theme.colors.black};
-  font-size: 36px;
-  text-transform: uppercase;
-  ${({ theme }) => theme.media.phone`
-    margin-bottom: 0;
-    transform: unset;
-    font-size:26px;
-  `}
+    transform: translateX(-100%) rotate(-90deg);
+    transform-origin: right top;
+    position: absolute;
+    top: calc(100vh - 500px);
+    width: 350px;
+    text-align: center;
+    font-size: 24px;
+    padding: 5px 0;
+    color: ${({ theme, primaryColor }) =>
+      primaryColor ? theme.colors.primary : theme.colors.black};
+    background: ${({ theme, primaryColor }) =>
+      primaryColor ? theme.colors.black : theme.colors.primary};
+    font-size: 36px;
+    text-transform: uppercase;
+    ${({ theme }) => theme.media.phone`
+      position: relative;
+      transform: none;
+      transform-origin: unset;
+      top: unset;
+      width: 60%;
+      text-align: center;
+      font-size: 24px;
+      padding: 0;
+      margin: auto;
+      position: unset;
+      height: 100%;
+  }
+    `} 
 `
 
 export const ContentContainer = styled.div`

@@ -1,13 +1,18 @@
 import styled, { createGlobalStyle } from 'styled-components';
+import yellowBkg from 'images/yellow-bkg.png'
 
 export const GlobalStyle = createGlobalStyle`
   html, body {
       margin: 0;
       overflow: hidden;
+      font-family: Qanelas;
+      background: url(${yellowBkg});
+      background-size: 400px;
       ${({ theme }) => theme.media.phone`
         overflow: unset;
+        background-size: 240px;
       `}
-      font-family: Qanelas;
+      
   }
 `;
 
@@ -17,7 +22,7 @@ export const Main = styled.main`
   display: flex;
   flex-direction: row;
   ${({ theme }) => theme.media.phone`
-    flex-direction: column;
+    flex-direction: column-reverse;
     height: 100vh
   `}
 `;

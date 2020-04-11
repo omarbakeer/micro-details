@@ -8,8 +8,6 @@ export const Footer = styled.footer`
   height: 150px;
   width: 100vw;
   display: flex;
-  /* grid-template-columns: 20% 20% 20% 20% 20%; */
-  background: ${({ theme }) => theme.colors.primary};
   position:fixed;
 
   ${({ theme }) => theme.media.phone`
@@ -19,7 +17,7 @@ export const Footer = styled.footer`
 
 export const Filler = styled.div`
   flex: 1;
-  background: ${({ color, theme }) =>  theme.colors[color ||'primary']};
+  background: ${({ color, theme }) => color ? theme.colors[color] : 'transparent'};
   position:relative;
 `;
 
@@ -30,6 +28,7 @@ export const Division = styled.div`
   justify-content: flex-start;
   align-items: center;
   padding: 30px 0;
+  background: ${({ theme }) => theme.colors.primary};
   ${({ SocialDivision }) => SocialDivision && `
     align-items: flex-end;
   `}

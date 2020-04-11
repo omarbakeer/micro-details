@@ -9,5 +9,4 @@ export {
   Icon,
   ShowOnDesktop,
   HideOnDeskTop,
-  DesktopRandomTextImg
 } from './CommonStyles.style'

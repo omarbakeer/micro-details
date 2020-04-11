@@ -10,14 +10,12 @@ import About from 'components/About'
 import Services from 'components/Services'
 import Work from 'components/Work'
 import ContactUs from 'components/ContactUs'
-import RandomText from 'images/random-text.png'
 import { T } from 'locale'
 import {
   Section,
   SectionSidebar,
   SidebarName,
   ContentContainer,
-  DesktopRandomTextImg,
 } from '../CommonStyles'
 
 const MainContainer = () => {
@@ -29,9 +27,8 @@ const MainContainer = () => {
         <LanguageSelector />
         <Main>
           <ContactUs isActive={active === 0} setActive={setActive} />
-          <Section active={active === 1} color="black">
+          <Section active={active === 1}>
             <SectionSidebar onClick={() => setActive(1)}>
-              <SidebarName />
               <SidebarName primaryColor>{T('weWorkWith')}</SidebarName>
             </SectionSidebar>
             {active === 1 && (
@@ -40,10 +37,8 @@ const MainContainer = () => {
               </ContentContainer>
             )}
           </Section>
-          <Section active={active === 2} color="#fcd72f">
-            <DesktopRandomTextImg src={RandomText} alt="micro details logo" />
-            <SectionSidebar onClick={() => setActive(2)}>
-              <SidebarName />
+          <Section active={active === 2}>
+            <SectionSidebar primaryColor onClick={() => setActive(2)}>
               <SidebarName>{T('services')}</SidebarName>
             </SectionSidebar>
             {active === 2 && (
@@ -52,9 +47,8 @@ const MainContainer = () => {
               </ContentContainer>
             )}
           </Section>
-          <Section active={active === 3} color="black">
+          <Section active={active === 3}>
             <SectionSidebar onClick={() => setActive(3)}>
-              <SidebarName />
               <SidebarName primaryColor>about us</SidebarName>
             </SectionSidebar>
             {active === 3 && (

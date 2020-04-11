@@ -1,6 +1,5 @@
 import React from 'react'
 import { Icon } from 'components/CommonStyles'
-import RandomText from 'images/random-text.png'
 import {
   Footer,
   Filler,
@@ -14,22 +13,15 @@ import {
   CopyRights,
   extendIcon,
 } from './Footer.style'
-import { DesktopRandomTextImg } from '../CommonStyles'
 
 const FooterContainer = (props) => {
   return (
     <Footer>
-      <Filler>
-        <DesktopRandomTextImg footer src={RandomText} alt="micro details logo" />
-      </Filler>
+      <Filler />
       <Filler color="black" />
-      <Filler>
-        <DesktopRandomTextImg footer src={RandomText} alt="micro details logo" />
-      </Filler>
+      <Filler />
       <Filler color="black" />
-      <Filler>
-        <DesktopRandomTextImg footer src={RandomText} alt="micro details logo" />
-      </Filler>
+      <Filler />
       <Division>
         <TitleWithIcon>
           <Icon icon="ef79" size={24} extendStyle={extendIcon} />

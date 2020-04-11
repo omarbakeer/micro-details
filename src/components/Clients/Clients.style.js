@@ -1,0 +1,22 @@
+import styled from 'styled-components'
+
+
+export const ClientsContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+`
+export const ClientLogo = styled.img`
+  margin: 10px;
+  vertical-align:middle;
+`
+export const ImageWrapper = styled.div`
+  width : 20%;
+  ${({ theme }) => theme.media.phone`
+  width : 25%;
+
+`}
+  ${({ theme }) => theme.media.phone`
+  width : 33%;
+`}
+`

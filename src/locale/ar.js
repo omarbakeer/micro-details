@@ -1,6 +1,6 @@
 const ar = {
-  weWorkWith : ""
-
+  langauge:'English',
+  weWorkWith : "",
   };
   
   export default ar;

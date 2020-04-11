@@ -1,26 +1,27 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
+import { Button, ButtonContainer, Flag } from './LangaugeSelector.style'
+import Eng from 'images/eng-flag.png'
+import Ar from 'images/saudi-flag.jpg'
+import { T } from 'locale'
 import { languageOptions } from 'locale'
 import { LanguageContext } from 'locale'
 
 const LanguageSelector = () => {
   const languageContext = useContext(LanguageContext)
+  const [language, seLangauge] = useState(languageContext.language)
 
-  const handleLanguageChange = (event) => {
+  const toggleLangauge = () => {
     const selectedLanguage = languageOptions.find(
-      (item) => item.id === event.target.value
+      (item) => item.id !== language.id
     )
-    // set selected language by calling context method
+    seLangauge(selectedLanguage)
     languageContext.setLanguage(selectedLanguage)
   }
 
   return (
-    <select onChange={handleLanguageChange} value={languageContext.language.id}>
-      {languageOptions.map((item) => (
-        <option key={item.id} value={item.id}>
-          {item.text}
-        </option>
-      ))}
-    </select>
+    <ButtonContainer>
+      <Button onClick={() => toggleLangauge()}>{T('langauge')}</Button>
+    </ButtonContainer>
   )
 }
 export default LanguageSelector

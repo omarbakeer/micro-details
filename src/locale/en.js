@@ -1,4 +1,5 @@
 const en = {
+   langauge:'العربية',
    weWorkWith : "We Work With"
   };
   

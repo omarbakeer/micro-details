@@ -3,6 +3,7 @@ import { ThemeProvider } from 'styled-components'
 import { LanguageProvider } from 'locale'
 import { GlobalStyle, Main } from './MainContainer.style'
 import Footer from 'components/Footer'
+import LanguageSelector from 'components/LangaugeSelector'
 import Theme from 'utils/theme'
 import Home from 'components/Home'
 import About from 'components/About'
@@ -24,6 +25,7 @@ const MainContainer = () => {
     <LanguageProvider>
       <ThemeProvider theme={Theme}>
         <GlobalStyle />
+        <LanguageSelector />
         <Main>
           <ContactUs isActive={active === 0} setActive={setActive} />
           <Section active={active === 1} color="black">

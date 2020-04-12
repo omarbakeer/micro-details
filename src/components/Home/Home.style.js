@@ -32,10 +32,15 @@ export const Slogan = styled.div`
 export const SloganText = styled.h1`
   width: min-content;
   font-size: 35px;
-  letter-spacing: 8px;
   text-align: left;
   margin: 0;
   font-weight: 400;
+  ${({ theme }) => theme.direction === 'ltr' && `
+    -webkit-letter-spacing: 8px;
+    -moz-letter-spacing: 8px;
+    -ms-letter-spacing: 8px;
+    letter-spacing: 8px;
+  `}
 `;
 
 export const NoWrapp = styled.span`
@@ -54,8 +59,13 @@ export const Sentence = styled.div`
   font-size: 16px;
   margin: 10px 0px;
   font-weight: 300;
-  letter-spacing: 2.5px;
   ${({ underLine }) => underLine && 'text-decoration: underline;'}
+  ${({ theme }) => theme.direction === 'ltr' && `
+    -webkit-letter-spacing: 2.5px;
+    -moz-letter-spacing: 2.5px;
+    -ms-letter-spacing: 2.5px;
+    letter-spacing: 2.5px;
+  `}
 `;
 
 export const SpecialStyle = styled.span`

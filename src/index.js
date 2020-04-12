@@ -1,19 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-// import './fonts/Qanelas-Regular.ttf';
-// import './fonts/icofont.woff2';
-import MainContainer from 'components/MainContainer';
-import * as serviceWorker from './serviceWorker';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import './index.css'
+import MainContainer from 'components/MainContainer'
+import * as serviceWorker from './serviceWorker'
+import Routes from 'routes/index'
+import { BrowserRouter as Router } from 'react-router-dom'
 
 ReactDOM.render(
   <React.StrictMode>
-    <MainContainer />
+    <Router>
+      <Routes>
+        <MainContainer />
+      </Routes>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
-);
+)
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+serviceWorker.unregister()

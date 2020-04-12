@@ -32,7 +32,7 @@ import {
 } from './Home.style'
 
 const Home = ({ isActive, setActive }) => {
-  const [selectedMenu, setSelectedMenu] = useState(1)
+  const [selectedMenu, setSelectedMenu] = useState(0)
   const location = useLocation()
   const languageContext = useContext(LanguageContext)
 
@@ -105,7 +105,7 @@ const Home = ({ isActive, setActive }) => {
             <Banner>
               <Slogan>
                 <SloganText>
-                  {T('bigThings')} <NoWrapp>{T('byLittle')} </NoWrapp>{' '}
+                  {T('bigThings')}{' '}<NoWrapp>{T('byLittle')} </NoWrapp>{' '}
                   {T('things')}
                 </SloganText>
               </Slogan>

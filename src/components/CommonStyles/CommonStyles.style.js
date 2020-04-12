@@ -61,6 +61,7 @@ export const SidebarName = styled.div`
       margin: auto;
       position: unset;
       height: 100%;
+      line-height: 5vh;
   }
     `} 
 `
@@ -102,86 +103,84 @@ export const Text = styled.span`
   max-width: ${({ maxWidth }) => maxWidth};
 
 
-  ${({ title }) =>
-    title &&
-    `  
+  ${({ title, theme }) => title && `
     font-size: 32px;
     margin:30px 0;
-    -webkit-letter-spacing: 12px;
-    -moz-letter-spacing: 12px;
-    -ms-letter-spacing: 12px;
-    letter-spacing: 12px;
     font-weight:500;
     text-transform:capitalize;
+    ${theme.direction === 'ltr' && `
+      -webkit-letter-spacing: 12px;
+      -moz-letter-spacing: 12px;
+      -ms-letter-spacing: 12px;
+      letter-spacing: 12px;
+    `}
   `}
-  ${({ secondryTitle }) =>
-    secondryTitle &&
-    `
+  ${({ secondryTitle, theme }) => secondryTitle && `
     font-size: 20px;
-    -webkit-letter-spacing: 5px;
-    -moz-letter-spacing: 5px;
-    -ms-letter-spacing: 5px;
-    letter-spacing: 5px;
     font-weight:500;
     text-transform: uppercase;
-
+    ${theme.direction === 'ltr' && `
+      -webkit-letter-spacing: 5px;
+      -moz-letter-spacing: 5px;
+      -ms-letter-spacing: 5px;
+      letter-spacing: 5px;
+    `}
   `}
-  ${({ subTitle }) =>
-    subTitle &&
-    `  
+  ${({ subTitle, theme }) => subTitle && `  
     font-size: 18px;
-    -webkit-letter-spacing: 3px;
-    -moz-letter-spacing: 3px;
-    -ms-letter-spacing: 3px;
-    letter-spacing: 3px;
     font-weight:400;
     margin : 10px 0px;
+    ${theme.direction === 'ltr' && `
+      -webkit-letter-spacing: 3px;
+      -moz-letter-spacing: 3px;
+      -ms-letter-spacing: 3px;
+      letter-spacing: 3px;
+    `}
  `}
- ${({ paragraph }) =>
-   paragraph &&
-   `  
+ ${({ paragraph }) => paragraph && `  
     font-size: 16px;
     margin: 10px 0px;
   `}
 
   ${({ theme }) => theme.media.phone`
-    ${(title) =>
-      title &&
-      `font-size:26px;
-      -webkit-letter-spacing: 5px;
-      -moz-letter-spacing:5px;
-      -ms-letter-spacing55px;
-      letter-spacing: 5px;
+    ${(title) => title && `
+      font-size:26px;
+      ${theme.direction === 'ltr' && `
+        -webkit-letter-spacing: 5px;
+        -moz-letter-spacing: 5px;
+        -ms-letter-spacing: 5px;
+        letter-spacing: 5px;
+      `}
     `}
-  ${(subTitle) =>
-    subTitle &&
-    `  
-    font-size: 14px;
-    -webkit-letter-spacing: 2px;
-    -moz-letter-spacing: 2px;
-    -ms-letter-spacing: 2px;
-    letter-spacing: 2px;
-  `}
-  ${(paragraph) =>
-    paragraph &&
-    ` 
+    ${(subTitle) => subTitle && `
       font-size: 14px;
-      letter-spacing: 2px;
-      -webkit-letter-spacing: 2px;
-      -moz-letter-spacing: 2px;
-      -ms-letter-spacing: 2px;
+      ${theme.direction === 'ltr' && `
+        -webkit-letter-spacing: 2px;
+        -moz-letter-spacing: 2px;
+        -ms-letter-spacing: 2px;
+        letter-spacing: 2px;
+      `}
     `}
-    ${({ secondryTitle }) =>
-      secondryTitle &&
-      `  
-    font-size: 14px;
-    -webkit-letter-spacing: 3px;
-    -moz-letter-spacing: 3px;
-    -ms-letter-spacing: 3px;
-    letter-spacing: 3px;
-    font-weight:500;
+    ${(paragraph) => paragraph && `
+        font-size: 14px;
+        ${theme.direction === 'ltr' && `
+          -webkit-letter-spacing: 2px;
+          -moz-letter-spacing: 2px;
+          -ms-letter-spacing: 2px;
+          letter-spacing: 2px;
+        `}
+      `}
+    ${({ secondryTitle }) => secondryTitle && `  
+      font-size: 14px;
+      font-weight:500;
+      ${theme.direction === 'ltr' && `
+        -webkit-letter-spacing: 3px;
+        -moz-letter-spacing: 3px;
+        -ms-letter-spacing: 3px;
+        letter-spacing: 3px;
+      `}
+    `}
   `}
-`}
 `
 
 export const Icon = styled.span`

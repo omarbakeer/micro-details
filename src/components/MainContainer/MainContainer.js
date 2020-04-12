@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { ThemeProvider } from 'styled-components'
 import { LanguageProvider } from 'locale'
 import { GlobalStyle, Main } from './MainContainer.style'
@@ -10,7 +10,7 @@ import About from 'components/About'
 import Services from 'components/Services'
 import Work from 'components/Work'
 import ContactUs from 'components/ContactUs'
-import { BrowserRouter as Router } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import { T } from 'locale'
 import {
   Section,
@@ -21,10 +21,18 @@ import {
 
 const MainContainer = () => {
   const [active, setActive] = useState(0)
+  const [theme, setTheme] = useState({ ...Theme })
+  let location = useLocation();
+
+  useEffect(() => {
+    let direction = 'ltr'
+    if (location.pathname.includes('ar')) direction = 'rtl'
+    setTheme({...theme, direction })
+  }, [location])
+  
   return (
     <LanguageProvider>
-      <Router>
-        <ThemeProvider theme={Theme}>
+        <ThemeProvider theme={theme}>
           <GlobalStyle />
           <LanguageSelector />
           <Main>
@@ -63,7 +71,6 @@ const MainContainer = () => {
           </Main>
           <Footer />
         </ThemeProvider>
-      </Router>
     </LanguageProvider>
   )
 }

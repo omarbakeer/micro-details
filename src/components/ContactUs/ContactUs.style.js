@@ -34,7 +34,12 @@ export const Title = styled.h3`
   margin-bottom: 24px;
   font-size: 22px;
   font-weight: 500;
-  letter-spacing: 5px;
+  ${({ theme }) => theme.direction === 'ltr' && `
+    -webkit-letter-spacing: 5px;
+    -moz-letter-spacing: 5px;
+    -ms-letter-spacing: 5px;
+    letter-spacing: 5px;
+  `}
   text-decoration: underline; 
 `;
 
@@ -74,14 +79,24 @@ export const AddressTitle = styled.h5`
   margin: 0;
   font-size: 14px;
   font-weight: 500;
-  letter-spacing: 1.5px;
   margin-bottom: 10px;
+  ${({ theme }) => theme.direction === 'ltr' && `
+    -webkit-letter-spacing: 1.5px;
+    -moz-letter-spacing: 1.5px;
+    -ms-letter-spacing: 1.5px;
+    letter-spacing: 1.5px;
+  `}
 `;
 
 export const AddressDetails = styled.p`
   margin: 0;
   font-size: 12px;
-  letter-spacing: 1.5px;
+  ${({ theme }) => theme.direction === 'ltr' && `
+    -webkit-letter-spacing: 1.5px;
+    -moz-letter-spacing: 1.5px;
+    -ms-letter-spacing: 1.5px;
+    letter-spacing: 1.5px;
+  `}
 `;
 
 const inputStyle = css`

@@ -40,8 +40,13 @@ export const Title = styled.h5`
   font-size: 20px;
   font-weight: 300;
   line-height: 1;
-  letter-spacing: 3px;
   text-transform: uppercase;
+  ${({ theme }) => theme.direction === 'ltr' && `
+    -webkit-letter-spacing: 3px;
+    -moz-letter-spacing: 3px;
+    -ms-letter-spacing: 3px;
+    letter-spacing: 3px;
+  `}
 `
 
 export const ImgIcon = styled.img`

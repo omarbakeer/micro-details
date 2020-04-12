@@ -25,7 +25,8 @@ export const SectionSidebar = styled.div`
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  background: ${({ theme, primaryColor }) => !primaryColor && theme.colors.black};
+  background: ${({ theme, primaryColor }) =>
+    !primaryColor && theme.colors.black};
   ${({ theme }) => theme.media.phone`
     width: 100%;
     height: 5vh;
@@ -35,21 +36,21 @@ export const SectionSidebar = styled.div`
 `
 
 export const SidebarName = styled.div`
-    transform: translateX(-100%) rotate(-90deg);
-    transform-origin: right top;
-    position: absolute;
-    top: calc(100vh - 500px);
-    width: 350px;
-    text-align: center;
-    height: 4vw;
-    line-height: 4vw;
-    color: ${({ theme, primaryColor }) =>
-      primaryColor ? theme.colors.primary : theme.colors.black};
-    background: ${({ theme, primaryColor }) =>
-      primaryColor ? theme.colors.black : theme.colors.primary};
-    font-size: 36px;
-    text-transform: uppercase;
-    ${({ theme }) => theme.media.phone`
+  transform: translateX(-100%) rotate(-90deg);
+  transform-origin: right top;
+  position: absolute;
+  top: calc(100vh - 500px);
+  width: 350px;
+  text-align: center;
+  height: 4vw;
+  line-height: 4vw;
+  color: ${({ theme, primaryColor }) =>
+    primaryColor ? theme.colors.primary : theme.colors.black};
+  background: ${({ theme, primaryColor }) =>
+    primaryColor ? theme.colors.black : theme.colors.primary};
+  font-size: 36px;
+  text-transform: uppercase;
+  ${({ theme }) => theme.media.phone`
       position: relative;
       transform: none;
       transform-origin: unset;
@@ -63,7 +64,7 @@ export const SidebarName = styled.div`
       height: 100%;
       line-height: 5vh;
   }
-    `} 
+    `}
 `
 
 export const ContentContainer = styled.div`
@@ -74,6 +75,11 @@ export const ContentContainer = styled.div`
   padding: 80px 80px;
   position: relative;
   box-sizing: border-box;
+  ${({ theme }) =>
+    theme.direction === 'rtl' &&
+    `
+  direction:rtl;
+ `}
   ${({ theme }) => theme.media.phone`
       width: 100%;
       height: calc(100% - calc(100vh / 20));
@@ -103,82 +109,119 @@ export const Text = styled.span`
   max-width: ${({ maxWidth }) => maxWidth};
 
 
-  ${({ title, theme }) => title && `
+  ${({ title, theme }) =>
+    title &&
+    `
     font-size: 32px;
     margin:30px 0;
     font-weight:500;
     text-transform:capitalize;
-    ${theme.direction === 'ltr' && `
+    ${
+      theme.direction === 'ltr' &&
+      `
       -webkit-letter-spacing: 12px;
       -moz-letter-spacing: 12px;
       -ms-letter-spacing: 12px;
       letter-spacing: 12px;
-    `}
+    `
+    }
   `}
-  ${({ secondryTitle, theme }) => secondryTitle && `
+  ${({ secondryTitle, theme }) =>
+    secondryTitle &&
+    `
     font-size: 20px;
     font-weight:500;
     text-transform: uppercase;
-    ${theme.direction === 'ltr' && `
+    ${
+      theme.direction === 'ltr' &&
+      `
       -webkit-letter-spacing: 5px;
       -moz-letter-spacing: 5px;
       -ms-letter-spacing: 5px;
       letter-spacing: 5px;
-    `}
+    `
+    }
   `}
-  ${({ subTitle, theme }) => subTitle && `  
+  ${({ subTitle, theme }) =>
+    subTitle &&
+    `  
     font-size: 18px;
     font-weight:400;
     margin : 10px 0px;
-    ${theme.direction === 'ltr' && `
+    ${
+      theme.direction === 'ltr' &&
+      `
       -webkit-letter-spacing: 3px;
       -moz-letter-spacing: 3px;
       -ms-letter-spacing: 3px;
       letter-spacing: 3px;
-    `}
+    `
+    }
  `}
- ${({ paragraph }) => paragraph && `  
+ ${({ paragraph }) =>
+   paragraph &&
+   `  
     font-size: 16px;
     margin: 10px 0px;
   `}
 
   ${({ theme }) => theme.media.phone`
-    ${(title) => title && `
+    ${(title) =>
+      title &&
+      `
       font-size:26px;
-      ${theme.direction === 'ltr' && `
+      ${
+        theme.direction === 'ltr' &&
+        `
         -webkit-letter-spacing: 5px;
         -moz-letter-spacing: 5px;
         -ms-letter-spacing: 5px;
         letter-spacing: 5px;
-      `}
+      `
+      }
     `}
-    ${(subTitle) => subTitle && `
+    ${(subTitle) =>
+      subTitle &&
+      `
       font-size: 14px;
-      ${theme.direction === 'ltr' && `
+      ${
+        theme.direction === 'ltr' &&
+        `
         -webkit-letter-spacing: 2px;
         -moz-letter-spacing: 2px;
         -ms-letter-spacing: 2px;
         letter-spacing: 2px;
-      `}
+      `
+      }
     `}
-    ${(paragraph) => paragraph && `
+    ${(paragraph) =>
+      paragraph &&
+      `
         font-size: 14px;
-        ${theme.direction === 'ltr' && `
+        ${
+          theme.direction === 'ltr' &&
+          `
           -webkit-letter-spacing: 2px;
           -moz-letter-spacing: 2px;
           -ms-letter-spacing: 2px;
           letter-spacing: 2px;
-        `}
+        `
+        }
       `}
-    ${({ secondryTitle }) => secondryTitle && `  
+    ${({ secondryTitle }) =>
+      secondryTitle &&
+      `  
       font-size: 14px;
       font-weight:500;
-      ${theme.direction === 'ltr' && `
+      ${
+        theme.direction === 'ltr' &&
+        `
         -webkit-letter-spacing: 3px;
         -moz-letter-spacing: 3px;
         -ms-letter-spacing: 3px;
         letter-spacing: 3px;
-      `}
+      `
+      }
     `}
   `}
 `
@@ -186,7 +229,14 @@ export const Text = styled.span`
 export const Icon = styled.span`
   font-family: icofont;
   margin: 0 5px;
+
+
   &:before {
+    ${({ theme }) =>
+    theme.direction === 'rtl' &&
+    `
+  transform: scaleX(-1);
+ `}
     content: "\\${({ icon }) => icon || ''}";
     font-size: ${({ size }) => size || 16}px;
     color: ${({ theme, color }) => theme.colors[color || 'black']};
@@ -196,6 +246,7 @@ export const Icon = styled.span`
   }
   transform: ${({ flip }) => (flip && 'scaleX(-1)') || 'unset'};
   ${({ extendStyle }) => extendStyle || ''}
+  
 `
 
 export const ShowOnDesktop = styled.div`

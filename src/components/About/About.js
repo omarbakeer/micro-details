@@ -26,7 +26,7 @@ const About = ({ isActive, setActive }) => {
   return (
     <Section active={isActive}>
       <SectionSidebar onClick={() => setActive(3)}>
-        <SidebarName primaryColor>about us</SidebarName>
+        <SidebarName primaryColor>{T('aboutUs')}</SidebarName>
       </SectionSidebar>
       {isActive && (
         <>

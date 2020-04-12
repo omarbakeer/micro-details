@@ -1,6 +1,7 @@
 const ar = {
   home: 'الرئـيـسية',
   langauge: 'English',
+  aboutUs :"نبذة عنا ",
   services: 'الخدمات',
   ourStory: 'قصتنا',
   weWorkWith: 'نعمل مع',

@@ -13,30 +13,30 @@ import Work from 'components/Work'
 import ContactUs from 'components/ContactUs'
 
 const MainContainer = () => {
-  const [active, setActive] = useState(3)
+  const [active, setActive] = useState(1)
   const [theme, setTheme] = useState({ ...Theme })
-  let location = useLocation();
+  let location = useLocation()
 
   useEffect(() => {
     let direction = 'ltr'
     if (location.pathname.includes('ar')) direction = 'rtl'
-    setTheme({...theme, direction })
+    setTheme({ ...theme, direction })
   }, [location])
-  
+
   return (
     <LanguageProvider>
-        <ThemeProvider theme={theme}>
-          <GlobalStyle />
-          <Main>
-            <LanguageSelector mobile />
-            <Home isActive={active === 4} setActive={setActive} />
-            <About isActive={active === 3} setActive={setActive} />
-            <Services isActive={active === 2} setActive={setActive}/>
-            <Work isActive={active === 1} setActive={setActive}/>
-            <ContactUs isActive={active === 0} setActive={setActive} />
-          </Main>
-          <Footer />
-        </ThemeProvider>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Main>
+          <LanguageSelector mobile />
+          <Home isActive={active === 4} setActive={setActive} />
+          <About isActive={active === 3} setActive={setActive} />
+          <Services isActive={active === 2} setActive={setActive} />
+          <Work isActive={active === 1} setActive={setActive} />
+          <ContactUs isActive={active === 0} setActive={setActive} />
+        </Main>
+        <Footer />
+      </ThemeProvider>
     </LanguageProvider>
   )
 }

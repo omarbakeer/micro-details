@@ -1,5 +1,10 @@
 import React, { useState } from 'react'
+import LanguageSelector from 'components/LangaugeSelector'
 import {
+  Section,
+  SectionSidebar,
+  SidebarName,
+  ContentContainer,
   Logo,
   LogoContainer,
   Text,
@@ -11,9 +16,9 @@ import { T } from 'locale'
 import BrandLogo from 'images/Logo.png'
 import { Container, Row, ServiceBlock, Service } from './Services.style'
 
-const Services = () => {
+const Services = ({ isActive, setActive }) => {
   const [selectedTab, setSelectedTab] = useState(4)
-  
+
   const renderTextBasedOnSelectedTab = () => {
     if (selectedTab === 1) {
       return (
@@ -241,17 +246,27 @@ const Services = () => {
   }
 
   return (
-    <>
-      <LogoContainer>
-        <Logo src={BrandLogo} alt="" />
-      </LogoContainer>
-      <Container>
-        <Text title>{T('services')}</Text>
-        {renderdDeskTopServicesTabs()}
-        {renderdMobileServicesTabs()}
-        {renderTextBasedOnSelectedTab()}
-      </Container>
-    </>
+    <Section active={isActive}>
+      <SectionSidebar primaryColor onClick={() => setActive(2)}>
+        <SidebarName>{T('services')}</SidebarName>
+      </SectionSidebar>
+      {isActive && (
+        <>
+          <LanguageSelector />
+          <ContentContainer>
+            <LogoContainer>
+              <Logo src={BrandLogo} alt="" />
+            </LogoContainer>
+            <Container>
+              <Text title>{T('services')}</Text>
+              {renderdDeskTopServicesTabs()}
+              {renderdMobileServicesTabs()}
+              {renderTextBasedOnSelectedTab()}
+            </Container>
+          </ContentContainer>
+        </>
+      )}
+    </Section>
   )
 }
 export default Services

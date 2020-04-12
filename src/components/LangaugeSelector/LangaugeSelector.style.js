@@ -12,6 +12,12 @@ export const ButtonContainer = styled.div`
   ${({ isMobile, theme }) => !isMobile && theme.media.phone`
     display: none;
   `}
+  ${({ isMobile, theme }) => isMobile && theme.media.desktop`
+    display: none;
+  `}
+  ${({ isMobile, theme }) => isMobile && theme.media.tablet`
+    display: none;
+  `}
   ${({ isMobile, theme }) => isMobile && theme.media.phone`
     top: 3px;
     right: 0;

@@ -55,16 +55,16 @@ const FooterContainer = (props) => {
       <Division SocialDivision flex={6}>
         <SocialMediaContainer>
           <SocialMediaLink href="https://www.facebook.com/Micro-Details-412285212646523/?modal=admin_todo_tour">
-            <Icon icon="ed37" size={30} />
+            <Icon dontFlipOnRtl icon="ed37" size={30} />
           </SocialMediaLink>
           <SocialMediaLink href="https://twitter.com/MicroDetails">
-            <Icon icon="ed7a" size={30} />
+            <Icon dontFlipOnRtl icon="ed7a" size={30} />
           </SocialMediaLink>
           <SocialMediaLink href="https://www.instagram.com/micro.details">
-            <Icon icon="ed46" size={30} />
+            <Icon dontFlipOnRtl icon="ed46" size={30} />
           </SocialMediaLink>
           <SocialMediaLink href="https://www.linkedin.com/company/18959521">
-            <Icon icon="ed4d" size={30} />
+            <Icon dontFlipOnRtl icon="ed4d" size={30} />
           </SocialMediaLink>
         </SocialMediaContainer>
         <CopyRights>

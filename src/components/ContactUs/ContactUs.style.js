@@ -34,13 +34,15 @@ export const Title = styled.h3`
   margin-bottom: 24px;
   font-size: 22px;
   font-weight: 500;
+  text-decoration: underline;
+  width: fit-content;
+  ${({ theme, highLight }) => highLight && `background-color: ${theme.colors.primary};`}
   ${({ theme }) => theme.direction === 'ltr' && `
     -webkit-letter-spacing: 5px;
     -moz-letter-spacing: 5px;
     -ms-letter-spacing: 5px;
     letter-spacing: 5px;
   `}
-  text-decoration: underline; 
 `;
 
 export const Row = styled.div`

@@ -99,7 +99,7 @@ const ContactUs = ({ isActive, setActive }) => {
             </BasicRow>
             <BasicRow reversedOnMobile>
               <Col flex={3}>
-                <Title>Say Hello!</Title>
+                <Title highLight>Say Hello!</Title>
                 <Form onSubmit={handleSubmit} method="POST" autoComplete="nope">
                   <InputField
                     placeholder={T('fullNamePlaceholder')}

@@ -230,11 +230,9 @@ export const Icon = styled.span`
   font-family: icofont;
   margin: 0 5px;
   &:before {
-    ${({ theme }) =>
-      theme.direction === 'rtl' &&
-      `
-  transform: scaleX(-1);
- `}
+    ${({ theme, dontFlipOnRtl }) => !dontFlipOnRtl && theme.direction === 'rtl' && `
+      transform: scaleX(-1);
+    `}
     content: "\\${({ icon }) => icon || ''}";
     font-size: ${({ size }) => size || 16}px;
     color: ${({ theme, color }) => theme.colors[color || 'black']};

@@ -14,7 +14,7 @@ export const WeCanItem = styled.div`
   display: flex;
   flex-direction: column;
   width: 30%;
-  margin-right: 3.3%;
+  ${({ theme }) => theme.direction === 'ltr' ? 'margin-right: 3.3%;' : 'margin-left: 3.3%;'}
   margin-bottom: 10px;
   ${({ theme }) => theme.media.tablet`
   width: 35%;
@@ -51,7 +51,7 @@ export const Title = styled.h5`
 
 export const ImgIcon = styled.img`
   width: 25px;
-  margin-right: 10px;
+  ${({ theme }) => theme.direction === 'ltr' ? 'margin-right: 10px;' : 'margin-left: 10px;'}
 `
 
 export const ContentText = styled.p`

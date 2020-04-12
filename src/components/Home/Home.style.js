@@ -117,10 +117,10 @@ export const MenuItem = styled.div`
     box-sizing: border-box;
     text-align: right;
   `}
-  ${({ theme, rightBorder }) =>
-    rightBorder &&
-    theme.media.phone`
-    border-right: solid 2px ${theme.colors.primary};
+  ${({ theme, rightBorder }) => rightBorder && theme.media.phone`
+    ${theme.direction === 'ltr' ? 
+      `border-right: solid 2px ${theme.colors.primary};` 
+      : `border-left: solid 2px ${theme.colors.primary};`}
   `}
 `
 

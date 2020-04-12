@@ -20,7 +20,7 @@ import {
 } from '../CommonStyles'
 
 const MainContainer = () => {
-  const [active, setActive] = useState(0)
+  const [active, setActive] = useState(3)
   const [theme, setTheme] = useState({ ...Theme })
   let location = useLocation();
 
@@ -34,17 +34,20 @@ const MainContainer = () => {
     <LanguageProvider>
         <ThemeProvider theme={theme}>
           <GlobalStyle />
-          <LanguageSelector />
           <Main>
+            <LanguageSelector mobile />
             <Home isActive={active === 4} setActive={setActive} />
             <Section active={active === 3}>
               <SectionSidebar onClick={() => setActive(3)}>
                 <SidebarName primaryColor>about us</SidebarName>
               </SectionSidebar>
               {active === 3 && (
-                <ContentContainer>
-                  <About />
-                </ContentContainer>
+                <>
+                  <LanguageSelector />
+                  <ContentContainer>
+                    <About />
+                  </ContentContainer>
+                </>
               )}
             </Section>
             <Section active={active === 2}>
@@ -52,9 +55,12 @@ const MainContainer = () => {
                 <SidebarName>{T('services')}</SidebarName>
               </SectionSidebar>
               {active === 2 && (
-                <ContentContainer>
-                  <Services />
-                </ContentContainer>
+                <>
+                  <LanguageSelector />
+                  <ContentContainer>
+                    <Services />
+                  </ContentContainer>
+                </>
               )}
             </Section>
             <Section active={active === 1}>
@@ -62,9 +68,12 @@ const MainContainer = () => {
                 <SidebarName primaryColor>{T('weWorkWith')}</SidebarName>
               </SectionSidebar>
               {active === 1 && (
-                <ContentContainer>
-                  <Work />
-                </ContentContainer>
+                <>
+                  <LanguageSelector />
+                  <ContentContainer>
+                    <Work />
+                  </ContentContainer>
+                </>
               )}
             </Section>
             <ContactUs isActive={active === 0} setActive={setActive} />

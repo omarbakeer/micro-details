@@ -5,10 +5,11 @@ import Ar from 'images/saudi-flag.jpg'
 import { T } from 'locale'
 import { languageOptions } from 'locale'
 import { LanguageContext } from 'locale'
-import { useHistory } from 'react-router-dom'
+import { useHistory, useLocation } from 'react-router-dom'
 
-const LanguageSelector = () => {
+const LanguageSelector = ({ mobile }) => {
   const history = useHistory()
+  const location = useLocation()
   const languageContext = useContext(LanguageContext)
   const [language, seLangauge] = useState(languageContext.language)
 
@@ -26,9 +27,11 @@ const LanguageSelector = () => {
   }
 
   return (
-    <ButtonContainer>
-      <Button onClick={() => toggleLangauge()}>{T('langauge')}</Button>
+    <ButtonContainer onClick={() => toggleLangauge()} isMobile={mobile}>
+      <Flag src={location.pathname.includes('ar') ? Eng : Ar} alt="select a language"/>
+      <Button isMobile={mobile}>{T('langauge')}</Button>
     </ButtonContainer>
   )
 }
+
 export default LanguageSelector

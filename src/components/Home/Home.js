@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react'
 import { useLocation } from 'react-router-dom'
-import { LanguageContext } from 'locale'
-import { languageOptions } from 'locale'
+import LanguageSelector from 'components/LangaugeSelector'
+import { LanguageContext, languageOptions } from 'locale'
 import WeCan from 'components/WeCan'
 import WeAre from 'components/WeAre'
 import WeDo from 'components/WeDo'
@@ -97,55 +97,58 @@ const Home = ({ isActive, setActive }) => {
         <SidebarName>{T('home')}</SidebarName>
       </SectionSidebar>
       {isActive && (
-        <ContentContainer>
-          <LogoContainer>
-            <Logo src={BrandLogo} alt="" />
-          </LogoContainer>
-          <ShowOnDesktop>
-            <Banner>
-              <Slogan>
-                <SloganText>
-                  {T('bigThings')}{' '}<NoWrapp>{T('byLittle')} </NoWrapp>{' '}
-                  {T('things')}
-                </SloganText>
-              </Slogan>
-              <DescriptionsContainer>
-                <Text paragraph maxWidth="70%">
-                  {T('homepageParagraphOne')}
-                  <SpecialStyle bold italic>
-                    {T('diverse')}
-                  </SpecialStyle>
-                </Text>
-                <Text>
-                  <SpecialStyle bold>{T('but')}</SpecialStyle>,{' '}
-                  {T('homepageParagraphTwo')}
-                </Text>
-                <Text paragraph>
-                  {T('homepageParagraphThree')}
-                  <SpecialStyle bold italic>
-                    {T('effectiveness')}
-                  </SpecialStyle>
-                </Text>
-                <Text paragraph>{T('homepageParagraphFour')}</Text>
-                <Text underLine paragraph>
-                  {T('homepageParagraphFive')}
-                </Text>
-              </DescriptionsContainer>
-            </Banner>
-          </ShowOnDesktop>
+        <>
+          <LanguageSelector />
+          <ContentContainer>
+            <LogoContainer>
+              <Logo src={BrandLogo} alt="" />
+            </LogoContainer>
+            <ShowOnDesktop>
+              <Banner>
+                <Slogan>
+                  <SloganText>
+                    {T('bigThings')}{' '}<NoWrapp>{T('byLittle')} </NoWrapp>{' '}
+                    {T('things')}
+                  </SloganText>
+                </Slogan>
+                <DescriptionsContainer>
+                  <Text paragraph maxWidth="70%">
+                    {T('homepageParagraphOne')}
+                    <SpecialStyle bold italic>
+                      {T('diverse')}
+                    </SpecialStyle>
+                  </Text>
+                  <Text>
+                    <SpecialStyle bold>{T('but')}</SpecialStyle>,{' '}
+                    {T('homepageParagraphTwo')}
+                  </Text>
+                  <Text paragraph>
+                    {T('homepageParagraphThree')}
+                    <SpecialStyle bold italic>
+                      {T('effectiveness')}
+                    </SpecialStyle>
+                  </Text>
+                  <Text paragraph>{T('homepageParagraphFour')}</Text>
+                  <Text underLine paragraph>
+                    {T('homepageParagraphFive')}
+                  </Text>
+                </DescriptionsContainer>
+              </Banner>
+            </ShowOnDesktop>
 
-          <HomeDetails>
-            {renderMenu()}
-            {selectedMenu === 0 && <WeCan />}
-            {selectedMenu === 1 && <WeAre />}
-            {selectedMenu === 2 && <WeDo />}
-            {selectedMenu === 3 && (
-              <ClientsContainer>
-                <Clients />
-              </ClientsContainer>
-            )}
-          </HomeDetails>
-        </ContentContainer>
+            <HomeDetails>
+              {renderMenu()}
+              {selectedMenu === 0 && <WeCan />}
+              {selectedMenu === 1 && <WeAre />}
+              {selectedMenu === 2 && <WeDo />}
+              {selectedMenu === 3 && (
+                <ClientsContainer>
+                  <Clients />
+                </ClientsContainer>
+              )}
+            </HomeDetails>
+          </ContentContainer>
+        </>
       )}
     </Section>
   )

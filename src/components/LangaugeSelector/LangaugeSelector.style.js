@@ -1,25 +1,37 @@
 import styled from 'styled-components'
 
-export const Button = styled.span`
+export const ButtonContainer = styled.div`
+  position: absolute;
+  right: 5px;
+  top: 30px;
   background-color: #000;
   color: #fff;
-  font-size: 12px;
-  width: 50px;
-  position: absolute;
-  right: 5%;
-  z-index: 20;
-  text-align: center;
-  font-weight: 700;
-  padding: 5px;
+  z-index: 2;
   cursor: pointer;
-  margin-right: 0;
-
-`
-
-export const ButtonContainer = styled.div`
-
+  display: flex;
+  ${({ isMobile, theme }) => !isMobile && theme.media.phone`
+    display: none;
+  `}
+  ${({ isMobile, theme }) => isMobile && theme.media.phone`
+    top: 3px;
+    right: 0;
+  `}
 `
 
 export const Flag = styled.img`
-margin-right: 0;
+  margin-right: 0;
+  width: 40px;
+`
+
+export const Button = styled.span`
+  font-size: 16px;
+  text-align: center;
+  font-weight: 700;
+  padding: 5px;
+  width: 50px;
+  ${({ isMobile, theme }) => isMobile && theme.media.phone`
+    font-size: 12px;
+    padding: 5px 0;
+    width: 40px;
+  `}
 `

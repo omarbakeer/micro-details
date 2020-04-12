@@ -229,12 +229,10 @@ export const Text = styled.span`
 export const Icon = styled.span`
   font-family: icofont;
   margin: 0 5px;
-
-
   &:before {
     ${({ theme }) =>
-    theme.direction === 'rtl' &&
-    `
+      theme.direction === 'rtl' &&
+      `
   transform: scaleX(-1);
  `}
     content: "\\${({ icon }) => icon || ''}";

@@ -4,6 +4,7 @@ import consultImage from 'images/consult.png'
 import designImage from 'images/design.png'
 import knightImage from 'images/knight.png'
 import planImage from 'images/plan.png'
+import { T } from 'locale'
 import {
   WeCanContainer,
   WeCanItem,
@@ -18,61 +19,44 @@ const WeCan = () => (
     <WeCanItem>
       <WeCanTitleWithIcon>
         <ImgIcon src={knightImage} />
-        <Title>Strategize</Title>
+        <Title>{T('strategize')}</Title>
       </WeCanTitleWithIcon>
-      <ContentText>
-        Little strategies. Big ideas. Cost-effective methods to reach your brand
-        objective.
-      </ContentText>
+      <ContentText>{T('strategizeParagraph')}</ContentText>
     </WeCanItem>
     <WeCanItem>
       <WeCanTitleWithIcon>
         <ImgIcon src={codeImage} />
-        <Title>Develop</Title>
+        <Title>{T('develop')}</Title>
       </WeCanTitleWithIcon>
-      <ContentText>
-        Website, application, social growth, engagement rates, campaigns,
-        content and everything needed to give you an edge over everyone else.
-      </ContentText>
+      <ContentText>{T('developParagraph')}</ContentText>
     </WeCanItem>
     <WeCanItem>
       <WeCanTitleWithIcon>
         <ImgIcon src={designImage} />
-        <Title>Design</Title>
+        <Title>{T('design')}</Title>
       </WeCanTitleWithIcon>
-      <ContentText>
-        Taking care of every detail, you will get consistency in the visual
-        aesthetics we design. Brand tone and emotion is maintained.
-      </ContentText>
+      <ContentText>{T('designParagraph')}</ContentText>
     </WeCanItem>
     <WeCanItem>
       <WeCanTitleWithIcon>
         <ImgIcon src={planImage} />
-        <Title>IDENTIFY</Title>
+        <Title>{T('identify')}</Title>
       </WeCanTitleWithIcon>
-      <ContentText>
-        Find your voice and distinguish your brand by positioning it in the
-        market.
-      </ContentText>
+      <ContentText>{T('identifyParagraph')}</ContentText>
     </WeCanItem>
     <WeCanItem>
       <WeCanTitleWithIcon>
         <ImgIcon src={consultImage} />
-        <Title>Consult</Title>
+        <Title>{T('consult')}</Title>
       </WeCanTitleWithIcon>
-      <ContentText>
-        Helping you diagnose your marketing gaps and address them.
-      </ContentText>
+      <ContentText>{T('consultParagraph')}</ContentText>
     </WeCanItem>
     <WeCanItem>
       <WeCanTitleWithIcon>
         <ImgIcon src={planImage} />
-        <Title>AMPLIFY</Title>
+        <Title>{T('amplify')}</Title>
       </WeCanTitleWithIcon>
-      <ContentText>
-        Tactics designed to boost your presence, business growth and brand
-        reach.
-      </ContentText>
+      <ContentText>{T('amplifyParagraph')}</ContentText>
     </WeCanItem>
   </WeCanContainer>
 )

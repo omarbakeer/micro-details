@@ -24,7 +24,13 @@ export const ServiceBlock = styled.div`
   border-bottom: ${({ theme, lastRow }) =>
     !lastRow && `solid 2px${theme.colors.primary}`};
   border-right: ${({ theme, lastEelement }) =>
-    !lastEelement && `solid 2px${theme.colors.primary}`};
+    theme.direction === 'ltr' &&
+    !lastEelement &&
+    `solid 2px${theme.colors.primary}`};
+  border-left: ${({ theme, lastEelement }) =>
+    theme.direction === 'rtl' &&
+    !lastEelement &&
+    `solid 2px${theme.colors.primary}`};
   color: ${({ theme }) => theme.colors.black};
   text-align: center;
   &&:hover {

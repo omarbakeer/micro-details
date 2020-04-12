@@ -53,18 +53,19 @@ const Home = ({ isActive, setActive }) => {
           selected={selectedMenu === 0}
           onClick={() => setSelectedMenu(0)}
         >
-          we{' '}
-          <SpecialStyle italic={selectedMenu === 0} vBold>
-            CAN
+          {T('we')}{' '}
+          <SpecialStyle uppercase italic={selectedMenu === 0} vBold>
+          {T('can')}
           </SpecialStyle>
         </MenuItem>
         <MenuItem
           selected={selectedMenu === 1}
           onClick={() => setSelectedMenu(1)}
         >
-          we{' '}
-          <SpecialStyle italic={selectedMenu === 1} vBold>
-            ARE
+          {T('we')}{' '}
+          <SpecialStyle uppercase italic={selectedMenu === 1} vBold>
+          {' '}
+          {T('are')}
           </SpecialStyle>
         </MenuItem>
         <MenuItem
@@ -72,20 +73,20 @@ const Home = ({ isActive, setActive }) => {
           selected={selectedMenu === 2}
           onClick={() => setSelectedMenu(2)}
         >
-          we{' '}
-          <SpecialStyle italic={selectedMenu === 2} vBold>
-            DO
+          {T('we')}{' '}
+          <SpecialStyle uppercase italic={selectedMenu === 2} vBold>
+          {T('do')}
           </SpecialStyle>
         </MenuItem>
         <MenuItem
           selected={selectedMenu === 3}
           onClick={() => setSelectedMenu(3)}
         >
-          we{' '}
-          <SpecialStyle italic={selectedMenu === 3} vBold>
-            WORK
+          {T('we')}{' '}
+          <SpecialStyle uppercase italic={selectedMenu === 3} vBold>
+          {T('work')}
           </SpecialStyle>{' '}
-          with
+          {T('with')}
         </MenuItem>
       </HomeMenu>
     )

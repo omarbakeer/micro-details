@@ -1,16 +1,16 @@
-import styled from 'styled-components';
-import bannerBackground from 'images/banner-rectangle.png';
+import styled from 'styled-components'
+import bannerBackground from 'images/banner-rectangle.png'
 /***************************************************
-****************** Home Commons ********************
-****************************************************/
+ ****************** Home Commons ********************
+ ****************************************************/
 
 export const Banner = styled.div`
   display: flex;
   margin-bottom: 40px;
   height: 65%;
-`;
+`
 
-export const ClientsContainer =styled.div`
+export const ClientsContainer = styled.div`
   ${({ theme }) => theme.media.desktop`
     width:70%;
   `}
@@ -27,7 +27,7 @@ export const Slogan = styled.div`
   background-position-x: 90%;
   background-repeat: no-repeat;
   /* margin-right: 5%; */
-`;
+`
 
 export const SloganText = styled.h1`
   width: min-content;
@@ -35,17 +35,19 @@ export const SloganText = styled.h1`
   text-align: left;
   margin: 0;
   font-weight: 400;
-  ${({ theme }) => theme.direction === 'ltr' && `
+  ${({ theme }) =>
+    theme.direction === 'ltr' &&
+    `
     -webkit-letter-spacing: 8px;
     -moz-letter-spacing: 8px;
     -ms-letter-spacing: 8px;
     letter-spacing: 8px;
   `}
-`;
+`
 
 export const NoWrapp = styled.span`
   white-space: nowrap;
-`;
+`
 
 export const DescriptionsContainer = styled.div`
   padding: 0 3%;
@@ -53,26 +55,31 @@ export const DescriptionsContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-`;
+`
 
 export const Sentence = styled.div`
   font-size: 16px;
   margin: 10px 0px;
   font-weight: 300;
   ${({ underLine }) => underLine && 'text-decoration: underline;'}
-  ${({ theme }) => theme.direction === 'ltr' && `
+  ${({ theme }) =>
+    theme.direction === 'ltr' &&
+    `
     -webkit-letter-spacing: 2.5px;
     -moz-letter-spacing: 2.5px;
     -ms-letter-spacing: 2.5px;
     letter-spacing: 2.5px;
   `}
-`;
+`
 
 export const SpecialStyle = styled.span`
   ${({ bold }) => bold && 'font-weight: 500;'}
   ${({ vBold }) => vBold && 'font-weight: 600;'}
   ${({ italic }) => italic && 'font-style: italic;'}
-`;
+  ${({ uppercase }) => uppercase && 'text-transform:uppercase;'}
+
+
+`
 
 export const HomeDetails = styled.div`
   display: flex;
@@ -80,7 +87,7 @@ export const HomeDetails = styled.div`
     flex-direction: column;
     align-items: center;
   `}
-`;
+`
 
 export const HomeMenu = styled.div`
   display: flex;
@@ -92,7 +99,7 @@ export const HomeMenu = styled.div`
     width: 100%;
     margin-bottom: 40px;
   `}
-`;
+`
 
 export const MenuItem = styled.div`
   max-width: 70%;
@@ -101,18 +108,21 @@ export const MenuItem = styled.div`
   border-bottom: 2px solid ${({ theme }) => theme.colors.primary};
   cursor: pointer;
   transition: all 0.5s linear;
-  background-color: ${({ selected, theme }) => selected ? theme.colors.primary : theme.colors.lightGray};
-  
+  background-color: ${({ selected, theme }) =>
+    selected ? theme.colors.primary : theme.colors.lightGray};
+
   ${({ theme }) => theme.media.phone`
     max-width: unset;
     width: 50%;
     box-sizing: border-box;
     text-align: right;
   `}
-  ${({ theme, rightBorder }) => rightBorder && theme.media.phone`
+  ${({ theme, rightBorder }) =>
+    rightBorder &&
+    theme.media.phone`
     border-right: solid 2px ${theme.colors.primary};
   `}
-`;
+`
 
 export const Row = styled.div`
   display: flex;

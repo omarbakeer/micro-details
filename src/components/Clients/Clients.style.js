@@ -19,8 +19,6 @@ export const ClientLogo = styled.img`
   margin: 10px;
   width: 85px;
   padding :10px;
-
-
 `
 export const ImageWrapper = styled.div`
   width : 20%;

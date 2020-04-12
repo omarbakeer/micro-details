@@ -17,7 +17,7 @@ import BrandLogo from 'images/Logo.png'
 import { Container, Row, ServiceBlock, Service } from './Services.style'
 
 const Services = ({ isActive, setActive }) => {
-  const [selectedTab, setSelectedTab] = useState(4)
+  const [selectedTab, setSelectedTab] = useState(1)
 
   const renderTextBasedOnSelectedTab = () => {
     if (selectedTab === 1) {

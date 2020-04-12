@@ -1,7 +1,7 @@
 const en = {
   home: 'Home',
   weWorkWith: 'We Work With',
-  aboutUs :"about us",
+  aboutUs: 'about us',
   services: 'services',
   langauge: 'العربية',
   ourStory: 'Our little story',
@@ -19,7 +19,7 @@ const en = {
   designAndDevelopment: 'design and development',
   buissnessConsultation: 'buissness consultation',
   growthHacking: 'growth hacking',
-  photographyAndVideoghraphy :"photography and videography",
+  photographyAndVideoghraphy: 'photography and videography',
   photographyAndVideoghraphyOne:
     'Your brand image is one of your biggest assets. At Micro Details, we want to capture the essence of your product or brand to fully reflect it. ',
   photographyAndVideoghraphyTwo:
@@ -64,11 +64,14 @@ const en = {
   visionParagraph:
     'Grow into the most reliable and go-to digital and marketing agency in the industry.',
   creative: 'creative',
-  creativeDescription: 'Experienced and skilled in every aspect of Advertising. We understand that Digital and Marketing is the current medium for growth. We’re focused. We listen. We have that little spark.',
+  creativeDescription:
+    'Experienced and skilled in every aspect of Advertising. We understand that Digital and Marketing is the current medium for growth. We’re focused. We listen. We have that little spark.',
   methodical: 'methodical',
-  methodicalDescription: 'Our goal is to understand the connection between customer and content. Imagine your brand is a puzzle and every piece, a tailored strategy. Little by little, we’re here to make it to the big picture.',
+  methodicalDescription:
+    'Our goal is to understand the connection between customer and content. Imagine your brand is a puzzle and every piece, a tailored strategy. Little by little, we’re here to make it to the big picture.',
   detailed: 'detailed',
-  detailedDescription: 'Getting into the details is testing work. But we’re patient and we’re ready to put in the effort. To provide you with a unique and successful experience, we go in headstrong for sure-fire results.',
+  detailedDescription:
+    'Getting into the details is testing work. But we’re patient and we’re ready to put in the effort. To provide you with a unique and successful experience, we go in headstrong for sure-fire results.',
   contactUs: 'contact us',
   contactInfo: 'Contact Info.',
   ourOffices: 'Our offices',
@@ -77,6 +80,30 @@ const en = {
   mobilePlaceholder: 'Mobile',
   messagePlaceholder: 'Message',
   send: 'Send',
+  we: 'we',
+  can: 'can',
+  work: 'work',
+  do: 'do',
+  with: 'with',
+  are: 'are',
+  strategize: 'strategize',
+  strategizeParagraph:
+    'Little strategies. Big ideas. Cost-effective methods to reach your brand objective.',
+  develop: 'develop',
+  developParagraph:
+    'Website, application, social growth, engagement rates, campaigns, content and everything needed to give you an edge over everyone else',
+  design: 'design',
+  designParagraph:
+    'Taking care of every detail, you will get consistency in the visual aesthetics we design. Brand tone and emotion is maintained.',
+  identify: 'identify',
+  identifyParagraph:
+    'Find your voice and distinguish your brand by positioning it in the market.',
+  consult: 'consult',
+  consultParagraph:
+    'Helping you diagnose your marketing gaps and address them.',
+  amplify: 'amplify',
+  amplifyParagraph:
+    'Tactics designed to boost your presence, business growth and brand reach.',
 }
 
 export default en

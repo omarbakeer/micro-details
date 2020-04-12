@@ -26,7 +26,6 @@ export const MissionAndVisionContainer = styled.div`
   ${({ theme }) => theme.media.phone`
   display: block;
 `}
-  
 `
 
 export const TitleContainer = styled.div`

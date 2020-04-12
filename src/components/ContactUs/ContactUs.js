@@ -128,7 +128,7 @@ const ContactUs = ({ isActive, setActive }) => {
               </Col>
               <Col flex={4} styleMapOnMobile>
                 <GoogleMapReact
-                  bootstrapURLKeys={{ key: 'AIzaSyAytC_TusuhG7kpNQ19hMrCzXDIUjd307o' }}
+                  bootstrapURLKeys={{ key: 'AIzaSyDgQLZIaiZyhDfH1pzhlaycTGM-fP4Ze-I' }}
                   yesIWantToUseGoogleMapApiInternals
                   defaultZoom={16}
                   center={[officesCoordinates[activeAddress].lat, officesCoordinates[activeAddress].long]}

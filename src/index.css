@@ -14,7 +14,7 @@ code {
 
 @font-face {
   font-family: 'Qanelas';
-  src: local('Qanelas'), url(./fonts/Qanelas-Regular.ttf) format('truetype');
+  src: local('Qanelas Regular'), url(./fonts/Qanelas-Regular.ttf) format('truetype');
 }
 
 @font-face {
@@ -31,8 +31,36 @@ code {
 
 @font-face {
   font-family: 'icofont';
-  src: local('icofont'), url(./fonts/icofont.woff2) format('woff2');
+  src: local('icofont Font'), url(./fonts/icofont.woff2) format('woff2');
 }
+
+@font-face {
+  font-family: 'icofont';
+  src: local('icofont Font'), url(./fonts/icofont.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'icofont';
+  src: local('icofont Font'), url(./fonts/icofont.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'icofont';
+  src: local('icofont Font'), url(./fonts/icofont.eot) format('embedded-opentype');
+}
+
+@font-face {
+  font-family: 'TheSansArabic';
+  font-weight: 700;
+  src: local('TheSansArabic Bold'), url(./fonts/TheSansArabic-Bold.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'TheSansArabic';
+  font-weight: 300;
+  src: local('TheSansArabic SemiLight'), url(./fonts/TheSansArabic-SemiLight.otf) format('opentype');
+}
+
 
 /* width */
 ::-webkit-scrollbar {

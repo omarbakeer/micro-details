@@ -9,6 +9,7 @@ export const ButtonContainer = styled.div`
   z-index: 2;
   cursor: pointer;
   display: flex;
+  align-items: center;
   ${({ isMobile, theme }) => !isMobile && theme.media.phone`
     display: none;
   `}
@@ -27,17 +28,18 @@ export const ButtonContainer = styled.div`
 export const Flag = styled.img`
   margin-right: 0;
   width: 40px;
+  ${({ theme }) => theme.media.phone`
+    width: 34px;
+  `}
 `
 
 export const Button = styled.span`
-  font-size: 16px;
+  font-size: 12px;
   text-align: center;
-  font-weight: 700;
-  padding: 5px;
-  width: 50px;
+  width: 42px;
+  font-family: ${({ theme }) => theme.direction === 'rtl' ? 'Qanelas' : 'TheSansArabic'};
   ${({ isMobile, theme }) => isMobile && theme.media.phone`
     font-size: 12px;
-    padding: 5px 0;
     width: 40px;
   `}
 `

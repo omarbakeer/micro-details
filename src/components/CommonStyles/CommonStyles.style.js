@@ -87,19 +87,22 @@ export const ContentContainer = styled.div`
       padding: 5px;
     `}
 `
+
 export const Logo = styled.img`
-  height: 120px;
+  height: 145px;
+  ${({ theme }) => theme.media.phone`
+    height: 120px;
+  `}
 `
 
 export const LogoContainer = styled.div`
   top: 0;
-  left: 2%;
+  left: 3.6%;
   position: absolute;
   z-index: 1;
   ${({ theme }) => theme.media.phone`
-  position: fixed;
-
-`}
+    position: fixed;
+  `}
 `
 
 export const Text = styled.span`

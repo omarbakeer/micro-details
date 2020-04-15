@@ -5,6 +5,8 @@ import {
   ClientLogo,
   Button,
   Container,
+  ItemIndicator,
+  ItemIndicatorList,
 } from './Clients.style'
 import SwipeableViews from 'react-swipeable-views'
 import { autoPlay } from 'react-swipeable-views-utils'
@@ -61,6 +63,20 @@ const Clients = ({ isHomePage }) => {
         setIndex(index - 1)
       }
     }
+  }
+  const renderSlideIndicator = () => {
+    return (
+      <ItemIndicatorList>
+        <ItemIndicator
+          selected={index === 0}
+          onClick={() => setIndex(0)}
+        ></ItemIndicator>
+        <ItemIndicator
+          selected={index === 1}
+          onClick={() => setIndex(1)}
+        ></ItemIndicator>
+      </ItemIndicatorList>
+    )
   }
 
   return (
@@ -119,15 +135,13 @@ const Clients = ({ isHomePage }) => {
             </>
           )}
         </ClientsContainer>
-      <span>.</span> <span>.</span>
-      <span>.</span>
       </AutoPlaySwipeableViews>
       {!isHomePage && (
         <Button onClick={() => handleButtonClick('next')}>
           <Icon icon="ea61" size={40} color={'primary'} />
         </Button>
       )}
-
+      {renderSlideIndicator()}
     </Container>
   )
 }

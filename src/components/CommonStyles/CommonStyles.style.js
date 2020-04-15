@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
 export const Section = styled.section`
-  width: 4vw;
+  width: 3.5vw;
   position: relative;
   height: 100%;
   transition: all 0.8s ease;
-  ${({ active }) => active && 'width: 84vw;'}
+  ${({ active }) => active && 'width: 86vw;'}
   display: flex;
   ${({ theme, active }) => theme.media.phone`
       width: 100%;
@@ -17,7 +17,7 @@ export const Section = styled.section`
 `
 
 export const SectionSidebar = styled.div`
-  width: 4vw;
+  width: 3.5vw;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -42,8 +42,8 @@ export const SidebarName = styled.div`
   top: calc(100vh - 500px);
   width: 350px;
   text-align: center;
-  height: 4vw;
-  line-height: 4vw;
+  height: 3.5vw;
+  line-height: 3.5vw;
   color: ${({ theme, primaryColor }) =>
     primaryColor ? theme.colors.primary : theme.colors.black};
   background: ${({ theme, primaryColor }) =>
@@ -70,9 +70,10 @@ export const SidebarName = styled.div`
 export const ContentContainer = styled.div`
   overflow-x: hidden;
   overflow-y: auto;
-  width: 80vw;
+  width: 82.5vw;
+  height: 100%;
   background: white;
-  padding: 80px 80px;
+  padding: ${({ padding }) => padding || '80px 80px'};
   position: relative;
   box-sizing: border-box;
   ${({ theme }) =>

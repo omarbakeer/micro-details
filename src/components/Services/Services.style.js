@@ -36,6 +36,11 @@ export const ServiceBlock = styled.div`
     cursor: pointer;
     background: ${({ theme }) => theme.colors.primary};
     color: ${({ theme }) => theme.colors['black']};
+    & .icon {
+      &::before{
+        color: ${({ theme }) => theme.colors.black};
+      }
+    }
   }
   ${({ theme }) => theme.media.phone`
   width: 50%;

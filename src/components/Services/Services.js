@@ -85,6 +85,7 @@ const Services = ({ isActive, setActive }) => {
             selected={selectedTab === 1}
           >
             <Icon
+              className="icon"
               icon="e97d"
               size={26}
               color={selectedTab !== 1 && 'primary'}
@@ -96,6 +97,7 @@ const Services = ({ isActive, setActive }) => {
             selected={selectedTab === 2}
           >
             <Icon
+              className="icon"
               icon="eae8"
               size={26}
               color={selectedTab !== 2 && 'primary'}
@@ -108,6 +110,7 @@ const Services = ({ isActive, setActive }) => {
             selected={selectedTab === 3}
           >
             <Icon
+              className="icon"
               icon="e962"
               size={26}
               color={selectedTab !== 3 && 'primary'}
@@ -122,6 +125,7 @@ const Services = ({ isActive, setActive }) => {
             selected={selectedTab === 4}
           >
             <Icon
+              className="icon"
               icon="ecf4"
               size={26}
               color={selectedTab !== 4 && 'primary'}
@@ -134,6 +138,7 @@ const Services = ({ isActive, setActive }) => {
             selected={selectedTab === 5}
           >
             <Icon
+              className="icon"
               icon="e97d"
               size={26}
               color={selectedTab !== 5 && 'primary'}
@@ -147,6 +152,7 @@ const Services = ({ isActive, setActive }) => {
             selected={selectedTab === 6}
           >
             <Icon
+              className="icon"
               icon="eece"
               size={26}
               color={selectedTab !== 6 && 'primary'}

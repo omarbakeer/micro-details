@@ -15,8 +15,8 @@ export const WeAreItem = styled.div`
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  width: 30%;
-  margin-right: 3.3%;
+  width: 28%;
+  margin-right: 5.3%;
   margin-bottom: 10px;
   ${({ theme }) => theme.media.tablet`
   width: 35%;
@@ -25,6 +25,7 @@ export const WeAreItem = styled.div`
   align-items: center;
   width: 100%;
   margin-right: 0;
+  margin-bottom: 25px;
   `}
 `
 
@@ -53,11 +54,13 @@ export const ImgIcon = styled.img`
 export const ContentText = styled.p`
   margin: 0;
   font-size: 15px;
+  /* line-height: 1.4; */
+  text-align: justify;
   ${({ theme }) => theme.media.tablet`
   font-size: 14px;
   `}
   ${({ theme }) => theme.media.phone`
-  font-size: 13px;
+  font-size: 14px;
   text-align: center;
   `}
 `

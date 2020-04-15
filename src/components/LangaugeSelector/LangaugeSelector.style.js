@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const ButtonContainer = styled.div`
   position: absolute;
   right: 5px;
-  top: 30px;
+  top: 2.5%;
   background-color: #000;
   color: #fff;
   z-index: 2;

@@ -32,7 +32,7 @@ import {
 } from './Home.style'
 
 const Home = ({ isActive, setActive }) => {
-  const [selectedMenu, setSelectedMenu] = useState(0)
+  const [selectedMenu, setSelectedMenu] = useState(2)
   const location = useLocation()
   const languageContext = useContext(LanguageContext)
 
@@ -100,7 +100,7 @@ const Home = ({ isActive, setActive }) => {
       {isActive && (
         <>
           <LanguageSelector />
-          <ContentContainer>
+          <ContentContainer padding="55px 3.6% 5%">
             <LogoContainer>
               <Logo src={BrandLogo} alt="" />
             </LogoContainer>
@@ -108,7 +108,7 @@ const Home = ({ isActive, setActive }) => {
               <Banner>
                 <Slogan>
                   <SloganText>
-                    {T('bigThings')}{' '}<NoWrapp>{T('byLittle')} </NoWrapp>{' '}
+                    {T('bigThings')}{' '}<NoWrapp>{T('byLittle')}</NoWrapp>{' '}
                     {T('things')}
                   </SloganText>
                 </Slogan>
@@ -120,8 +120,14 @@ const Home = ({ isActive, setActive }) => {
                     </SpecialStyle>
                   </Text>
                   <Text>
-                    <SpecialStyle bold>{T('but')}</SpecialStyle>,{' '}
+                    <SpecialStyle bold>{T('but')}</SpecialStyle>{' '}
                     {T('homepageParagraphTwo')}
+                  </Text>
+                  <Text paragraph maxWidth="60%">
+                    <SpecialStyle bold italic>
+                    {T('everyDetailMatters')}
+                    </SpecialStyle>
+                   {T('homepagePreParagraphTwo')}
                   </Text>
                   <Text paragraph>
                     {T('homepageParagraphThree')}
@@ -144,7 +150,7 @@ const Home = ({ isActive, setActive }) => {
               {selectedMenu === 2 && <WeDo />}
               {selectedMenu === 3 && (
                 <ClientsContainer>
-                  <Clients />
+                  <Clients isHomePage />
                 </ClientsContainer>
               )}
             </HomeDetails>

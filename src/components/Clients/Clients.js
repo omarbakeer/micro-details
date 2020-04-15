@@ -7,6 +7,7 @@ import {
   Container,
 } from './Clients.style'
 import SwipeableViews from 'react-swipeable-views'
+import { autoPlay } from 'react-swipeable-views-utils';
 import Logo_1 from 'images/(1).jpg'
 import Logo_2 from 'images/(2).jpg'
 import Logo_3 from 'images/(3).jpg'
@@ -40,8 +41,9 @@ import Logo_30 from 'images/(30).png'
 import Logo_31 from 'images/(31).jpg'
 import Logo_32 from 'images/(32).jpg'
 
+const AutoPlaySwipeableViews = autoPlay(SwipeableViews)
 
-const Clients = () => {
+const Clients = ({ isHomePage }) => {
   const [index, setIndex] = useState(0)
   const lastIndex = 1
 
@@ -64,59 +66,63 @@ const Clients = () => {
 
   return (
     <Container>
-      <Button onClick={() => handleButtonClick('prevouis')}>
-        <Icon icon="ea60" size={40} color={'primary'} />
-      </Button>
-      <SwipeableViews index={index} interval={1000} autoplay enableMouseEvents>
+      {!isHomePage && (
+        <Button onClick={() => handleButtonClick('prevouis')}>
+          <Icon icon="ea60" size={40} color={'primary'} />
+        </Button>
+      )}
+      <AutoPlaySwipeableViews index={index} onChangeIndex={setIndex}  enableMouseEvents>
         <ClientsContainer>
           <ClientLogo src={Logo_1} alt="client" />
           <ClientLogo src={Logo_2} alt="client" />
           <ClientLogo src={Logo_3} alt="client" />
           <ClientLogo src={Logo_4} alt="client" />
           <ClientLogo src={Logo_5} alt="client" />
-          <ClientLogo src={Logo_6} alt="client" />
-          <ClientLogo src={Logo_7} alt="client" />
-          <ClientLogo src={Logo_8} alt="client" />
-          <ClientLogo src={Logo_9} alt="client" />
-          <ClientLogo src={Logo_10} alt="client" />
-          <ClientLogo src={Logo_11} alt="client" />
-          <ClientLogo src={Logo_12} alt="client" />
-          <ClientLogo src={Logo_13} alt="client" />
-          <ClientLogo src={Logo_14} alt="client" />
-          <ClientLogo src={Logo_15} alt="client" />
-          <ClientLogo src={Logo_32} alt="client" />
+          {!isHomePage && (
+            <>
+              <ClientLogo src={Logo_6} alt="client" />
+              <ClientLogo src={Logo_7} alt="client" />
+              <ClientLogo src={Logo_8} alt="client" />
+              <ClientLogo src={Logo_9} alt="client" />
+              <ClientLogo src={Logo_10} alt="client" />
+              <ClientLogo src={Logo_11} alt="client" />
+              <ClientLogo src={Logo_12} alt="client" />
+              <ClientLogo src={Logo_13} alt="client" />
+              <ClientLogo src={Logo_14} alt="client" />
+              <ClientLogo src={Logo_15} alt="client" />
+              <ClientLogo src={Logo_32} alt="client" />
+            </>
+          )}
 
         </ClientsContainer>
         <ClientsContainer>
           <ClientLogo src={Logo_16} alt="client" />
           <ClientLogo src={Logo_17} alt="client" />
-          <ClientLogo src={Logo_18} alt="client" />
+        <ClientLogo src={Logo_21} alt="client" />
           <ClientLogo src={Logo_19} alt="client" />
           <ClientLogo src={Logo_20} alt="client" />
-          <ClientLogo src={Logo_21} alt="client" />
-          <ClientLogo src={Logo_22} alt="client" />
-          <ClientLogo src={Logo_23} alt="client" />
-          <ClientLogo src={Logo_24} alt="client" />
-          <ClientLogo src={Logo_25} alt="client" />
-          <ClientLogo src={Logo_26} alt="client" />
-          <ClientLogo src={Logo_27} alt="client" />
-          <ClientLogo src={Logo_28} alt="client" />
-          <ClientLogo src={Logo_29} alt="client" />
-          <ClientLogo src={Logo_30} alt="client" />
-          <ClientLogo src={Logo_31} alt="client" />
-
-
-
-
-
-             
-   
-          
+          {!isHomePage && (
+            <>
+              <ClientLogo src={Logo_22} alt="client" />
+              <ClientLogo src={Logo_23} alt="client" />
+          <ClientLogo src={Logo_18} alt="client" />
+              <ClientLogo src={Logo_24} alt="client" />
+              <ClientLogo src={Logo_25} alt="client" />
+              <ClientLogo src={Logo_26} alt="client" />
+              <ClientLogo src={Logo_27} alt="client" />
+              <ClientLogo src={Logo_28} alt="client" />
+              <ClientLogo src={Logo_29} alt="client" />
+              <ClientLogo src={Logo_30} alt="client" />
+              <ClientLogo src={Logo_31} alt="client" />
+            </>
+          )}
         </ClientsContainer>
-      </SwipeableViews>
-      <Button onClick={() => handleButtonClick('next')}>
-        <Icon icon="ea61" size={40} color={'primary'} />
-      </Button>
+      </AutoPlaySwipeableViews>
+      {!isHomePage && (
+        <Button onClick={() => handleButtonClick('next')}>
+          <Icon icon="ea61" size={40} color={'primary'} />
+        </Button>
+      )}
     </Container>
   )
 }

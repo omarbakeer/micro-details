@@ -1,19 +1,14 @@
 import styled from 'styled-components'
 import bannerBackground from 'images/banner-rectangle.png'
+
 /***************************************************
  ****************** Home Commons ********************
  ****************************************************/
 
 export const Banner = styled.div`
   display: flex;
-  margin-bottom: 40px;
-  height: 65%;
-`
-
-export const ClientsContainer = styled.div`
-  ${({ theme }) => theme.media.desktop`
-    width:70%;
-  `}
+  margin-bottom: 35px;
+  height: 250px;
 `
 
 export const Slogan = styled.div`
@@ -24,7 +19,8 @@ export const Slogan = styled.div`
   align-items: center;
   background-image: url(${bannerBackground});
   background-size: contain;
-  background-position-x: 90%;
+  background-position-x: ${({ theme }) => theme.direction === 'ltr' ? 
+  '90%' : '0'};
   background-repeat: no-repeat;
   /* margin-right: 5%; */
 `
@@ -32,6 +28,7 @@ export const Slogan = styled.div`
 export const SloganText = styled.h1`
   width: min-content;
   font-size: 35px;
+  line-height: 45px;
   text-align: left;
   margin: 0;
   font-weight: 400;
@@ -92,17 +89,19 @@ export const HomeDetails = styled.div`
 export const HomeMenu = styled.div`
   display: flex;
   flex-direction: column;
-  width: 18%;
+  width: 16%;
+  margin:  ${({ theme }) => theme.direction === 'ltr' ? '0 50px 0 0' : '0 50px 0 50px'};
   ${({ theme }) => theme.media.phone`
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
+    margin: 0;
     margin-bottom: 40px;
   `}
 `
 
 export const MenuItem = styled.div`
-  max-width: 70%;
+  /* max-width: 70%; */
   background-color: #f8f8f8;
   padding: 20px 10px;
   border-bottom: 2px solid ${({ theme }) => theme.colors.primary};
@@ -129,4 +128,12 @@ export const Row = styled.div`
   justify-content: center;
   position: relative;
   width: 100%;
+`
+
+export const ClientsContainer = styled.div`
+  ${({ theme }) => theme.media.desktop`
+    display: flex;
+    align-items: center;
+    width:70%;
+  `}
 `

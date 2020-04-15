@@ -5,6 +5,7 @@ export const extendIcon = css`
 `;
 
 export const Footer = styled.footer`
+/* TODO height: 160px */
   height: 150px;
   width: 100vw;
   display: flex;
@@ -16,7 +17,7 @@ export const Footer = styled.footer`
 `;
 
 export const Filler = styled.div`
-  flex: 1;
+  width: 3.5vw;
   background: ${({ color, theme }) => color ? theme.colors[color] : 'transparent'};
   position:relative;
 `;

@@ -31,6 +31,7 @@ export const WeCanTitleWithIcon = styled.div`
   height: 35px;
   ${({ theme }) => theme.media.phone`
     text-align:center;
+    margin-bottom: 16px;
   `}
 `
 
@@ -50,17 +51,18 @@ export const Title = styled.h5`
 `
 
 export const ImgIcon = styled.img`
-  width: 25px;
+  width: ${({ width }) => width || 25}px;
   ${({ theme }) => theme.direction === 'ltr' ? 'margin-right: 10px;' : 'margin-left: 10px;'}
 `
 
 export const ContentText = styled.p`
   margin: 0;
   font-size: 15px;
+  /* line-height: 1.4; */
   ${({ theme }) => theme.media.tablet`
   font-size: 14px;
   `}
   ${({ theme }) => theme.media.phone`
-  font-size: 13px;
+  font-size: 14px;
   `}
 `

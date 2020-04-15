@@ -25,14 +25,14 @@ const WeCan = () => (
     </WeCanItem>
     <WeCanItem>
       <WeCanTitleWithIcon>
-        <ImgIcon src={codeImage} />
+        <ImgIcon src={codeImage} width={30} />
         <Title>{T('develop')}</Title>
       </WeCanTitleWithIcon>
       <ContentText>{T('developParagraph')}</ContentText>
     </WeCanItem>
     <WeCanItem>
       <WeCanTitleWithIcon>
-        <ImgIcon src={designImage} />
+        <ImgIcon src={designImage} width={27} />
         <Title>{T('design')}</Title>
       </WeCanTitleWithIcon>
       <ContentText>{T('designParagraph')}</ContentText>
@@ -46,7 +46,7 @@ const WeCan = () => (
     </WeCanItem>
     <WeCanItem>
       <WeCanTitleWithIcon>
-        <ImgIcon src={consultImage} />
+        <ImgIcon src={consultImage} width={26} />
         <Title>{T('consult')}</Title>
       </WeCanTitleWithIcon>
       <ContentText>{T('consultParagraph')}</ContentText>

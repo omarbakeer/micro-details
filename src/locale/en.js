@@ -9,7 +9,7 @@ const en = {
   byLittle: 'BY LITTLE',
   things: 'THINGS',
   diverse: 'Diverse.',
-  but: 'But',
+  but: 'But,',
   effectiveness: 'effectiveness',
   howWeDoIt: 'how we do it',
   mission: 'misson',
@@ -18,7 +18,7 @@ const en = {
   marketingPlan: 'marketing plan',
   designAndDevelopment: 'design and development',
   buissnessConsultation: 'buissness consultation',
-  growthHacking: 'growth hacking',
+  growthHacking: 'organic digital growth',
   photographyAndVideoghraphy: 'photography and videography',
   photographyAndVideoghraphyOne:
     'Your brand image is one of your biggest assets. At Micro Details, we want to capture the essence of your product or brand to fully reflect it. ',
@@ -46,6 +46,8 @@ const en = {
     'There are unique techniques available for entrepreneurs and new brands entering the field including viral marketing, lean marketing and growth hacking. Micro Details stays informed and keeps you informed. ',
   homepageParagraphOne: 'The world is getting fast-paced. Powerful.',
   homepageParagraphTwo: 'it’s a small world.',
+  everyDetailMatters: 'Every detail matters ',
+  homepagePreParagraphTwo: "because there’s no room for mistakes.",
   homepageParagraphThree:
     'All elements of your marketing needs tailored for precise.',
   homepageParagraphFour: 'That’s where we come in.',

@@ -11,13 +11,16 @@ const display = keyframes`
 
 export const ClientsContainer = styled.div`
   display: block;
-  text-align:center;
-  margin:auto;
+  text-align: center;
+  margin: auto;
 `
 export const ClientLogo = styled.img`
   margin: 10px;
   width: 85px;
   padding: 10px;
+  ${({ theme }) => theme.media.phone`
+  width: 60px;
+`}
 `
 export const ImageWrapper = styled.div`
   width: 20%;
@@ -34,6 +37,7 @@ export const Button = styled.div`
   margin: auto 0;
   ${({ theme }) => theme.media.phone`
   width : 15px;
+  display:none;
 `}
 `
 
@@ -52,7 +56,7 @@ export const ItemIndicator = styled.li`
   cursor: pointer;
   background-color: red;
   background-color: ${({ selected, theme }) =>
-  selected ? theme.colors.black : theme.colors.lightGray};
+    selected ? theme.colors.black : theme.colors.lightGray};
   background-clip: padding-box;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;

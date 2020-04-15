@@ -9,4 +9,5 @@ export {
   Icon,
   ShowOnDesktop,
   HideOnDeskTop,
+  mobileCenteredText
 } from './CommonStyles.style'

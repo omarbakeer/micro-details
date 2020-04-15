@@ -7,7 +7,7 @@ import {
   Container,
 } from './Clients.style'
 import SwipeableViews from 'react-swipeable-views'
-import { autoPlay } from 'react-swipeable-views-utils';
+import { autoPlay } from 'react-swipeable-views-utils'
 import Logo_1 from 'images/(1).jpg'
 import Logo_2 from 'images/(2).jpg'
 import Logo_3 from 'images/(3).jpg'
@@ -46,7 +46,6 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews)
 const Clients = ({ isHomePage }) => {
   const [index, setIndex] = useState(0)
   const lastIndex = 1
-
   const handleButtonClick = (type) => {
     if (type === 'next') {
       if (index === lastIndex) {
@@ -71,7 +70,11 @@ const Clients = ({ isHomePage }) => {
           <Icon icon="ea60" size={40} color={'primary'} />
         </Button>
       )}
-      <AutoPlaySwipeableViews index={index} onChangeIndex={setIndex}  enableMouseEvents>
+      <AutoPlaySwipeableViews
+        index={index}
+        onChangeIndex={setIndex}
+        enableMouseEvents
+      >
         <ClientsContainer>
           <ClientLogo src={Logo_1} alt="client" />
           <ClientLogo src={Logo_2} alt="client" />
@@ -93,19 +96,18 @@ const Clients = ({ isHomePage }) => {
               <ClientLogo src={Logo_32} alt="client" />
             </>
           )}
-
         </ClientsContainer>
         <ClientsContainer>
           <ClientLogo src={Logo_16} alt="client" />
           <ClientLogo src={Logo_17} alt="client" />
-        <ClientLogo src={Logo_21} alt="client" />
+          <ClientLogo src={Logo_21} alt="client" />
           <ClientLogo src={Logo_19} alt="client" />
           <ClientLogo src={Logo_20} alt="client" />
           {!isHomePage && (
             <>
               <ClientLogo src={Logo_22} alt="client" />
               <ClientLogo src={Logo_23} alt="client" />
-          <ClientLogo src={Logo_18} alt="client" />
+              <ClientLogo src={Logo_18} alt="client" />
               <ClientLogo src={Logo_24} alt="client" />
               <ClientLogo src={Logo_25} alt="client" />
               <ClientLogo src={Logo_26} alt="client" />
@@ -117,12 +119,15 @@ const Clients = ({ isHomePage }) => {
             </>
           )}
         </ClientsContainer>
+      <span>.</span> <span>.</span>
+      <span>.</span>
       </AutoPlaySwipeableViews>
       {!isHomePage && (
         <Button onClick={() => handleButtonClick('next')}>
           <Icon icon="ea61" size={40} color={'primary'} />
         </Button>
       )}
+
     </Container>
   )
 }

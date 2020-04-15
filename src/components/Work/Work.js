@@ -6,12 +6,11 @@ import {
   SidebarName,
   ContentContainer,
   Logo,
-  Text,
   LogoContainer,
 } from 'components/CommonStyles'
 import BrandLogo from 'images/Logo.png'
 import Clients from 'components/Clients'
-import { Container } from './Work.style'
+import { Container, Title } from './Work.style'
 import { T } from 'locale'
 
 const Work = ({ isActive, setActive }) => {
@@ -28,7 +27,7 @@ const Work = ({ isActive, setActive }) => {
               <Logo src={BrandLogo} alt="" />
             </LogoContainer>
             <Container>
-              <Text title>{T('weWorkWith')}</Text>
+              <Title>{T('weWorkWith')}</Title>
               <Clients />
             </Container>
           </ContentContainer>

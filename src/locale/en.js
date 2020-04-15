@@ -11,7 +11,7 @@ const en = {
   diverse: 'Diverse.',
   but: 'But,',
   effectiveness: 'effectiveness',
-  howWeDoIt: 'how we do it',
+  howWeDoIt: 'how we do it ?',
   mission: 'misson',
   vision: 'vision',
   trainingAndWorkshop: 'training and workshop',

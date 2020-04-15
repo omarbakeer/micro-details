@@ -1,5 +1,11 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
+export const mobileCenteredText = css`
+  ${({ theme }) => theme.media.phone`
+text-align: center;
+
+`}
+`
 export const Section = styled.section`
   width: 3.5vw;
   position: relative;
@@ -111,8 +117,7 @@ export const Text = styled.span`
   color: ${({ theme, color }) => theme.colors[color || 'black']};
   ${({ underLine }) => underLine && 'text-decoration: underline;'}
   max-width: ${({ maxWidth }) => maxWidth};
-
-
+  ${({ extendStyle }) => extendStyle || ''}
   ${({ title, theme }) =>
     title &&
     `
@@ -134,7 +139,7 @@ export const Text = styled.span`
     secondryTitle &&
     `
     font-size: 20px;
-    font-weight:500;
+    font-weight:400;
     text-transform: uppercase;
     ${
       theme.direction === 'ltr' &&
@@ -173,7 +178,6 @@ export const Text = styled.span`
     ${(title) =>
       title &&
       `
-      font-size:26px;
       ${
         theme.direction === 'ltr' &&
         `
@@ -216,7 +220,6 @@ export const Text = styled.span`
       secondryTitle &&
       `  
       font-size: 14px;
-      font-weight:500;
       ${
         theme.direction === 'ltr' &&
         `
@@ -234,7 +237,10 @@ export const Icon = styled.span`
   font-family: icofont;
   margin: 0 5px;
   &:before {
-    ${({ theme, dontFlipOnRtl }) => !dontFlipOnRtl && theme.direction === 'rtl' && `
+    ${({ theme, dontFlipOnRtl }) =>
+      !dontFlipOnRtl &&
+      theme.direction === 'rtl' &&
+      `
       transform: scaleX(-1);
     `}
     content: "\\${({ icon }) => icon || ''}";

@@ -7,6 +7,7 @@ import {
   Logo,
   LogoContainer,
   Text,
+  mobileCenteredText,
 } from 'components/CommonStyles'
 import LanguageSelector from 'components/LangaugeSelector'
 import Target from 'images/target.png'
@@ -20,6 +21,7 @@ import {
   TitleContainer,
   ParagraphContainer,
   Wrapper,
+  Title,
 } from './About.style'
 
 const About = ({ isActive, setActive }) => {
@@ -36,9 +38,13 @@ const About = ({ isActive, setActive }) => {
               <Logo src={BrandLogo} alt="" />
             </LogoContainer>
             <Container>
-              <Text title>{T('ourStory')}</Text>
-              <Text subTitle>{T('aboutParagraphOne')}</Text>
-              <Text paragraph>{T('aboutParagraphTwo')}</Text>
+              <Title>{T('ourStory')}</Title>
+              <Text paragraph extendStyle={mobileCenteredText}>
+                {T('aboutParagraphOne')}
+              </Text>
+              <Text paragraph extendStyle={mobileCenteredText}>
+                {T('aboutParagraphTwo')}
+              </Text>
               <MissionAndVisionContainer>
                 <Wrapper>
                   <Illustration target src={Target} alt="" />
@@ -48,7 +54,9 @@ const About = ({ isActive, setActive }) => {
                     </Text>
                   </TitleContainer>
                   <ParagraphContainer>
-                    <Text paragraph>{T('missonParagraph')}</Text>
+                    <Text paragraph extendStyle={mobileCenteredText}>
+                      {T('missonParagraph')}
+                    </Text>
                   </ParagraphContainer>
                 </Wrapper>
                 <Wrapper>
@@ -59,13 +67,19 @@ const About = ({ isActive, setActive }) => {
                     </Text>
                   </TitleContainer>
                   <ParagraphContainer>
-                    <Text paragraph>{T('visionParagraph')}</Text>
+                    <Text extendStyle={mobileCenteredText} paragraph>
+                      {T('visionParagraph')}
+                    </Text>
                   </ParagraphContainer>
                 </Wrapper>
               </MissionAndVisionContainer>
-              <Text title>{T('howWeDoIt')}</Text>
-              <Text paragraph>{T('aboutParagraphThree')}</Text>
-              <Text paragraph>{T('aboutParagraphFour')}</Text>
+              <Title>{T('howWeDoIt')}</Title>
+              <Text extendStyle={mobileCenteredText} paragraph>
+                {T('aboutParagraphThree')}
+              </Text>
+              <Text extendStyle={mobileCenteredText} paragraph>
+                {T('aboutParagraphFour')}
+              </Text>
             </Container>
           </ContentContainer>
         </>

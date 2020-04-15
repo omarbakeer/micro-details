@@ -11,10 +11,12 @@ import {
   Icon,
   HideOnDeskTop,
   ShowOnDesktop,
+  mobileCenteredText,
+
 } from 'components/CommonStyles'
 import { T } from 'locale'
 import BrandLogo from 'images/Logo.png'
-import { Container, Row, ServiceBlock, Service } from './Services.style'
+import { Container, Row, ServiceBlock, Service, Title } from './Services.style'
 
 const Services = ({ isActive, setActive }) => {
   const [selectedTab, setSelectedTab] = useState(1)
@@ -23,54 +25,54 @@ const Services = ({ isActive, setActive }) => {
     if (selectedTab === 1) {
       return (
         <>
-          <Text title>{T('marketingPlan')}</Text>
-          <Text paragraph>{T('marketingPlanParahraphOne')}</Text>
-          <Text paragraph>{T('marketingPlanParahraphTwo')}</Text>
+          <Title>{T('marketingPlan')}</Title>
+          <Text paragraph extendStyle={mobileCenteredText}>{T('marketingPlanParahraphOne')}</Text>
+          <Text paragraph extendStyle={mobileCenteredText}>{T('marketingPlanParahraphTwo')}</Text>
         </>
       )
     }
     if (selectedTab === 2) {
       return (
         <>
-          <Text title>{T('designAndDevelopment')}</Text>
-          <Text paragraph>{T('designAndDevelopmentParahraphOne')}</Text>
-          <Text paragraph>{T('designAndDevelopmentParahraphTwo')}</Text>
+          <Title>{T('designAndDevelopment')}</Title>
+          <Text paragraph extendStyle={mobileCenteredText}>{T('designAndDevelopmentParahraphOne')}</Text>
+          <Text paragraph extendStyle={mobileCenteredText}>{T('designAndDevelopmentParahraphTwo')}</Text>
         </>
       )
     }
     if (selectedTab === 3) {
       return (
         <>
-          <Text title>{T('buissnessConsultation')}</Text>
-          <Text paragraph>{T('buissnessConsultationParahraphOne')}</Text>
-          <Text paragraph>{T('buissnessConsultationParahraphTwo')}</Text>
+          <Title>{T('buissnessConsultation')}</Title>
+          <Text paragraph extendStyle={mobileCenteredText}>{T('buissnessConsultationParahraphOne')}</Text>
+          <Text paragraph extendStyle={mobileCenteredText}>{T('buissnessConsultationParahraphTwo')}</Text>
         </>
       )
     }
     if (selectedTab === 4) {
       return (
         <>
-          <Text title>{T('trainingAndWorkshop')}</Text>
-          <Text paragraph>{T('trainingAndWorkshopParahraphOne')}</Text>
-          <Text paragraph>{T('trainingAndWorkshopParahraphTwo')}</Text>
+          <Title>{T('trainingAndWorkshop')}</Title>
+          <Text paragraph extendStyle={mobileCenteredText}>{T('trainingAndWorkshopParahraphOne')}</Text>
+          <Text paragraph extendStyle={mobileCenteredText}>{T('trainingAndWorkshopParahraphTwo')}</Text>
         </>
       )
     }
     if (selectedTab === 5) {
       return (
         <>
-          <Text title>{T('growthHacking')}</Text>
-          <Text paragraph>{T('growthHackingParahraphOne')}</Text>
-          <Text paragraph>{T('growthHackingParahraphTwo')}</Text>
+          <Title>{T('growthHacking')}</Title>
+          <Text paragraph extendStyle={mobileCenteredText}>{T('growthHackingParahraphOne')}</Text>
+          <Text paragraph extendStyle={mobileCenteredText}>{T('growthHackingParahraphTwo')}</Text>
         </>
       )
     }
     if (selectedTab === 6) {
       return (
         <>
-          <Text title>{T('photographyAndVideoghraphy')}</Text>
-          <Text paragraph>{T('photographyAndVideoghraphyOne')}</Text>
-          <Text paragraph>{T('photographyAndVideoghraphyTwo')}</Text>
+          <Title>{T('photographyAndVideoghraphy')}</Title>
+          <Text paragraph extendStyle={mobileCenteredText}>{T('photographyAndVideoghraphyOne')}</Text>
+          <Text paragraph extendStyle={mobileCenteredText}>{T('photographyAndVideoghraphyTwo')}</Text>
         </>
       )
     }
@@ -172,9 +174,7 @@ const Services = ({ isActive, setActive }) => {
             onClick={() => setSelectedTab(1)}
             selected={selectedTab === 1}
           >
-            <Service>Marketing Plan</Service>
             <Service>{T('marketingPlan')}</Service>
-
             <Icon
               icon="e97d"
               size={26}
@@ -243,8 +243,7 @@ const Services = ({ isActive, setActive }) => {
               size={26}
               color={selectedTab !== 6 && 'primary'}
             />
-            <Service>Photography and videography</Service>
-            <Service>{T('marketingPlan')}</Service>
+            <Service>{T('photographyAndVideoghraphy')}</Service>
           </ServiceBlock>
         </Row>
       </HideOnDeskTop>
@@ -264,7 +263,7 @@ const Services = ({ isActive, setActive }) => {
               <Logo src={BrandLogo} alt="" />
             </LogoContainer>
             <Container>
-              <Text title>{T('services')}</Text>
+              <Title>{T('services')}</Title>
               {renderdDeskTopServicesTabs()}
               {renderdMobileServicesTabs()}
               {renderTextBasedOnSelectedTab()}

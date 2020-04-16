@@ -2,8 +2,24 @@ import styled, { css } from 'styled-components'
 
 export const extendIcon = css`
   margin: 0;
-  margin-right: 10px;
+  ${({ theme }) => theme.direction === 'ltr' ? 'margin-right: 10px;' : 'margin-left: 10px;'}
 `;
+
+
+export const MainTitle = styled.div`
+  font-size: 35px;
+  margin: 40px 0 50px;
+  ${({ theme }) =>
+    theme.direction === 'ltr' && `
+      -webkit-letter-spacing: 12px;
+      -moz-letter-spacing: 12px;
+      -ms-letter-spacing: 12px;
+      letter-spacing: 12px;
+    `}
+  ${({ theme }) => theme.media.phone`
+    display: none;
+  `}
+`
 
 export const BasicRow = styled.div`
   display: flex;
@@ -36,8 +52,8 @@ export const Title = styled.h3`
   font-weight: 500;
   text-decoration: underline;
   width: fit-content;
-  ${({ theme, highLight }) => highLight && `background-color: ${theme.colors.primary};`}
-  ${({ theme }) => theme.direction === 'ltr' && `
+  ${({ theme, highLight }) => highLight && theme.direction ==='rtl' && `background-color: ${theme.colors.primary};`}
+  ${({ theme }) => theme.direction !== 'ltr' ? '' : `
     -webkit-letter-spacing: 5px;
     -moz-letter-spacing: 5px;
     -ms-letter-spacing: 5px;
@@ -56,6 +72,7 @@ export const Link = styled.a`
   font-size: 14px;
   color: ${({ theme }) => theme.colors.black};
   text-decoration: none;
+  direction: ltr;
   &:hover {
     color: ${({ theme }) => theme.colors.blue};
     text-decoration: underline;
@@ -80,9 +97,9 @@ export const Address = styled.div`
 export const AddressTitle = styled.h5`
   margin: 0;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   margin-bottom: 10px;
-  ${({ theme }) => theme.direction === 'ltr' && `
+  ${({ theme }) => theme.direction !== 'ltr' ? '' : `
     -webkit-letter-spacing: 1.5px;
     -moz-letter-spacing: 1.5px;
     -ms-letter-spacing: 1.5px;
@@ -93,7 +110,7 @@ export const AddressTitle = styled.h5`
 export const AddressDetails = styled.p`
   margin: 0;
   font-size: 12px;
-  ${({ theme }) => theme.direction === 'ltr' && `
+  ${({ theme }) => theme.direction !== 'ltr' ? '' : `
     -webkit-letter-spacing: 1.5px;
     -moz-letter-spacing: 1.5px;
     -ms-letter-spacing: 1.5px;
@@ -113,7 +130,8 @@ const inputStyle = css`
     width: 95%;
   `}
   &::placeholder{
-    font-family: Arial;
+    font-family: ${({ theme }) => theme.direction === 'ltr' ? 'Qanelas, Arial': 'TheSansArabic'} ;
+    font-size: 16px;
     color: ${({ theme }) => theme.colors.black};
     ${({ theme }) => theme.media.phone`
       text-align: center;
@@ -156,7 +174,7 @@ export const Marker = styled.div`
   top: -30px;
   left: -14px;
   border-radius: 50% 50% 50% 0;
-  border: 4px solid #ef0f0f;
+  border: 4px solid ${({ theme }) => theme.colors.primary};
   width: 30px;
   height: 30px;
   transform: rotate(-45deg);
@@ -170,6 +188,10 @@ export const Marker = styled.div`
     left: 50%;
     margin-left: -7px;
     margin-top: -8px;
-    background-color: #ef0f0f;
+    background-color: ${({ theme }) => theme.colors.primary};
   }
 `;
+
+export const SpecialStyle = styled.span`
+  background-color: ${({ theme }) => theme.colors.primary};
+`

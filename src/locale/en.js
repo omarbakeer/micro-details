@@ -79,7 +79,7 @@ const en = {
   detailed: 'detailed',
   detailedDescription:
     'Getting into the details is testing work. But we’re patient and we’re ready to put in the effort. To provide you with a unique and successful experience, we go in headstrong for sure-fire results.',
-  contactUs: 'contact us',
+  contactUs: 'Contact us',
   contactInfo: 'Contact Info.',
   ourOffices: 'Our offices',
   fullNamePlaceholder: 'Full Name',
@@ -111,6 +111,12 @@ const en = {
   amplify: 'amplify',
   amplifyParagraph:
     'Tactics designed to boost your presence, business growth and brand reach.',
+  saudiAddress: 'Hisham bin Hakim Street, Al Andalus District, Jeddah 23322, KSA',
+  egyptAddress: '55 Makram Ebaid, City Center Tower 4th floor, Cairo - Egypt',
+  jeddah: 'Jeddah',
+  cairo: 'Cairo',
+  say: 'Say',
+  hello: 'Hello!'
 }
 
 export default en

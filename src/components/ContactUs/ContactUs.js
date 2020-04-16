@@ -9,12 +9,12 @@ import {
   ContentContainer,
   LogoContainer,
   Logo,
-  Text,
   Icon,
 } from 'components/CommonStyles'
 import {
   BasicRow,
   Col,
+  MainTitle,
   Title,
   Row,
   Link,
@@ -27,6 +27,7 @@ import {
   Button,
   Marker,
   extendIcon,
+  SpecialStyle,
 } from './ContactUs.style'
 import BrandLogo from 'images/Logo.png'
 
@@ -36,8 +37,8 @@ const officesCoordinates = {
     long: 31.3453752,
   },
   sa: {
-    lat: 21.5677489,
-    long: 39.1436756,
+    lat: 21.5472008,
+    long: 39.1465893,
   }
 }
 
@@ -60,11 +61,11 @@ const ContactUs = ({ isActive, setActive }) => {
       {isActive && (
         <>
           <LanguageSelector />
-          <ContentContainer>
+          <ContentContainer padding="5px 5% 5% 11%">
             <LogoContainer>
               <Logo src={BrandLogo} alt="" />
             </LogoContainer>
-            <Text title>{T('contactUs')}</Text>
+            <MainTitle >{T('contactUs')}</MainTitle>
             <BasicRow>
               <Col flex={3}>
                 <Title>{T('contactInfo')}</Title>
@@ -83,15 +84,15 @@ const ContactUs = ({ isActive, setActive }) => {
                 <Title>{T('ourOffices')}</Title>
                 <Row>
                   <Address active={activeAddress === 'sa'} onClick={() => setActiveAddress('sa')}>
-                    <AddressTitle>Jeddah</AddressTitle>
+                    <AddressTitle>{T('jeddah')}</AddressTitle>
                     <AddressDetails>
-                    Prince Sultan Street, Al Murjana Tower, 7th floor, Jeddah- KSA
+                      {T('saudiAddress')}
                     </AddressDetails>
                   </Address>
                   <Address active={activeAddress === 'eg'} onClick={() => setActiveAddress('eg')}>
-                    <AddressTitle>Cairo</AddressTitle>
+                    <AddressTitle>{(T('cairo'))}</AddressTitle>
                     <AddressDetails>
-                      55 Makram Ebaid, City Center Tower 4th floor, Cairo - Egypt
+                      {T('egyptAddress')}
                     </AddressDetails>
                   </Address>
                 </Row>
@@ -99,7 +100,7 @@ const ContactUs = ({ isActive, setActive }) => {
             </BasicRow>
             <BasicRow reversedOnMobile>
               <Col flex={3}>
-                <Title highLight>Say Hello!</Title>
+                <Title highLight>{T('say')} <SpecialStyle>{T('hello')}</SpecialStyle></Title>
                 <Form onSubmit={handleSubmit} method="POST" autoComplete="nope">
                   <InputField
                     placeholder={T('fullNamePlaceholder')}

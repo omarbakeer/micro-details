@@ -50,14 +50,16 @@ export const SidebarName = styled.div`
   position: absolute;
   top: calc(100vh - 500px);
   width: 350px;
-  text-align: center;
+  text-align: ${({ theme }) => theme.direction === 'ltr' ? 'left' : 'right'};
   height: 3.5vw;
   line-height: 3.5vw;
   color: ${({ theme, primaryColor }) =>
     primaryColor ? theme.colors.primary : theme.colors.black};
   background: ${({ theme, primaryColor }) =>
     primaryColor ? theme.colors.black : theme.colors.primary};
-  font-size: 36px;
+  font-size: 24px;
+  padding: 0 85px;
+  box-sizing: border-box;
   text-transform: uppercase;
   ${({ theme }) => theme.media.phone`
       position: relative;
@@ -66,7 +68,7 @@ export const SidebarName = styled.div`
       top: unset;
       width: 60%;
       text-align: center;
-      font-size: 24px;
+      font-size: 22px;
       padding: 0;
       margin: auto;
       position: unset;

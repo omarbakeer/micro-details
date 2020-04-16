@@ -22,7 +22,7 @@ const Work = ({ isActive, setActive }) => {
       {isActive && (
         <>
           <LanguageSelector />
-          <ContentContainer>
+          <ContentContainer padding="5px 5% 5% 11%">
             <LogoContainer>
               <Logo src={BrandLogo} alt="" />
             </LogoContainer>

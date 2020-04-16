@@ -128,7 +128,7 @@ export const Text = styled.span`
     font-weight:500;
     text-transform:capitalize;
     ${
-      theme.direction === 'ltr' &&
+      theme.direction !== 'ltr' ? '' :
       `
       -webkit-letter-spacing: 12px;
       -moz-letter-spacing: 12px;
@@ -144,7 +144,7 @@ export const Text = styled.span`
     font-weight:400;
     text-transform: uppercase;
     ${
-      theme.direction === 'ltr' &&
+      theme.direction !== 'ltr' ? '' :
       `
       -webkit-letter-spacing: 5px;
       -moz-letter-spacing: 5px;
@@ -160,7 +160,7 @@ export const Text = styled.span`
     font-weight:400;
     margin : 10px 0px;
     ${
-      theme.direction === 'ltr' &&
+      theme.direction !== 'ltr' ? '' :
       `
       -webkit-letter-spacing: 3px;
       -moz-letter-spacing: 3px;
@@ -177,11 +177,11 @@ export const Text = styled.span`
   `}
 
   ${({ theme }) => theme.media.phone`
-    ${(title) =>
+    ${({ title }) =>
       title &&
       `
       ${
-        theme.direction === 'ltr' &&
+        theme.direction !== 'ltr' ? '' :
         `
         -webkit-letter-spacing: 5px;
         -moz-letter-spacing: 5px;
@@ -190,12 +190,12 @@ export const Text = styled.span`
       `
       }
     `}
-    ${(subTitle) =>
+    ${({ subTitle }) =>
       subTitle &&
       `
       font-size: 14px;
       ${
-        theme.direction === 'ltr' &&
+        theme.direction !== 'ltr' ? '' :
         `
         -webkit-letter-spacing: 2px;
         -moz-letter-spacing: 2px;
@@ -204,12 +204,12 @@ export const Text = styled.span`
       `
       }
     `}
-    ${(paragraph) =>
+    ${({ paragraph }) =>
       paragraph &&
       `
         font-size: 14px;
         ${
-          theme.direction === 'ltr' &&
+          theme.direction !== 'ltr' ? '' :
           `
           -webkit-letter-spacing: 2px;
           -moz-letter-spacing: 2px;
@@ -223,7 +223,7 @@ export const Text = styled.span`
       `  
       font-size: 14px;
       ${
-        theme.direction === 'ltr' &&
+        theme.direction !== 'ltr' ? '' :
         `
         -webkit-letter-spacing: 3px;
         -moz-letter-spacing: 3px;

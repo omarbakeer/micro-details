@@ -1,6 +1,6 @@
 const en = {
   home: 'Home',
-  weWorkWith: 'We Work With',
+  weWorkWith: 'We work with',
   aboutUs: 'about us',
   services: 'services',
   langauge: 'العربية',

@@ -112,6 +112,7 @@ const Clients = ({ isHomePage }) => {
               <ClientLogo src={Logo_14} alt="client" />
               <ClientLogo src={Logo_15} alt="client" />
               <ClientLogo src={Logo_32} alt="client" />
+              <ClientLogo src={Logo_31} alt="client" />
             </>
           )}
         </ClientsContainer>
@@ -133,7 +134,6 @@ const Clients = ({ isHomePage }) => {
               <ClientLogo src={Logo_28} alt="client" />
               <ClientLogo src={Logo_29} alt="client" />
               <ClientLogo src={Logo_30} alt="client" />
-              <ClientLogo src={Logo_31} alt="client" />
             </>
           )}
         </ClientsContainer>

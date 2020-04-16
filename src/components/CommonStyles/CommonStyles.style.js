@@ -2,9 +2,12 @@ import styled, { css } from 'styled-components'
 
 export const mobileCenteredText = css`
   ${({ theme }) => theme.media.phone`
-text-align: center;
-
-`}
+    text-align: center;
+    -webkit-letter-spacing: 0;
+    -moz-letter-spacing: 0;
+    -ms-letter-spacing: 0;
+    letter-spacing: 0;
+  `}
 `
 export const Section = styled.section`
   width: 3.5vw;
@@ -117,7 +120,6 @@ export const Text = styled.span`
   color: ${({ theme, color }) => theme.colors[color || 'black']};
   ${({ underLine }) => underLine && 'text-decoration: underline;'}
   max-width: ${({ maxWidth }) => maxWidth};
-  ${({ extendStyle }) => extendStyle || ''}
   ${({ title, theme }) =>
     title &&
     `
@@ -231,6 +233,8 @@ export const Text = styled.span`
       }
     `}
   `}
+  ${({ extendStyle }) => extendStyle || ''}
+
 `
 
 export const Icon = styled.span`

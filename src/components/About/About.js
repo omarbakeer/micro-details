@@ -8,20 +8,24 @@ import {
   LogoContainer,
   Text,
   mobileCenteredText,
+  Icon,
 } from 'components/CommonStyles'
 import LanguageSelector from 'components/LangaugeSelector'
-import Target from 'images/target.png'
-import Vision from 'images/vision.webp'
 import BrandLogo from 'images/Logo.png'
 import { T } from 'locale'
 import {
   Container,
-  Illustration,
   MissionAndVisionContainer,
   TitleContainer,
   ParagraphContainer,
   Wrapper,
   Title,
+  SpecialStyle,
+  extendIcon,
+  extendText,
+  extendTextZeroMargins,
+  marginToAlignText,
+  lineHeightAndLetterSpacing,
 } from './About.style'
 
 const About = ({ isActive, setActive }) => {
@@ -33,52 +37,62 @@ const About = ({ isActive, setActive }) => {
       {isActive && (
         <>
           <LanguageSelector />
-          <ContentContainer>
+          <ContentContainer padding="5px 5% 5% 11%">
             <LogoContainer>
               <Logo src={BrandLogo} alt="" />
             </LogoContainer>
             <Container>
-              <Title>{T('ourStory')}</Title>
-              <Text paragraph extendStyle={mobileCenteredText}>
-                {T('aboutParagraphOne')}
+              <Title >{T('ourStory')}</Title>
+              <Text paragraph extendStyle={mobileCenteredText.concat(extendText, lineHeightAndLetterSpacing)}>
+                {T('partOneAboutParagraphOne')}
+                <SpecialStyle vBold italic>
+                  {T('partTwoAboutParagraphOne')}
+                </SpecialStyle>
+                {T('partThreeAboutParagraphOne')}
               </Text>
-              <Text paragraph extendStyle={mobileCenteredText}>
+              <Text paragraph extendStyle={mobileCenteredText.concat(lineHeightAndLetterSpacing)}>
                 {T('aboutParagraphTwo')}
               </Text>
               <MissionAndVisionContainer>
                 <Wrapper>
-                  <Illustration target src={Target} alt="" />
+                  <Icon icon="eecc" size={60} extendStyle={extendIcon} />
                   <TitleContainer>
-                    <Text secondryTitle color="white">
+                    <Text secondryTitle color="white" extendStyle={marginToAlignText}>
                       {T('mission')}
                     </Text>
                   </TitleContainer>
                   <ParagraphContainer>
-                    <Text paragraph extendStyle={mobileCenteredText}>
+                    <Text paragraph extendStyle={extendTextZeroMargins.concat(lineHeightAndLetterSpacing)}>
                       {T('missonParagraph')}
                     </Text>
                   </ParagraphContainer>
                 </Wrapper>
                 <Wrapper>
-                  <Illustration vision src={Vision} alt="" />
+                  <Icon icon="ef24" size={60} extendStyle={extendIcon} />
                   <TitleContainer>
-                    <Text secondryTitle color="white">
+                    <Text secondryTitle color="white" extendStyle={marginToAlignText}>
                       {T('vision')}
                     </Text>
                   </TitleContainer>
                   <ParagraphContainer>
-                    <Text extendStyle={mobileCenteredText} paragraph>
+                    <Text extendStyle={extendTextZeroMargins.concat(lineHeightAndLetterSpacing)} paragraph>
                       {T('visionParagraph')}
                     </Text>
                   </ParagraphContainer>
                 </Wrapper>
               </MissionAndVisionContainer>
-              <Title>{T('howWeDoIt')}</Title>
-              <Text extendStyle={mobileCenteredText} paragraph>
+              <Title secondry>{T('howWeDoIt')}</Title>
+              <Text extendStyle={mobileCenteredText.concat(lineHeightAndLetterSpacing)} paragraph>
                 {T('aboutParagraphThree')}
               </Text>
-              <Text extendStyle={mobileCenteredText} paragraph>
-                {T('aboutParagraphFour')}
+              <Text extendStyle={mobileCenteredText.concat(lineHeightAndLetterSpacing)} paragraph>
+                {T('aboutParagraphFourPartOne')}
+                <SpecialStyle vBold italic arabic>
+                  {T('aboutParagraphFourPartTwo')}
+                </SpecialStyle>
+              </Text>
+              <Text extendStyle={mobileCenteredText.concat(lineHeightAndLetterSpacing)} paragraph>
+                {T('aboutParagraphFive')}
               </Text>
             </Container>
           </ContentContainer>

@@ -1,13 +1,4 @@
-import styled, { keyframes } from 'styled-components'
-
-const display = keyframes`
-  from {
-    opacity: 0.75;
-  }
-  to {
-    opacity: 0;
-  }
-  `
+import styled from 'styled-components'
 
 export const ClientsContainer = styled.div`
   display: block;
@@ -43,7 +34,13 @@ export const Button = styled.div`
 
 export const Container = styled.div`
   display: flex;
+  flex-direction: column;
 `
+
+export const Row = styled.div`
+  display: flex;
+`
+
 export const ItemIndicator = styled.li`
   box-sizing: content-box;
   -ms-flex: 0 1 auto;
@@ -63,20 +60,14 @@ export const ItemIndicator = styled.li`
   transition: opacity 0.6s ease;
 `
 export const ItemIndicatorList = styled.ul`
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin:auto;
-    z-index: 15;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: center;
-    justify-content: center;
-    padding-left: 0;
-    margin-right: 15%;
-    margin-left: 15%;
-    list-style: none;
-}
-
+  margin: auto;
+  z-index: 15;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-left: 0;
+  margin-right: 15%;
+  margin-left: 15%;
+  list-style: none;
 `

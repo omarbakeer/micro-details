@@ -12,7 +12,7 @@ const en = {
   but: 'But,',
   effectiveness: 'effectiveness',
   howWeDoIt: 'how we do it ?',
-  mission: 'misson',
+  mission: 'mission',
   vision: 'vision',
   trainingAndWorkshop: 'training and workshop',
   marketingPlan: 'marketing plan',
@@ -53,14 +53,19 @@ const en = {
   homepageParagraphFour: 'That’s where we come in.',
   homepageParagraphFive:
     'We will make your dreams bigger than this small world.',
-  aboutParagraphOne:
-    'Micro Details is a detail-oriented marketing agency based in Saudi Arabia.',
+    partOneAboutParagraphOne:
+    'Micro Details is a',
+    partTwoAboutParagraphOne:
+    ' detail-oriented marketing agency',
+    partThreeAboutParagraphOne:
+    ' based in Saudi Arabia.',
   aboutParagraphTwo:
     'We started our journey when we experienced the reach and impact of digital marketing on brands. The marketeers focus on ‘details’, but our team is passionate about ‘micro details’. We started this company so we can continue to analyze and use these details to create unique and successful marketing campaigns for our clients. ',
   aboutParagraphThree:
-    'You look at the big picture while we work on the subtle micro details, leading to success for everyone involved. We discovered this through years of experience in the marketing, digital and business development sector across various industries in the GCC region..',
-  aboutParagraphFour:
-    'Offering you marketing plan plus strategy, e-marketing, web and application development, design, training and workshops as well as growth hacking and brand positioning -- Micro Details will make a big difference to your brand.',
+    'You look at the big picture while we work on the subtle micro details, leading to success for everyone involved. We discovered this through years of experience in the marketing, digital and business development sector across various industries in the GCC region.',
+  aboutParagraphFourPartOne:
+    'Offering you marketing plan plus strategy, e-marketing, web and application development, design, training and workshops as well as growth hacking and brand positioning -- ',
+  aboutParagraphFourPartTwo: 'Micro Details will make a big difference to your brand.',
   missonParagraph:
     'To help ambitious organizations reach the right audience to maximize growth and profitability.',
   visionParagraph:

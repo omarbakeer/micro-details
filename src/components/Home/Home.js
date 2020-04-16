@@ -32,7 +32,7 @@ import {
 } from './Home.style'
 
 const Home = ({ isActive, setActive }) => {
-  const [selectedMenu, setSelectedMenu] = useState(2)
+  const [selectedMenu, setSelectedMenu] = useState(0)
   const location = useLocation()
   const languageContext = useContext(LanguageContext)
 

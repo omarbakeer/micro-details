@@ -13,7 +13,7 @@ import Work from 'components/Work'
 import ContactUs from 'components/ContactUs'
 
 const MainContainer = () => {
-  const [active, setActive] = useState(4)
+  const [active, setActive] = useState(3)
   const [theme, setTheme] = useState({ ...Theme })
   let location = useLocation()
 

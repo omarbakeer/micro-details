@@ -5,6 +5,7 @@ import {
   ClientLogo,
   Button,
   Container,
+  Row,
   ItemIndicator,
   ItemIndicatorList,
 } from './Clients.style'
@@ -81,6 +82,7 @@ const Clients = ({ isHomePage }) => {
 
   return (
     <Container>
+      <Row>
       {!isHomePage && (
         <Button onClick={() => handleButtonClick('prevouis')}>
           <Icon icon="ea60" size={40} color={'primary'} />
@@ -141,6 +143,7 @@ const Clients = ({ isHomePage }) => {
           <Icon icon="ea61" size={40} color={'primary'} />
         </Button>
       )}
+      </Row>
       {renderSlideIndicator()}
     </Container>
   )

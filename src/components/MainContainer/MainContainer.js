@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
-import { LanguageProvider } from 'locale'
+import { Helmet } from 'react-helmet'
+import { LanguageProvider, T } from 'locale'
 import { GlobalStyle, Main } from './MainContainer.style'
 import Footer from 'components/Footer'
 import LanguageSelector from 'components/LangaugeSelector'
@@ -28,6 +29,9 @@ const MainContainer = () => {
       <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Main>
+          <Helmet>
+            <title>{location.pathname.includes('ar') ? 'تفاصيل دقيقة' : 'Micro Details'}</title>
+          </Helmet>
           <LanguageSelector mobile />
           <Home isActive={active === 4} setActive={setActive} />
           <About isActive={active === 3} setActive={setActive} />

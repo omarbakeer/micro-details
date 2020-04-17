@@ -107,7 +107,9 @@ const ar = {
   egyptAddress: '٥٥ مكرم عبيد، مركز سيتي سنتر، الدور الرابع، القاهرة - مصر',
   jeddah: 'جـــدة',
   cairo: 'القاهرة',
-  say: 'راسلنا الآن!'
+  say: 'راسلنا الآن!',
+  microDetails: 'تفاصيل دقيقة',
+  copyRights: 'جميع الحقوق محفوظة ٢٠٢٠'
 }
 
 export default ar

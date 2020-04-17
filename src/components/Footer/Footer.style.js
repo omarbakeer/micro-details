@@ -10,7 +10,8 @@ export const Footer = styled.footer`
   width: 100vw;
   display: flex;
   position:fixed;
-
+  direction: ${({ theme }) => theme.direction};
+  flex-direction: ${({ theme }) => theme.direction === 'ltr' ? 'row' : 'row-reverse'};
   ${({ theme }) => theme.media.phone`
     display: none;
   `}
@@ -30,8 +31,10 @@ export const Division = styled.div`
   align-items: center;
   padding: 30px 0;
   background: ${({ theme }) => theme.colors.primary};
-  ${({ SocialDivision }) => SocialDivision && `
+  ${({ SocialDivision, theme }) => SocialDivision && theme.direction === 'ltr' ? `
     align-items: flex-end;
+  ` : `
+    align-items: flex-start;
   `}
 `;
 
@@ -48,7 +51,7 @@ export const Title = styled.span`
 `;
 
 export const Address = styled.div`
-  padding-left: 25px;
+  ${({ theme }) => theme.direction === 'ltr' ? 'padding-left: 25px;' : 'padding-right: 25px;'}
   width: 90%;
   box-sizing: border-box;
   font-size: 14px;
@@ -56,6 +59,7 @@ export const Address = styled.div`
 
 export const Link = styled.a`
   font-size: 14px;
+  direction: ltr;
   color: ${({ theme }) => theme.colors.black};
   text-decoration: none;
   &:hover {
@@ -66,8 +70,7 @@ export const Link = styled.a`
 
 export const SocialMediaContainer = styled.div`
   display: flex;
-  justify-content: flex-end;
-  margin: 0 20px 16px 0;
+  margin: ${({ theme }) => theme.direction === 'ltr' ? '0 20px 16px 0' : '0 25px 16px 0'};
 `;
 
 export const SocialMediaLink = styled.a`

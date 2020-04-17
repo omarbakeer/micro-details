@@ -1,4 +1,5 @@
 import React from 'react'
+import { T } from 'locale'
 import { Icon } from 'components/CommonStyles'
 import {
   Footer,
@@ -14,7 +15,7 @@ import {
   extendIcon,
 } from './Footer.style'
 
-const FooterContainer = (props) => {
+const FooterContainer = () => {
   return (
     <Footer>
       <Filler />
@@ -25,19 +26,19 @@ const FooterContainer = (props) => {
       <Division>
         <TitleWithIcon>
           <Icon icon="ef79" size={24} extendStyle={extendIcon} />
-          <Title>Jeddah</Title>
+          <Title>{T('jeddah')}</Title>
         </TitleWithIcon>
         <Address>
-          Prince Sultan Street, Al Murjana Tower, 7th floor, Jeddah- KSA
+          {T('saudiAddress')}
         </Address>
       </Division>
       <Division>
         <TitleWithIcon>
           <Icon icon="ef79" size={24} extendStyle={extendIcon} />
-          <Title>Cairo</Title>
+          <Title>{(T('cairo'))}</Title>
         </TitleWithIcon>
         <Address>
-          55 Makram Ebaid, City Center Tower 4th floor, Cairo - Egypt
+        {T('egyptAddress')}
         </Address>
       </Division>
       <Division flex={4}>
@@ -68,8 +69,7 @@ const FooterContainer = (props) => {
           </SocialMediaLink>
         </SocialMediaContainer>
         <CopyRights>
-          © <span style={{ fontWeight: 500 }}>Micro Details</span> - All rights
-          reserved 2020
+          © <span style={{ fontWeight: 600 }}>{T('microDetails')}</span> - {T('copyRights')}
         </CopyRights>
       </Division>
     </Footer>

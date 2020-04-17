@@ -166,6 +166,7 @@ export const Button = styled.button`
   margin-top: 14px;
   font-family: Qanelas;
   padding: 10px 0;
+  font-size: 18px;
   cursor: pointer;
 `;
 

@@ -116,7 +116,9 @@ const en = {
   jeddah: 'Jeddah',
   cairo: 'Cairo',
   say: 'Say',
-  hello: 'Hello!'
+  hello: 'Hello!',
+  microDetails: 'Micro Details',
+  copyRights: 'All rights reserved 2020'
 }
 
 export default en

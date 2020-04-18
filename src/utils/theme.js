@@ -33,6 +33,7 @@ export default {
     white: '#fff',
     blue: '#0056b3',
     lightGray: '#f8f8f8',
+    darkgrey:'#646464',
   },
   direction: 'ltr'
 };

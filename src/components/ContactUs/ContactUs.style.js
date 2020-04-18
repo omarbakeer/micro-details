@@ -129,10 +129,13 @@ const inputStyle = css`
   ${({ theme }) => theme.media.phone`
     width: 95%;
   `}
+  font-family: ${({ theme }) => theme.direction === 'ltr' ? 'Qanelas, Arial': 'TheSansArabic'};
+  font-size: 16px;
   &::placeholder{
     font-family: ${({ theme }) => theme.direction === 'ltr' ? 'Qanelas, Arial': 'TheSansArabic'} ;
     font-size: 16px;
-    color: ${({ theme }) => theme.colors.black};
+    color: ${({ theme }) => theme.colors.darkgrey};
+    line-height: 100%;
     ${({ theme }) => theme.media.phone`
       text-align: center;
     `}

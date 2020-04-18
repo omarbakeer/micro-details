@@ -55,16 +55,16 @@ const FooterContainer = () => {
       </Division>
       <Division SocialDivision flex={6}>
         <SocialMediaContainer>
-          <SocialMediaLink href="https://www.facebook.com/Micro-Details-412285212646523/?modal=admin_todo_tour">
+          <SocialMediaLink target="_blank" href="https://www.facebook.com/Micro-Details-412285212646523/?modal=admin_todo_tour">
             <Icon dontFlipOnRtl icon="ed37" size={30} />
           </SocialMediaLink>
-          <SocialMediaLink href="https://twitter.com/MicroDetails">
+          <SocialMediaLink target="_blank" href="https://twitter.com/MicroDetails">
             <Icon dontFlipOnRtl icon="ed7a" size={30} />
           </SocialMediaLink>
-          <SocialMediaLink href="https://www.instagram.com/micro.details">
+          <SocialMediaLink target="_blank" href="https://www.instagram.com/micro.details">
             <Icon dontFlipOnRtl icon="ed46" size={30} />
           </SocialMediaLink>
-          <SocialMediaLink href="https://www.linkedin.com/company/18959521">
+          <SocialMediaLink target="_blank" href="https://www.linkedin.com/company/18959521">
             <Icon dontFlipOnRtl icon="ed4d" size={30} />
           </SocialMediaLink>
         </SocialMediaContainer>

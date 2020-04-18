@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import GoogleMapReact from 'google-map-react'
+import axios from 'axios'
 import LanguageSelector from 'components/LangaugeSelector'
 import { T } from 'locale'
 import {
@@ -49,8 +50,21 @@ const ContactUs = ({ isActive, setActive }) => {
   const [mobile, setMobile] = useState('');
   const [message, setMessage] = useState('');
 
-  const handleSubmit = () => {
-    console.warn("Submitted")
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    let data = {
+      name: fullName,
+      email: emailAddress,
+      mobile,
+      message
+    }
+    axios.post('https://yeivffcxg3.execute-api.eu-central-1.amazonaws.com/production/', data)
+      .then( res => {
+        console.log("Message sent")
+      })
+      .catch( () => {
+        console.log('Message not sent')
+      })
   }
 
   return (

@@ -24,14 +24,6 @@ export const ImageWrapper = styled.div`
   width : 33%;
 `}
 `
-export const Button = styled.div`
-  height: 20px;
-  margin: auto 0;
-  ${({ theme }) => theme.media.phone`
-  width : 15px;
-  display:none;
-`}
-`
 
 export const Container = styled.div`
   display: flex;

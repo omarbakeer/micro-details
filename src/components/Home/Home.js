@@ -5,7 +5,7 @@ import { LanguageContext, languageOptions } from 'locale'
 import WeCan from 'components/WeCan'
 import WeAre from 'components/WeAre'
 import WeDo from 'components/WeDo'
-import Clients from 'components/Clients'
+import WeWorkWith from 'components/WeWorkWith'
 import { T } from 'locale'
 import {
   Section,
@@ -150,7 +150,7 @@ const Home = ({ isActive, setActive }) => {
               {selectedMenu === 2 && <WeDo />}
               {selectedMenu === 3 && (
                 <ClientsContainer>
-                  <Clients isHomePage />
+                  <WeWorkWith />
                 </ClientsContainer>
               )}
             </HomeDetails>

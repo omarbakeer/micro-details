@@ -167,7 +167,7 @@ export const Button = styled.button`
   color: white;
   width: 35%;
   margin-top: 14px;
-  font-family: Qanelas;
+  font-family: ${({ theme }) => theme.direction === 'ltr' ? 'Qanelas, Arial': 'TheSansArabic'};
   padding: 10px 0;
   font-size: 18px;
   cursor: pointer;

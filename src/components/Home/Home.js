@@ -29,6 +29,7 @@ import {
   HomeMenu,
   MenuItem,
   ClientsContainer,
+  extendTextStyle,
 } from './Home.style'
 
 const Home = ({ isActive, setActive }) => {
@@ -36,14 +37,14 @@ const Home = ({ isActive, setActive }) => {
   const location = useLocation()
   const languageContext = useContext(LanguageContext)
 
+  let currentPath = location.pathname
   useEffect(() => {
-    let currentPath = location.pathname
     if (currentPath === '/ar') {
       languageContext.setLanguage(languageOptions[1])
     } else {
       languageContext.setLanguage(languageOptions[0])
     }
-  }, [])
+  }, [location])
 
   const renderMenu = () => {
     return (
@@ -113,30 +114,30 @@ const Home = ({ isActive, setActive }) => {
                   </SloganText>
                 </Slogan>
                 <DescriptionsContainer>
-                  <Text paragraph maxWidth="70%">
+                  <Text paragraph extendStyle={extendTextStyle}>
                     {T('homepageParagraphOne')}
                     <SpecialStyle bold italic>
                       {T('diverse')}
                     </SpecialStyle>
                   </Text>
-                  <Text>
+                  <Text delay={3.5} extendStyle={extendTextStyle}>
                     <SpecialStyle bold>{T('but')}</SpecialStyle>{' '}
                     {T('homepageParagraphTwo')}
                   </Text>
-                  <Text paragraph maxWidth="60%">
+                  <Text paragraph delay={7} extendStyle={extendTextStyle}>
                     <SpecialStyle bold italic>
                     {T('everyDetailMatters')}
                     </SpecialStyle>
                    {T('homepagePreParagraphTwo')}
                   </Text>
-                  <Text paragraph>
+                  <Text paragraph delay={currentPath.includes('ar') ? 7 : 10.5} extendStyle={extendTextStyle}>
                     {T('homepageParagraphThree')}
                     <SpecialStyle bold italic>
                       {T('effectiveness')}
                     </SpecialStyle>
                   </Text>
-                  <Text paragraph>{T('homepageParagraphFour')}</Text>
-                  <Text underLine paragraph>
+                  <Text paragraph delay={currentPath.includes('ar') ? 10.5 : 14} extendStyle={extendTextStyle}>{T('homepageParagraphFour')}</Text>
+                  <Text underLine paragraph delay={currentPath.includes('ar') ? 14 : 17.5} extendStyle={extendTextStyle}>
                     {T('homepageParagraphFive')}
                   </Text>
                 </DescriptionsContainer>

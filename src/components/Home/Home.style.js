@@ -1,5 +1,17 @@
-import styled from 'styled-components'
+import styled, { keyframes, css } from 'styled-components'
 import bannerBackground from 'images/banner-rectangle.png'
+
+/* The typing effect */
+const typing = keyframes`
+  from { width: 0 }
+  to { width: 100% }
+`
+
+/* The typewriter cursor effect */
+ const blinkCaret = keyframes` 
+  from, to { border-color: transparent }
+  50% { border-color: #fcd72f; }
+`
 
 /***************************************************
  ****************** Home Commons ********************
@@ -136,4 +148,25 @@ export const ClientsContainer = styled.div`
     align-items: center;
     width:70%;
   `}
+`
+
+
+export const extendTextStyle = css`
+  width: 0;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  ${({ theme }) => theme.direction === 'ltr' ? 'border-right: 2px solid transparent;' :'border-left: 2px solid transparent;' } /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  ${({ theme }) => theme.direction !== 'ltr' ? '' : `
+    -webkit-letter-spacing: 1px;
+    -moz-letter-spacing: 1px;
+    -ms-letter-spacing: 1px;
+    letter-spacing: 1px;
+  `}
+  animation: ${typing} 3.5s steps(40, end) , ${blinkCaret} .75s step-end 4;
+  animation-delay: ${({ delay }) => delay || 0}s;
+  -webkit-animation-fill-mode: forwards; /* Chrome 16+, Safari 4+ */
+  -moz-animation-fill-mode: forwards;    /* FF 5+ */
+  -o-animation-fill-mode: forwards;      /* Not implemented yet */
+  -ms-animation-fill-mode: forwards;     /* IE 10+ */
+  animation-fill-mode: forwards;         /* When the spec is finished */
 `

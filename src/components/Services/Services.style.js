@@ -44,7 +44,7 @@ export const iconSize = css`
 `
 
 export const extendIcon = css`
-  position: relative;
+  /* position: relative;
   ${({ theme }) => theme.direction === 'ltr' ? 
     `left: 0;`
     : `right: 0;`}
@@ -58,7 +58,7 @@ export const extendIcon = css`
     right: 0;
     left: 0;
     ${iconSize}
-  `}
+  `} */
 `
 
 export const Sections = styled.div`

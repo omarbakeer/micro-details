@@ -171,6 +171,7 @@ export const Button = styled.button`
   padding: 10px 0;
   font-size: 18px;
   cursor: pointer;
+  outline: none;
 `;
 
 export const Marker = styled.div`
@@ -198,4 +199,8 @@ export const Marker = styled.div`
 
 export const SpecialStyle = styled.span`
   background-color: ${({ theme }) => theme.colors.primary};
+`
+
+export const MessageSent = styled.span`
+  margin: 14px 0;
 `

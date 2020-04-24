@@ -29,6 +29,7 @@ import {
   Marker,
   extendIcon,
   SpecialStyle,
+  MessageSent
 } from './ContactUs.style'
 import BrandLogo from 'images/Logo.png'
 
@@ -49,6 +50,7 @@ const ContactUs = ({ isActive, setActive }) => {
   const [emailAddress, setEmailAddress] = useState('');
   const [mobile, setMobile] = useState('');
   const [message, setMessage] = useState('');
+  const [isSent, setIsSent] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -61,6 +63,11 @@ const ContactUs = ({ isActive, setActive }) => {
     axios.post('https://yeivffcxg3.execute-api.eu-central-1.amazonaws.com/production/', data)
       .then( res => {
         console.log("Message sent")
+        setFullName('')
+        setEmailAddress('')
+        setMobile('')
+        setMessage('')
+        setIsSent(true)
       })
       .catch( () => {
         console.log('Message not sent')
@@ -139,6 +146,9 @@ const ContactUs = ({ isActive, setActive }) => {
                     placeholder={T('messagePlaceholder')}
                   />
                   <Button>{T('send')}</Button>
+                  {true && (
+                    <MessageSent>{T('yourInquiryHaveBeenSent')}</MessageSent>
+                  )}
                 </Form>
               </Col>
               <Col flex={4} styleMapOnMobile>

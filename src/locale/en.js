@@ -118,7 +118,8 @@ const en = {
   say: 'Say',
   hello: 'Hello!',
   microDetails: 'Micro Details',
-  copyRights: 'All rights reserved 2020'
+  copyRights: 'All rights reserved 2020',
+  yourInquiryHaveBeenSent: 'Your message is Sent. We will contact you ASAP'
 }
 
 export default en

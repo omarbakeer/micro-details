@@ -109,7 +109,8 @@ const ar = {
   cairo: 'القاهرة',
   say: 'راسلنا الآن!',
   microDetails: 'تفاصيل دقيقة',
-  copyRights: 'جميع الحقوق محفوظة ٢٠٢٠'
+  copyRights: 'جميع الحقوق محفوظة ٢٠٢٠',
+  yourInquiryHaveBeenSent: 'تم ارسال طلبك، وسيتم التواصل معك في اسرع وقت ممكن'
 }
 
 export default ar

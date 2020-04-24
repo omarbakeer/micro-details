@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components'
 
 export const extendIcon = css`
-  position: relative;
+  /* position: relative;
   ${({ theme }) => theme.direction === 'ltr' ? 
     `left: 0;`
     : `right: 0;`}
@@ -14,7 +14,7 @@ export const extendIcon = css`
     top: 0;
     right: 0;
     left: 0;
-  `}
+  `} */
 `
 
 export const Container = styled.div`

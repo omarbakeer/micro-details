@@ -24,6 +24,7 @@ export const Main = styled.main`
   flex-direction: row-reverse;
   ${({ theme }) => theme.media.phone`
     flex-direction: column;
-    height: 100vh
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
   `}
 `;

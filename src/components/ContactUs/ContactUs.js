@@ -146,7 +146,7 @@ const ContactUs = ({ isActive, setActive }) => {
                     placeholder={T('messagePlaceholder')}
                   />
                   <Button>{T('send')}</Button>
-                  {true && (
+                  {isSent && (
                     <MessageSent>{T('yourInquiryHaveBeenSent')}</MessageSent>
                   )}
                 </Form>
